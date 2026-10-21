@@ -43,6 +43,17 @@ jobs:
           # never pull upstream automation over ours
           rm -rf /tmp/upstream/.github
 
+      - name: Merge dubblebyte proxy list into proxies.txt
+        run: |
+          # second source: https://github.com/dubblebyte/free-mtproto-proxies
+          # same `https://t.me/proxy?...` format, deduplicated by server+port+secret
+          if curl -fsSL https://raw.githubusercontent.com/dubblebyte/free-mtproto-proxies/main/all_proxies.txt -o /tmp/extra_proxies.txt; then
+            python3 merge_proxies.py proxies.txt /tmp/extra_proxies.txt > /tmp/proxies.merged.txt
+            mv /tmp/proxies.merged.txt proxies.txt
+          else
+            echo "::warning::dubblebyte all_proxies.txt unavailable, publishing the primary list only"
+          fi
+
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
