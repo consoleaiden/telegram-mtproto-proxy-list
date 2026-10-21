@@ -1093,11 +1093,14 @@ export default {
 
       // 记一条心跳，便于在不方便直连 Worker 时远程确认 webhook 是否真的送达
       const msgForLog = update.message || update.channel_post;
+      const chatForLog = (msgForLog && msgForLog.chat)
+        || (update.callback_query && update.callback_query.message && update.callback_query.message.chat)
+        || null;
       const heartbeat = {
         at: new Date().toISOString(),
         kind: update.my_chat_member ? 'my_chat_member' : update.callback_query ? 'callback' : 'message',
         command: (update.callback_query && update.callback_query.data) || (msgForLog && msgForLog.text ? String(msgForLog.text).slice(0, 40) : ''),
-        chat: msgForLog && msgForLog.chat ? { id: msgForLog.chat.id, type: msgForLog.chat.type, title: msgForLog.chat.title || '' } : null,
+        chat: chatForLog ? { id: chatForLog.id, type: chatForLog.type, title: chatForLog.title || '' } : null,
       };
       if (env.STATE) {
         const write = env.STATE.put('meta:lastUpdate', JSON.stringify(heartbeat), { expirationTtl: 86400 }).catch(() => {});
