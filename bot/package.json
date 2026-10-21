@@ -1,6 +1,6 @@
 {
   "name": "mtproxy-bot",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "type": "module",
   "description": "MTProxy 代理榜 Telegram Bot（Cloudflare Worker）",
@@ -8,7 +8,7 @@
     "dev": "wrangler dev",
     "deploy": "wrangler deploy",
     "tail": "wrangler tail",
-    "test": "node --test test/"
+    "test": "node --test test/bot.test.mjs"
   },
   "devDependencies": {
     "wrangler": "^4.42.0"
