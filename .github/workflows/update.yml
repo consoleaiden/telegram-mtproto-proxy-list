@@ -1,0 +1,98 @@
+name: 每小时更新代理数据（合并 + 全量测速）
+
+# 每小时：
+#   1. 抓取两个上游数据源（tgmtproxy 主源 + dubblebyte 次源）
+#   2. 按 server+port+secret 去重合并，打来源标签
+#   3. 对合并后的每一条代理做真实 FakeTLS 握手测速（并发）
+#   4. 按访问速率排序，产出 proxies.txt / proxies.json / top40.json
+#   5. 有变化才提交，GitHub Pages 自动重建
+
+on:
+  schedule:
+    # 每小时 :17（UTC）。上游约在 :08 MSK 完成自己的刷新，这里留足余量
+    - cron: '17 * * * *'
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: '只测前 N 条（0 = 全部，调试用）'
+        required: false
+        default: '0'
+      attempts:
+        description: '每台探测次数'
+        required: false
+        default: '2'
+
+permissions:
+  contents: write
+
+# 上一轮没跑完就不叠加新一轮，避免重复推送互相打架
+concurrency:
+  group: update-proxies
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 单元测试（离线，纯函数）
+        run: python -m unittest discover -s tests -v
+
+      - name: 合并两源 + 全量测速 + 生成数据
+        env:
+          ATTEMPTS: ${{ github.event.inputs.attempts || '2' }}
+          LIMIT: ${{ github.event.inputs.limit || '0' }}
+        run: |
+          set +e
+          python scripts/update.py \
+            --top 40 \
+            --concurrency 128 \
+            --attempts "$ATTEMPTS" \
+            --timeout 6 \
+            --connect-timeout 5 \
+            --limit "$LIMIT"
+          code=$?
+          set -e
+          # 3 = 存活率异常偏低（多为 runner 出网故障）：保留上一轮数据，只报警告
+          if [ "$code" -eq 3 ]; then
+            echo "::warning::本轮存活率异常偏低，已保留上一轮数据；请检查 runner 出网"
+            exit 0
+          fi
+          exit "$code"
+
+      - name: 上传数据快照
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: proxy-data-${{ github.run_number }}
+          path: |
+            proxies.txt
+            proxies.json
+            top40.json
+          retention-days: 7
+
+      - name: 有变化才提交
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add proxies.txt proxies.json top40.json
+          if git diff --cached --quiet; then
+            echo "本轮数据与上一轮一致，跳过提交"
+            exit 0
+          fi
+          git commit -m "data: $(date -u '+%Y-%m-%d %H:%M') UTC 全量测速刷新"
+          for attempt in 1 2 3; do
+            if git push; then
+              exit 0
+            fi
+            echo "推送失败，第 $attempt 次重试前先同步远端"
+            git pull --rebase --autostash || true
+          done
+          echo "::error::连续三次推送失败"
+          exit 1

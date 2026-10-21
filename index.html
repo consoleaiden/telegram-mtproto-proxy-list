@@ -1,156 +1,790 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Telegram 代理：900 个可用 MTProxy（2026-10-21）——已验证，每小时更新</title><meta name="description" content="免费 MTProto 代理（Telegram），逐台验证可用性：900 台服务器已通过握手确认。 自有服务器 + 公开列表聚合，每小时更新，可从你的设备一键检测。"><link rel="canonical" href="https://tgmtproxy.github.io/telegram-mtproto-proxy-list/">
-<meta property="og:title" content="Telegram 代理：900 个可用 MTProxy（2026-10-21）——已验证，每小时更新"><meta property="og:description" content="免费 MTProto 代理（Telegram），逐台验证可用性：900 台服务器已通过握手确认。 自有服务器 + 公开列表聚合，每小时更新，可从你的设备一键检测。"><meta property="og:url" content="https://tgmtproxy.github.io/telegram-mtproto-proxy-list/"><meta property="og:type" content="website"><meta property="og:locale" content="zh_CN">
-<meta name="robots" content="index,follow"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%232aabee'/%3E%3Cpath d='M7 15l17-7-3 16-5-4-3 3v-4l8-8-10 7z' fill='%23fff'/%3E%3C/svg%3E">
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "name": "MTProxy——Telegram 代理目录", "url": "https://tgmtproxy.github.io/telegram-mtproto-proxy-list/", "inLanguage": "zh-CN"}, {"@type": "Article", "headline": "Telegram 代理：900 个可用 MTProxy（2026-10-21）——已验证，每小时更新", "dateModified": "2026-10-21T08:08:20.615876+03:00", "datePublished": "2026-09-13T00:00:00+03:00", "inLanguage": "zh-CN", "author": {"@type": "Organization", "name": "TGMTProxy"}, "mainEntityOfPage": "https://tgmtproxy.github.io/mtproxy/"}, {"@type": "HowTo", "name": "如何在 Telegram 中连接 MTProxy", "step": [{"@type": "HowToStep", "text": "点击所选服务器旁的「连接」。"}, {"@type": "HowToStep", "text": "在 Telegram 中确认添加代理。"}, {"@type": "HowToStep", "text": "确认代理已在设置中启用。"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "什么是 MTProxy？有什么用？", "acceptedAnswer": {"@type": "Answer", "text": "MTProxy 是 MTProto 协议的代理服务器，Telegram 正运行在该协议上。当运营商或网络打不开 Telegram 时就需要它：流量先发往代理，再由代理连接 Telegram 服务器。无需任何应用，点一下 tg://proxy 链接即可完成配置。"}}, {"@type": "Question", "name": "如何连接列表中的代理？", "acceptedAnswer": {"@type": "Answer", "text": "点击服务器旁的「连接」：Telegram 会打开并询问是否添加代理。确认后，设置里会出现带该服务器的「代理」项。在电脑上，t.me/proxy 链接效果相同。"}}, {"@type": "Question", "name": "“已通过握手确认”是什么意思？", "acceptedAnswer": {"@type": "Answer", "text": "我们的服务器使用该代理的密钥（fake-TLS）亲自完成了 MTProto 握手并得到正确响应。这比“端口开放”可靠得多：端口开放可能只是个占位网站，而只有真正的 MTProxy 才能完成握手。"}}, {"@type": "Question", "name": "为什么你们检测有响应，我这边却没有？", "acceptedAnswer": {"@type": "Answer", "text": "我们的检测来自数据中心，而「检测」按钮是从你的设备、经你的网络发起的。运营商可能屏蔽其中部分服务器，所以你自己的检测结果才最关键——请点「从我的设备全部检测」。"}}, {"@type": "Question", "name": "列表多久更新一次？", "acceptedAnswer": {"@type": "Answer", "text": "每小时一次：从公开来源和频道收集链接，按地址、端口和密钥去重，逐台检测，只发布有响应的服务器。失效服务器会自动移出列表。"}}, {"@type": "Question", "name": "代理突然失效了怎么办？", "acceptedAnswer": {"@type": "Answer", "text": "重新打开本页——列表每小时都是新的。换一台标着「在线可用」的服务器。如果全部无响应，可能是运营商做了深度过滤，此时需要使用 VPN。"}}]}]}</script><style>
-:root{--bg:#0b0f14;--card:#121821;--line:#1f2a37;--acc:#2aabee;--ok:#3ddc84;--warn:#ffc043;--bad:#ff5c5c;--t:#e6edf3;--m:#8b98a5}
-*{box-sizing:border-box;margin:0;padding:0}body{background:var(--bg);color:var(--t);font:15px/1.55 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:24px 16px 60px;max-width:960px;margin:0 auto}
-a{color:var(--acc)}h1{font-size:1.6rem;line-height:1.25;margin-bottom:8px}h2{font-size:1.2rem;margin:34px 0 12px}p{margin:10px 0}
-.meta{color:var(--m);font-size:.85rem}.meta b{color:var(--t)}
-.bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:18px 0 12px}.bar .sp{flex:1}
-button{display:inline-flex;align-items:center;gap:6px;background:var(--acc);color:#fff;border:0;padding:9px 16px;border-radius:9px;cursor:pointer;font-size:.86rem;font-weight:600}
-button.g{background:transparent;border:1px solid var(--line);color:var(--m)}button.s{padding:5px 11px;font-size:.78rem;border-radius:7px}
-button.o{background:transparent;border:1px solid var(--acc);color:var(--acc)}button:disabled{opacity:.4}
-table{width:100%;border-collapse:collapse;font-size:.9rem}th{text-align:left;padding:8px 10px;color:var(--m);font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid var(--line)}
-td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:middle}tr:hover td{background:rgba(255,255,255,.025)}
-.n{color:var(--m);width:40px}.srv{font-weight:600;word-break:break-all}.srv small{color:var(--m);font-weight:400}.act{white-space:nowrap;text-align:right}
-.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:7px;background:var(--line)}.up .dot{background:var(--ok);box-shadow:0 0 6px var(--ok)}.tcp .dot{background:var(--warn)}.down .dot{background:var(--bad)}.chk .dot{background:var(--warn);animation:p 1s infinite}
-@keyframes p{50%{opacity:.3}}.st{font-size:.82rem;white-space:nowrap}
-.ours{background:linear-gradient(90deg,rgba(42,171,238,.10),transparent)}.tag{display:inline-block;font-size:.68rem;padding:1px 6px;border-radius:5px;background:rgba(42,171,238,.18);color:var(--acc);margin-left:6px;vertical-align:middle}
-.box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:14px 0}
-.faq details{border-bottom:1px solid var(--line);padding:10px 0}.faq summary{cursor:pointer;font-weight:600}
-.net{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:.88rem}footer{margin-top:40px;color:var(--m);font-size:.82rem}
-@media(max-width:640px){body{padding:16px 10px 50px}td,th{padding:7px 6px}.act button{padding:5px 8px}.hide-m{display:none}}
-</style></head><body><header><h1>Telegram 代理：900 个可用 MTProxy（2026-10-21）</h1><div class="meta"><b>900</b> 个独立代理 · 其中 <b>900</b> 个已通过握手确认、<b>0</b> 个 TCP 可连通 · 服务器端检测于 08:08（莫斯科时间）· 下次检测 09:08 · 数据库累计 2997 台 · 来源 46 个</div></header>
-<p>本页是 Telegram MTProxy 实时目录。顶部是 <b>我们的自有服务器</b>：这些服务器专门用于分发代理，地址自动更新，状态每十秒检测一次。下方是聚合器：脚本每小时扫描 GitHub 上的 40 个公开列表和 5 个 Telegram 频道，按“地址 + 端口 + 密钥”去重，并从我们的主机逐台检测，只保留有响应的。至今共有 2997 台服务器进入过数据库，目前存活 900 台。</p><!-- promo --><style>.p2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:12px;margin:22px 0;padding:0;font:inherit;line-height:1.3;box-sizing:border-box;clear:both}.p2 *{box-sizing:border-box}.p2a{position:relative;display:flex;align-items:center;gap:12px;min-width:0;padding:13px 16px;border-radius:14px;text-decoration:none!important;transition:transform .18s,box-shadow .18s,border-color .18s,background .18s;overflow:hidden}.p2a:hover{transform:translateY(-2px)}.p2a i{flex:none;display:grid;place-items:center;width:40px;height:40px;border-radius:12px;color:#fff;background:linear-gradient(135deg,var(--c),var(--d))}.p2a span{display:flex;flex-direction:column;min-width:0;flex:1;text-align:left}.p2a small{font-size:.8em;opacity:.75;color:inherit!important}.p2a b{font-size:1.02em;font-weight:700;margin:0;background:none}.p2a em{font-style:normal;font-size:1.15em;opacity:.7;transition:transform .18s,opacity .18s}.p2a:hover em{transform:translateX(3px);opacity:1}.p2-soft .p2a{color:inherit!important;background:color-mix(in srgb,var(--c) 9%,transparent);border:1px solid color-mix(in srgb,var(--c) 28%,transparent)}.p2-soft .p2a b{color:var(--c)!important}.p2-soft .p2a:hover{border-color:var(--c);box-shadow:0 8px 22px -12px var(--c)}@media(max-width:620px){.p2{gap:8px;margin:16px 0}.p2a{padding:11px 13px}}</style><div class="p2 p2-soft" data-ab="v0125"><a class="p2a" href="https://t.me/MTProxy4free" target="_blank" rel="noopener" data-promo="channel" style="--c:#2aabee;--d:color-mix(in srgb,#2aabee 72%,#000)"><i><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.8 15.3l-.4 5.3c.6 0 .8-.2 1.1-.5l2.6-2.5 5.4 4c1 .5 1.7.3 2-.9l3.6-17c.3-1.5-.6-2.1-1.6-1.7L1.4 9.9c-1.4.6-1.4 1.4-.2 1.8l5.4 1.7L19 5.6c.6-.4 1.1-.2.7.2"/></svg></i><span><small>新代理——第一时间在 Telegram</small><b>订阅 @MTProxy4free</b></span><em>→</em></a><a class="p2a" href="https://t.me/primenow_robot?start=wl" target="_blank" rel="noopener" data-promo="vprime" style="--c:#f472b6;--d:#db2777"><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></i><span><small>白名单限制？不是问题</small><b>试试 Prime VPN</b></span><em>→</em></a></div><script>try{localStorage.setItem("pab","v0125")}catch(e){}</script><!-- /promo -->
-<div class="bar"><button id="all" onclick="checkAll()">从我的设备全部检测</button><span class="sp"></span><span class="meta" id="stat"></span></div>
-<h2>我们的服务器——刚刚验证</h2>
-<table><thead><tr><th>#</th><th>服务器</th><th>状态</th><th></th></tr></thead><tbody><tr class="ours" data-i="0" data-s="pixel.lite64.top" data-p="443"><td class="n">1</td><td class="srv">pixel.lite64.top<small>:443</small><span class="tag">自有</span><small> · xapi.ozon.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=pixel.lite64.top&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=pixel.lite64.top&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="ours" data-i="1" data-s="harbor.lite64.xyz" data-p="443"><td class="n">2</td><td class="srv">harbor.lite64.xyz<small>:443</small><span class="tag">自有</span><small> · xapi.ozon.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=harbor.lite64.xyz&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=harbor.lite64.xyz&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="ours" data-i="2" data-s="mist.velvetoak.work" data-p="443"><td class="n">3</td><td class="srv">mist.velvetoak.work<small>:443</small><span class="tag">自有</span><small> · xapi.ozon.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=mist.velvetoak.work&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=mist.velvetoak.work&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="ours" data-i="3" data-s="cobalt.lite64.top" data-p="443"><td class="n">4</td><td class="srv">cobalt.lite64.top<small>:443</small><span class="tag">自有</span><small> · xapi.ozon.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=cobalt.lite64.top&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=cobalt.lite64.top&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="ours" data-i="4" data-s="storm.pebblewisp.xyz" data-p="443"><td class="n">5</td><td class="srv">storm.pebblewisp.xyz<small>:443</small><span class="tag">自有</span><small> · xapi.ozon.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=storm.pebblewisp.xyz&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=storm.pebblewisp.xyz&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="ours" data-i="5" data-s="mint.hollowfern.sbs" data-p="443"><td class="n">6</td><td class="srv">mint.hollowfern.sbs<small>:443</small><span class="tag">自有</span><small> · xapi.ozon.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=mint.hollowfern.sbs&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=mint.hollowfern.sbs&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="ours" data-i="6" data-s="forest.lite64.top" data-p="443"><td class="n">7</td><td class="srv">forest.lite64.top<small>:443</small><span class="tag">自有</span><small> · xapi.ozon.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=forest.lite64.top&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=forest.lite64.top&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="ours" data-i="7" data-s="velvet.hollowfern.sbs" data-p="443"><td class="n">8</td><td class="srv">velvet.hollowfern.sbs<small>:443</small><span class="tag">自有</span><small> · xapi.ozon.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=velvet.hollowfern.sbs&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=velvet.hollowfern.sbs&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="ours" data-i="8" data-s="lark.hollowfern.sbs" data-p="443"><td class="n">9</td><td class="srv">lark.hollowfern.sbs<small>:443</small><span class="tag">自有</span><small> · xapi.ozon.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=lark.hollowfern.sbs&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=lark.hollowfern.sbs&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="ours" data-i="9" data-s="origin.lanternmoss.top" data-p="443"><td class="n">10</td><td class="srv">origin.lanternmoss.top<small>:443</small><span class="tag">自有</span><small> · xapi.ozon.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=origin.lanternmoss.top&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=origin.lanternmoss.top&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="ours" data-i="10" data-s="nova.velvetoak.work" data-p="443"><td class="n">11</td><td class="srv">nova.velvetoak.work<small>:443</small><span class="tag">自有</span><small> · xapi.ozon.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=nova.velvetoak.work&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=nova.velvetoak.work&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="ours" data-i="11" data-s="echo.lite64.click" data-p="443"><td class="n">12</td><td class="srv">echo.lite64.click<small>:443</small><span class="tag">自有</span><small> · xapi.ozon.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=echo.lite64.click&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=echo.lite64.click&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="ours" data-i="12" data-s="opal.velvetoak.work" data-p="443"><td class="n">13</td><td class="srv">opal.velvetoak.work<small>:443</small><span class="tag">自有</span><small> · xapi.ozon.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=opal.velvetoak.work&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=opal.velvetoak.work&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="ours" data-i="13" data-s="rain.lite64.xyz" data-p="443"><td class="n">14</td><td class="srv">rain.lite64.xyz<small>:443</small><span class="tag">自有</span><small> · xapi.ozon.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=rain.lite64.xyz&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=rain.lite64.xyz&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="ours" data-i="14" data-s="glacier.pebblewisp.xyz" data-p="443"><td class="n">15</td><td class="srv">glacier.pebblewisp.xyz<small>:443</small><span class="tag">自有</span><small> · xapi.ozon.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=glacier.pebblewisp.xyz&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=glacier.pebblewisp.xyz&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="ours" data-i="15" data-s="ocean.velvetoak.work" data-p="443"><td class="n">16</td><td class="srv">ocean.velvetoak.work<small>:443</small><span class="tag">自有</span><small> · xapi.ozon.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=ocean.velvetoak.work&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=ocean.velvetoak.work&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="ours" data-i="16" data-s="blaze.pebblewisp.xyz" data-p="443"><td class="n">17</td><td class="srv">blaze.pebblewisp.xyz<small>:443</small><span class="tag">自有</span><small> · xapi.ozon.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=blaze.pebblewisp.xyz&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=blaze.pebblewisp.xyz&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="ours" data-i="17" data-s="jasper.driftquill.click" data-p="443"><td class="n">18</td><td class="srv">jasper.driftquill.click<small>:443</small><span class="tag">自有</span><small> · xapi.ozon.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=jasper.driftquill.click&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=jasper.driftquill.click&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="ours" data-i="18" data-s="mirage.lite64.xyz" data-p="443"><td class="n">19</td><td class="srv">mirage.lite64.xyz<small>:443</small><span class="tag">自有</span><small> · xapi.ozon.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=mirage.lite64.xyz&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=mirage.lite64.xyz&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="ours" data-i="19" data-s="meteor.lanternmoss.top" data-p="443"><td class="n">20</td><td class="srv">meteor.lanternmoss.top<small>:443</small><span class="tag">自有</span><small> · xapi.ozon.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=meteor.lanternmoss.top&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=meteor.lanternmoss.top&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="ours" data-i="20" data-s="maple.pebblewisp.xyz" data-p="443"><td class="n">21</td><td class="srv">maple.pebblewisp.xyz<small>:443</small><span class="tag">自有</span><small> · xapi.ozon.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=maple.pebblewisp.xyz&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=maple.pebblewisp.xyz&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="ours" data-i="21" data-s="tundra.driftquill.click" data-p="443"><td class="n">22</td><td class="srv">tundra.driftquill.click<small>:443</small><span class="tag">自有</span><small> · xapi.ozon.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=tundra.driftquill.click&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=tundra.driftquill.click&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="ours" data-i="22" data-s="north.lanternmoss.top" data-p="443"><td class="n">23</td><td class="srv">north.lanternmoss.top<small>:443</small><span class="tag">自有</span><small> · xapi.ozon.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=north.lanternmoss.top&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=north.lanternmoss.top&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="ours" data-i="23" data-s="spruce.driftquill.click" data-p="443"><td class="n">24</td><td class="srv">spruce.driftquill.click<small>:443</small><span class="tag">自有</span><small> · xapi.ozon.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=spruce.driftquill.click&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=spruce.driftquill.click&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="ours" data-i="24" data-s="astra.lanternmoss.top" data-p="443"><td class="n">25</td><td class="srv">astra.lanternmoss.top<small>:443</small><span class="tag">自有</span><small> · xapi.ozon.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=astra.lanternmoss.top&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=astra.lanternmoss.top&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="ours" data-i="25" data-s="nebula.lite64.xyz" data-p="443"><td class="n">26</td><td class="srv">nebula.lite64.xyz<small>:443</small><span class="tag">自有</span><small> · xapi.ozon.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=nebula.lite64.xyz&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=nebula.lite64.xyz&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="ours" data-i="26" data-s="jade.lite64.top" data-p="443"><td class="n">27</td><td class="srv">jade.lite64.top<small>:443</small><span class="tag">自有</span><small> · xapi.ozon.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=jade.lite64.top&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=jade.lite64.top&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="ours" data-i="27" data-s="karma.lite64.click" data-p="443"><td class="n">28</td><td class="srv">karma.lite64.click<small>:443</small><span class="tag">自有</span><small> · xapi.ozon.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=karma.lite64.click&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=karma.lite64.click&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="ours" data-i="28" data-s="quasar.driftquill.click" data-p="443"><td class="n">29</td><td class="srv">quasar.driftquill.click<small>:443</small><span class="tag">自有</span><small> · xapi.ozon.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=quasar.driftquill.click&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=quasar.driftquill.click&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="ours" data-i="29" data-s="wave.hollowfern.sbs" data-p="443"><td class="n">30</td><td class="srv">wave.hollowfern.sbs<small>:443</small><span class="tag">自有</span><small> · xapi.ozon.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=wave.hollowfern.sbs&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=wave.hollowfern.sbs&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="ours" data-i="30" data-s="vega.velvetoak.work" data-p="443"><td class="n">31</td><td class="srv">vega.velvetoak.work<small>:443</small><span class="tag">自有</span><small> · xapi.ozon.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=vega.velvetoak.work&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=vega.velvetoak.work&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="ours" data-i="31" data-s="magma.lite64.click" data-p="443"><td class="n">32</td><td class="srv">magma.lite64.click<small>:443</small><span class="tag">自有</span><small> · xapi.ozon.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=magma.lite64.click&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=magma.lite64.click&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="ours" data-i="32" data-s="violet.lite64.top" data-p="443"><td class="n">33</td><td class="srv">violet.lite64.top<small>:443</small><span class="tag">自有</span><small> · xapi.ozon.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=violet.lite64.top&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=violet.lite64.top&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="ours" data-i="33" data-s="garnet.lite64.click" data-p="443"><td class="n">34</td><td class="srv">garnet.lite64.click<small>:443</small><span class="tag">自有</span><small> · xapi.ozon.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=garnet.lite64.click&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=garnet.lite64.click&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="ours" data-i="34" data-s="onyx.lite64.xyz" data-p="443"><td class="n">35</td><td class="srv">onyx.lite64.xyz<small>:443</small><span class="tag">自有</span><small> · xapi.ozon.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=onyx.lite64.xyz&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=onyx.lite64.xyz&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="ours" data-i="35" data-s="meadow.lite64.click" data-p="443"><td class="n">36</td><td class="srv">meadow.lite64.click<small>:443</small><span class="tag">自有</span><small> · xapi.ozon.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=meadow.lite64.click&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=meadow.lite64.click&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="ours" data-i="36" data-s="lumen.driftquill.click" data-p="443"><td class="n">37</td><td class="srv">lumen.driftquill.click<small>:443</small><span class="tag">自有</span><small> · xapi.ozon.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=lumen.driftquill.click&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=lumen.driftquill.click&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="ours" data-i="37" data-s="cedar.pebblewisp.xyz" data-p="443"><td class="n">38</td><td class="srv">cedar.pebblewisp.xyz<small>:443</small><span class="tag">自有</span><small> · xapi.ozon.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=cedar.pebblewisp.xyz&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=cedar.pebblewisp.xyz&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="ours" data-i="38" data-s="iris.hollowfern.sbs" data-p="443"><td class="n">39</td><td class="srv">iris.hollowfern.sbs<small>:443</small><span class="tag">自有</span><small> · xapi.ozon.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=iris.hollowfern.sbs&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=iris.hollowfern.sbs&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="ours" data-i="39" data-s="aurora.lanternmoss.top" data-p="443"><td class="n">40</td><td class="srv">aurora.lanternmoss.top<small>:443</small><span class="tag">自有</span><small> · xapi.ozon.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=aurora.lanternmoss.top&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=aurora.lanternmoss.top&amp;port=443&amp;secret=ee2b6eb790d613a1725557ce33b9a87b30786170692e6f7a6f6e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr></tbody></table>
-<h2>当前有响应的公开 MTProto 代理</h2>
-<p>公开列表前 60 台（共 860 台在线）。带同样按钮的完整列表见 <a href="https://tgmtproxy.github.io/mtproxy/proxy.html">全部代理（900 台）</a>.</p>
-<table><thead><tr><th>#</th><th>服务器</th><th>状态</th><th></th></tr></thead><tbody><tr class="" data-i="0" data-s="t.meow-network.com" data-p="443"><td class="n">1</td><td class="srv">t.meow-network.com<small>:443</small><small> · t.meow-network.com</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=t.meow-network.com&amp;port=443&amp;secret=ee5622e11fff3e49bcc85280197a6106b5742e6d656f772d6e6574776f726b2e636f6d"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=t.meow-network.com&amp;port=443&amp;secret=ee5622e11fff3e49bcc85280197a6106b5742e6d656f772d6e6574776f726b2e636f6d" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="1" data-s="rkn.tg" data-p="853"><td class="n">2</td><td class="srv">rkn.tg<small>:853</small><small> · mt.akenai.click</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=rkn.tg&amp;port=853&amp;secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=rkn.tg&amp;port=853&amp;secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="2" data-s="max.kimt.click" data-p="443"><td class="n">3</td><td class="srv">max.kimt.click<small>:443</small><small> · max.kimt.click</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=max.kimt.click&amp;port=443&amp;secret=ee1b153cf06dbd43c6085c359a6702eb936d61782e6b696d742e636c69636b"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=max.kimt.click&amp;port=443&amp;secret=ee1b153cf06dbd43c6085c359a6702eb936d61782e6b696d742e636c69636b" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="3" data-s="i-love-femboys.top" data-p="853"><td class="n">4</td><td class="srv">i-love-femboys.top<small>:853</small><small> · mt.akenai.click</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=i-love-femboys.top&amp;port=853&amp;secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=i-love-femboys.top&amp;port=853&amp;secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="4" data-s="cover-acid.top" data-p="853"><td class="n">5</td><td class="srv">cover-acid.top<small>:853</small><small> · mt.akenai.click</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=cover-acid.top&amp;port=853&amp;secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=cover-acid.top&amp;port=853&amp;secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="5" data-s="yazaebalsyadelatproxy.uk" data-p="443"><td class="n">6</td><td class="srv">yazaebalsyadelatproxy.uk<small>:443</small><small> · owelwe.live</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=yazaebalsyadelatproxy.uk&amp;port=443&amp;secret=ee69e899d89ec68e220ca177557322b27f6f77656c77652e6c697665"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=yazaebalsyadelatproxy.uk&amp;port=443&amp;secret=ee69e899d89ec68e220ca177557322b27f6f77656c77652e6c697665" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="6" data-s="ctfd-is-shit.top" data-p="853"><td class="n">7</td><td class="srv">ctfd-is-shit.top<small>:853</small><small> · mt.akenai.click</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=ctfd-is-shit.top&amp;port=853&amp;secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=ctfd-is-shit.top&amp;port=853&amp;secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="7" data-s="owner-explain.top" data-p="853"><td class="n">8</td><td class="srv">owner-explain.top<small>:853</small><small> · mt.akenai.click</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=owner-explain.top&amp;port=853&amp;secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=owner-explain.top&amp;port=853&amp;secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="8" data-s="redflag.yazaebalsyadelatproxy.uk" data-p="443"><td class="n">9</td><td class="srv">redflag.yazaebalsyadelatproxy.uk<small>:443</small><small> · redflag.yazaebalsyadelatproxy.cc</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=redflag.yazaebalsyadelatproxy.uk&amp;port=443&amp;secret=ee69e899d89ec68e220ca177557322b27f726564666c61672e79617a616562616c73796164656c617470726f78792e6363"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=redflag.yazaebalsyadelatproxy.uk&amp;port=443&amp;secret=ee69e899d89ec68e220ca177557322b27f726564666c61672e79617a616562616c73796164656c617470726f78792e6363" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="9" data-s="s.rkn.tg" data-p="853"><td class="n">10</td><td class="srv">s.rkn.tg<small>:853</small><small> · mt.akenai.click</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=s.rkn.tg&amp;port=853&amp;secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=s.rkn.tg&amp;port=853&amp;secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="10" data-s="5hu7-up-4nd-sell-me-mor3-th353-chocol47e5.top" data-p="853"><td class="n">11</td><td class="srv">5hu7-up-4nd-sell-me-mor3-th353-chocol47e5.top<small>:853</small><small> · mt.akenai.click</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=5hu7-up-4nd-sell-me-mor3-th353-chocol47e5.top&amp;port=853&amp;secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=5hu7-up-4nd-sell-me-mor3-th353-chocol47e5.top&amp;port=853&amp;secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="11" data-s="focus-ultimate.top" data-p="853"><td class="n">12</td><td class="srv">focus-ultimate.top<small>:853</small><small> · mt.akenai.click</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=focus-ultimate.top&amp;port=853&amp;secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=focus-ultimate.top&amp;port=853&amp;secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="12" data-s="grin-idle.top" data-p="853"><td class="n">13</td><td class="srv">grin-idle.top<small>:853</small><small> · mt.akenai.click</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=grin-idle.top&amp;port=853&amp;secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=grin-idle.top&amp;port=853&amp;secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="13" data-s="redflag.yazaebalsyadelatproxy.co.uk" data-p="443"><td class="n">14</td><td class="srv">redflag.yazaebalsyadelatproxy.co.uk<small>:443</small><small> · redflag.yazaebalsyadelatproxy.cc</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=redflag.yazaebalsyadelatproxy.co.uk&amp;port=443&amp;secret=ee69e899d89ec68e220ca177557322b27f726564666c61672e79617a616562616c73796164656c617470726f78792e6363"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=redflag.yazaebalsyadelatproxy.co.uk&amp;port=443&amp;secret=ee69e899d89ec68e220ca177557322b27f726564666c61672e79617a616562616c73796164656c617470726f78792e6363" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="14" data-s="redflag.yazaebalsyadelatproxy.com" data-p="443"><td class="n">15</td><td class="srv">redflag.yazaebalsyadelatproxy.com<small>:443</small><small> · redflag.yazaebalsyadelatproxy.cc</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=redflag.yazaebalsyadelatproxy.com&amp;port=443&amp;secret=ee69e899d89ec68e220ca177557322b27f726564666c61672e79617a616562616c73796164656c617470726f78792e6363"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=redflag.yazaebalsyadelatproxy.com&amp;port=443&amp;secret=ee69e899d89ec68e220ca177557322b27f726564666c61672e79617a616562616c73796164656c617470726f78792e6363" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="15" data-s="79.137.196.223" data-p="13443"><td class="n">16</td><td class="srv">79.137.196.223<small>:13443</small><small> · www.cloudflare.com</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=79.137.196.223&amp;port=13443&amp;secret=eee06596f5753c0dc9b56fe4864a4665e57777772e636c6f7564666c6172652e636f6d"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=79.137.196.223&amp;port=13443&amp;secret=eee06596f5753c0dc9b56fe4864a4665e57777772e636c6f7564666c6172652e636f6d" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="16" data-s="79.137.196.223" data-p="14443"><td class="n">17</td><td class="srv">79.137.196.223<small>:14443</small><small> · www.cloudflare.com</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=79.137.196.223&amp;port=14443&amp;secret=ee9e28cf588967add684c5e759fea036d47777772e636c6f7564666c6172652e636f6d"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=79.137.196.223&amp;port=14443&amp;secret=ee9e28cf588967add684c5e759fea036d47777772e636c6f7564666c6172652e636f6d" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="17" data-s="79.137.196.223" data-p="2053"><td class="n">18</td><td class="srv">79.137.196.223<small>:2053</small><small> · www.cloudflare.com</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=79.137.196.223&amp;port=2053&amp;secret=eeee1701dff011da0ee1313d584fc565187777772e636c6f7564666c6172652e636f6d"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=79.137.196.223&amp;port=2053&amp;secret=eeee1701dff011da0ee1313d584fc565187777772e636c6f7564666c6172652e636f6d" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="18" data-s="skill-issue.top" data-p="853"><td class="n">19</td><td class="srv">skill-issue.top<small>:853</small><small> · mt.akenai.click</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=skill-issue.top&amp;port=853&amp;secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=skill-issue.top&amp;port=853&amp;secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="19" data-s="79.137.196.223" data-p="3443"><td class="n">20</td><td class="srv">79.137.196.223<small>:3443</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=79.137.196.223&amp;port=3443&amp;secret=eeee33159ebd0ee0dcafef811a9bc7c2ab8d7777772e636c6f7564666c6172652e636f6d"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=79.137.196.223&amp;port=3443&amp;secret=eeee33159ebd0ee0dcafef811a9bc7c2ab8d7777772e636c6f7564666c6172652e636f6d" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="20" data-s="79.137.196.223" data-p="7443"><td class="n">21</td><td class="srv">79.137.196.223<small>:7443</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=79.137.196.223&amp;port=7443&amp;secret=eeeeb30662ee79541fb143515ad872d2e9dd7777772e636c6f7564666c6172652e636f6d"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=79.137.196.223&amp;port=7443&amp;secret=eeeeb30662ee79541fb143515ad872d2e9dd7777772e636c6f7564666c6172652e636f6d" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="21" data-s="79.137.196.223" data-p="8443"><td class="n">22</td><td class="srv">79.137.196.223<small>:8443</small><small> · www.cloudflare.com</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=79.137.196.223&amp;port=8443&amp;secret=eeeeacd334a255675ccc880cb6b8c9caf07777772e636c6f7564666c6172652e636f6d"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=79.137.196.223&amp;port=8443&amp;secret=eeeeacd334a255675ccc880cb6b8c9caf07777772e636c6f7564666c6172652e636f6d" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="22" data-s="79.137.196.223" data-p="21443"><td class="n">23</td><td class="srv">79.137.196.223<small>:21443</small><small> · www.cloudflare.com</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=79.137.196.223&amp;port=21443&amp;secret=ee70d02df07ecb5669b6eb010aba55eab07777772e636c6f7564666c6172652e636f6d"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=79.137.196.223&amp;port=21443&amp;secret=ee70d02df07ecb5669b6eb010aba55eab07777772e636c6f7564666c6172652e636f6d" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="23" data-s="espress0-macch1ato-p0r-favor3.top" data-p="853"><td class="n">24</td><td class="srv">espress0-macch1ato-p0r-favor3.top<small>:853</small><small> · mt.akenai.click</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=espress0-macch1ato-p0r-favor3.top&amp;port=853&amp;secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=espress0-macch1ato-p0r-favor3.top&amp;port=853&amp;secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="24" data-s="190.2.144.63" data-p="443"><td class="n">25</td><td class="srv">190.2.144.63<small>:443</small><small> · www.google.com</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=190.2.144.63&amp;port=443&amp;secret=eea3c15217ac9f487f3a9c2a1cab661ebb7777772e676f6f676c652e636f6d"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=190.2.144.63&amp;port=443&amp;secret=eea3c15217ac9f487f3a9c2a1cab661ebb7777772e676f6f676c652e636f6d" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="25" data-s="aerodrive.plus-medeum24.ru" data-p="443"><td class="n">26</td><td class="srv">aerodrive.plus-medeum24.ru<small>:443</small><small> · catcat.plus-medeum24.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=aerodrive.plus-medeum24.ru&amp;port=443&amp;secret=eecc1e01bda3b66bb53f98889bedd6cad36361746361742e706c75732d6d656465756d32342e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=aerodrive.plus-medeum24.ru&amp;port=443&amp;secret=eecc1e01bda3b66bb53f98889bedd6cad36361746361742e706c75732d6d656465756d32342e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="26" data-s="melat.managep.info" data-p="443"><td class="n">27</td><td class="srv">melat.managep.info<small>:443</small><small> · media.steampowered.com</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=melat.managep.info&amp;port=443&amp;secret=ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=melat.managep.info&amp;port=443&amp;secret=ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="27" data-s="fluctuant.migration.palsy.pinoywebtv.com" data-p="443"><td class="n">28</td><td class="srv">fluctuant.migration.palsy.pinoywebtv.com<small>:443</small><small> · dzen.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=fluctuant.migration.palsy.pinoywebtv.com&amp;port=443&amp;secret=ee9280f583ff78c356fe69766ad320356c647a656e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=fluctuant.migration.palsy.pinoywebtv.com&amp;port=443&amp;secret=ee9280f583ff78c356fe69766ad320356c647a656e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="28" data-s="miz.tashkilat.info" data-p="443"><td class="n">29</td><td class="srv">miz.tashkilat.info<small>:443</small><small> · biscotti.yektanet.com</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=miz.tashkilat.info&amp;port=443&amp;secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=miz.tashkilat.info&amp;port=443&amp;secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="29" data-s="calcium-credit.top" data-p="853"><td class="n">30</td><td class="srv">calcium-credit.top<small>:853</small><small> · mt.akenai.click</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=calcium-credit.top&amp;port=853&amp;secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=calcium-credit.top&amp;port=853&amp;secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="30" data-s="torobchesho.co.uk" data-p="443"><td class="n">31</td><td class="srv">torobchesho.co.uk<small>:443</small><small> · torobchesho.co.uk</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=torobchesho.co.uk&amp;port=443&amp;secret=ee5f7ce28a2c4816c6c923dfd4d5630e01746f726f6263686573686f2e636f2e756b"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=torobchesho.co.uk&amp;port=443&amp;secret=ee5f7ce28a2c4816c6c923dfd4d5630e01746f726f6263686573686f2e636f2e756b" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="31" data-s="87.248.129.13" data-p="15"><td class="n">32</td><td class="srv">87.248.129.13<small>:15</small><small> · cdn.yektanet.com</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=87.248.129.13&amp;port=15&amp;secret=ee1603010200010001fc030386e24c3add63646e2e79656b74616e65742e636f6d"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=87.248.129.13&amp;port=15&amp;secret=ee1603010200010001fc030386e24c3add63646e2e79656b74616e65742e636f6d" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="32" data-s="i-love-cu.top" data-p="853"><td class="n">33</td><td class="srv">i-love-cu.top<small>:853</small><small> · mt.akenai.click</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=i-love-cu.top&amp;port=853&amp;secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=i-love-cu.top&amp;port=853&amp;secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="33" data-s="pinklove.top" data-p="853"><td class="n">34</td><td class="srv">pinklove.top<small>:853</small><small> · mt.akenai.click</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=pinklove.top&amp;port=853&amp;secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=pinklove.top&amp;port=853&amp;secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="34" data-s="believe-gravity.top" data-p="853"><td class="n">35</td><td class="srv">believe-gravity.top<small>:853</small><small> · mt.akenai.click</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=believe-gravity.top&amp;port=853&amp;secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=believe-gravity.top&amp;port=853&amp;secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="35" data-s="predator-artist.top" data-p="853"><td class="n">36</td><td class="srv">predator-artist.top<small>:853</small><small> · mt.akenai.click</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=predator-artist.top&amp;port=853&amp;secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=predator-artist.top&amp;port=853&amp;secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="36" data-s="nya-nya.top" data-p="853"><td class="n">37</td><td class="srv">nya-nya.top<small>:853</small><small> · mt.akenai.click</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=nya-nya.top&amp;port=853&amp;secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=nya-nya.top&amp;port=853&amp;secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="37" data-s="esplanade.poker.unconsecrated.pinoywebtv.com" data-p="443"><td class="n">38</td><td class="srv">esplanade.poker.unconsecrated.pinoywebtv.com<small>:443</small><small> · dzen.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=esplanade.poker.unconsecrated.pinoywebtv.com&amp;port=443&amp;secret=ee8704bc882dc9454091bf7b21ea16e76c647a656e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=esplanade.poker.unconsecrated.pinoywebtv.com&amp;port=443&amp;secret=ee8704bc882dc9454091bf7b21ea16e76c647a656e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="38" data-s="ratteen.spotting.whirly.gmateleserye.com" data-p="443"><td class="n">39</td><td class="srv">ratteen.spotting.whirly.gmateleserye.com<small>:443</small><small> · dzen.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=ratteen.spotting.whirly.gmateleserye.com&amp;port=443&amp;secret=eea60b7acf2dafd3003483abcb4aa347bd647a656e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=ratteen.spotting.whirly.gmateleserye.com&amp;port=443&amp;secret=eea60b7acf2dafd3003483abcb4aa347bd647a656e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="39" data-s="bocasin.frowsty.interpretative.teleseryetvreplay.com" data-p="443"><td class="n">40</td><td class="srv">bocasin.frowsty.interpretative.teleseryetvreplay.com<small>:443</small><small> · dzen.ru</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=bocasin.frowsty.interpretative.teleseryetvreplay.com&amp;port=443&amp;secret=ee956b4f35754cd86428c93935ba7704a0647a656e2e7275"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=bocasin.frowsty.interpretative.teleseryetvreplay.com&amp;port=443&amp;secret=ee956b4f35754cd86428c93935ba7704a0647a656e2e7275" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="40" data-s="spb1.webvirt.cloud" data-p="443"><td class="n">41</td><td class="srv">spb1.webvirt.cloud<small>:443</small><small> · tel.webvirt.cloud</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=spb1.webvirt.cloud&amp;port=443&amp;secret=ee938dd87467bc49301de2e9765cf20f4374656c2e776562766972742e636c6f7564"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=spb1.webvirt.cloud&amp;port=443&amp;secret=ee938dd87467bc49301de2e9765cf20f4374656c2e776562766972742e636c6f7564" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="41" data-s="pack.talebi.co.uk" data-p="443"><td class="n">42</td><td class="srv">pack.talebi.co.uk<small>:443</small><small> · biscotti.yektanet.com</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=pack.talebi.co.uk&amp;port=443&amp;secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=pack.talebi.co.uk&amp;port=443&amp;secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="42" data-s="he.18.mtproto.ru" data-p="443"><td class="n">43</td><td class="srv">he.18.mtproto.ru<small>:443</small><small> · browser.yandex.com</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=he.18.mtproto.ru&amp;port=443&amp;secret=ee2111222233334444555566667777888862726f777365722e79616e6465782e636f6d"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=he.18.mtproto.ru&amp;port=443&amp;secret=ee2111222233334444555566667777888862726f777365722e79616e6465782e636f6d" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="43" data-s="dl.aapks.app" data-p="443"><td class="n">44</td><td class="srv">dl.aapks.app<small>:443</small><small> · dl.aapks.app</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=dl.aapks.app&amp;port=443&amp;secret=eeb9368cadbd8a756073e33cd2598dbef2646c2e6161706b732e617070"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=dl.aapks.app&amp;port=443&amp;secret=eeb9368cadbd8a756073e33cd2598dbef2646c2e6161706b732e617070" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="44" data-s="mt1.kurduk.store" data-p="443"><td class="n">45</td><td class="srv">mt1.kurduk.store<small>:443</small><small> · mt1.kurduk.store</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=mt1.kurduk.store&amp;port=443&amp;secret=ee2c359976c0e74101ab25d285b51faf306d74312e6b757264756b2e73746f7265"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=mt1.kurduk.store&amp;port=443&amp;secret=ee2c359976c0e74101ab25d285b51faf306d74312e6b757264756b2e73746f7265" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="45" data-s="mt.wexproxy.com" data-p="8443"><td class="n">46</td><td class="srv">mt.wexproxy.com<small>:8443</small><small> · cloudflare.com</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=mt.wexproxy.com&amp;port=8443&amp;secret=ee426fd6b96aaad73409bacd2b4653be47636c6f7564666c6172652e636f6d"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=mt.wexproxy.com&amp;port=8443&amp;secret=ee426fd6b96aaad73409bacd2b4653be47636c6f7564666c6172652e636f6d" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="46" data-s="host.mizbanonline.info" data-p="443"><td class="n">47</td><td class="srv">host.mizbanonline.info<small>:443</small><small> · media.steampowered.com</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=host.mizbanonline.info&amp;port=443&amp;secret=ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=host.mizbanonline.info&amp;port=443&amp;secret=ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="47" data-s="179.237.76.190" data-p="443"><td class="n">48</td><td class="srv">179.237.76.190<small>:443</small><small> · www.msn.com</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=179.237.76.190&amp;port=443&amp;secret=ee271a79a8c3ffc97950025632d757aa227777772e6d736e2e636f6d"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=179.237.76.190&amp;port=443&amp;secret=ee271a79a8c3ffc97950025632d757aa227777772e6d736e2e636f6d" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="48" data-s="83.228.224.201" data-p="443"><td class="n">49</td><td class="srv">83.228.224.201<small>:443</small><small> · www.msn.com</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=83.228.224.201&amp;port=443&amp;secret=ee271a79a8c3ffc97950025632d757aa227777772e6d736e2e636f6d"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=83.228.224.201&amp;port=443&amp;secret=ee271a79a8c3ffc97950025632d757aa227777772e6d736e2e636f6d" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="49" data-s="ai.kerfilia.info" data-p="6775"><td class="n">50</td><td class="srv">ai.kerfilia.info<small>:6775</small><small> · biscotti.yektanet.com</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=ai.kerfilia.info&amp;port=6775&amp;secret=eee9a4f23b1d768c04a8d7f39120ca5b6e626973636f7474692e79656b74616e65742e636f6d"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=ai.kerfilia.info&amp;port=6775&amp;secret=eee9a4f23b1d768c04a8d7f39120ca5b6e626973636f7474692e79656b74616e65742e636f6d" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="50" data-s="179.237.76.238" data-p="443"><td class="n">51</td><td class="srv">179.237.76.238<small>:443</small><small> · www.msn.com</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=179.237.76.238&amp;port=443&amp;secret=ee271a79a8c3ffc97950025632d757aa227777772e6d736e2e636f6d"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=179.237.76.238&amp;port=443&amp;secret=ee271a79a8c3ffc97950025632d757aa227777772e6d736e2e636f6d" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="51" data-s="tg.surfvpn.info" data-p="443"><td class="n">52</td><td class="srv">tg.surfvpn.info<small>:443</small><small> · relay.surfvpn.app</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=tg.surfvpn.info&amp;port=443&amp;secret=eedf44a4347c1eb8938c7e63340bd1ca4972656c61792e7375726676706e2e617070"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=tg.surfvpn.info&amp;port=443&amp;secret=eedf44a4347c1eb8938c7e63340bd1ca4972656c61792e7375726676706e2e617070" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="52" data-s="genuismind.info" data-p="443"><td class="n">53</td><td class="srv">genuismind.info<small>:443</small><small> · media.steampowered.com</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=genuismind.info&amp;port=443&amp;secret=ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=genuismind.info&amp;port=443&amp;secret=ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="53" data-s="daemi-asli.karshenasi.info" data-p="443"><td class="n">54</td><td class="srv">daemi-asli.karshenasi.info<small>:443</small><small> · media.steampowered.com</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=daemi-asli.karshenasi.info&amp;port=443&amp;secret=ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=daemi-asli.karshenasi.info&amp;port=443&amp;secret=ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="54" data-s="mahanmizban.genuismind.info" data-p="443"><td class="n">55</td><td class="srv">mahanmizban.genuismind.info<small>:443</small><small> · media.steampowered.com</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=mahanmizban.genuismind.info&amp;port=443&amp;secret=ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=mahanmizban.genuismind.info&amp;port=443&amp;secret=ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="55" data-s="he.67.mtproto.ru" data-p="443"><td class="n">56</td><td class="srv">he.67.mtproto.ru<small>:443</small><small> · browser.yandex.com</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=he.67.mtproto.ru&amp;port=443&amp;secret=ee2111222233334444555566667777888862726f777365722e79616e6465782e636f6d"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=he.67.mtproto.ru&amp;port=443&amp;secret=ee2111222233334444555566667777888862726f777365722e79616e6465782e636f6d" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="56" data-s="kharazmi-abo-reyhan-bironi-va-dakheli.basalam.info" data-p="443"><td class="n">57</td><td class="srv">kharazmi-abo-reyhan-bironi-va-dakheli.basalam.info<small>:443</small><small> · media.steampowered.com</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=kharazmi-abo-reyhan-bironi-va-dakheli.basalam.info&amp;port=443&amp;secret=ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=kharazmi-abo-reyhan-bironi-va-dakheli.basalam.info&amp;port=443&amp;secret=ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="57" data-s="dl3.soft98.net" data-p="2053"><td class="n">58</td><td class="srv">dl3.soft98.net<small>:2053</small><small> · soft98.ir</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=dl3.soft98.net&amp;port=2053&amp;secret=ee277b571aff100fbafc2e3efebac80b2b736f667439382e6972"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=dl3.soft98.net&amp;port=2053&amp;secret=ee277b571aff100fbafc2e3efebac80b2b736f667439382e6972" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="58" data-s="daemi.net.masnavi.info" data-p="443"><td class="n">59</td><td class="srv">daemi.net.masnavi.info<small>:443</small><small> · media.steampowered.com</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=daemi.net.masnavi.info&amp;port=443&amp;secret=ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=daemi.net.masnavi.info&amp;port=443&amp;secret=ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr>
-<tr class="" data-i="59" data-s="arizo6pro.basalam.info" data-p="443"><td class="n">60</td><td class="srv">arizo6pro.basalam.info<small>:443</small><small> · media.steampowered.com</small></td><td><span class="st up"><span class="dot"></span>在线可用</span></td><td class="act"><a href="tg://proxy?server=arizo6pro.basalam.info&amp;port=443&amp;secret=ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d"><button class="s o">连接</button></a> <a class="hide-m" href="https://t.me/proxy?server=arizo6pro.basalam.info&amp;port=443&amp;secret=ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d" target="_blank" rel="nofollow"><button class="s g">t.me</button></a> <button class="s g" onclick="ping(this.closest('tr'))">检测</button></td></tr></tbody></table>
-<p style="margin-top:14px"><a href="https://tgmtproxy.github.io/mtproxy/proxy.html"><button>显示全部 900 台服务器</button></a></p>
-<h2>如何挑一小时后仍然可用的代理</h2>
-<p>「在线可用」表示该服务器接受了我们主机的连接，fake-TLS 密钥还通过了 MTProto 握手。「无响应」表示服务器不可达。要确认服务器在你那边是否可用，请点「从我的设备全部检测」。</p>
-<p>如果 Telegram 能打开但媒体加载很慢，通常不是代理的问题，而是运营商对第三方流量限速。可以换用列表里的另一台服务器，或改用 fake-TLS 代理（密钥以 <code>ee</code>开头）——其流量看起来就像在正常访问链接中的网站（普通 HTTPS）。</p>
-<h2>如何连接 MTProxy</h2>
-<ol style="padding-left:22px"><li>点击所选服务器旁的「连接」——Telegram 会自动打开。</li><li>在弹出的窗口中确认添加代理。</li><li>检查“设置 → 数据和存储 → 代理”中是否已勾选“使用代理”。</li><li>如果消息发不出去——回到本页换下一台服务器。</li></ol>
-<p>在电脑上，链接 <code>tg://proxy</code> 会被已安装的 Telegram Desktop 接管；如果打开的是空白标签页，请改用 t.me 按钮——它会进入 Telegram 页面，由页面把代理传给应用。</p>
-<h2>常见问题</h2><div class="box faq"><details><summary>什么是 MTProxy？有什么用？</summary><p>MTProxy 是 MTProto 协议的代理服务器，Telegram 正运行在该协议上。当运营商或网络打不开 Telegram 时就需要它：流量先发往代理，再由代理连接 Telegram 服务器。无需任何应用，点一下 tg://proxy 链接即可完成配置。</p></details><details><summary>如何连接列表中的代理？</summary><p>点击服务器旁的「连接」：Telegram 会打开并询问是否添加代理。确认后，设置里会出现带该服务器的「代理」项。在电脑上，t.me/proxy 链接效果相同。</p></details><details><summary>“已通过握手确认”是什么意思？</summary><p>我们的服务器使用该代理的密钥（fake-TLS）亲自完成了 MTProto 握手并得到正确响应。这比“端口开放”可靠得多：端口开放可能只是个占位网站，而只有真正的 MTProxy 才能完成握手。</p></details><details><summary>为什么你们检测有响应，我这边却没有？</summary><p>我们的检测来自数据中心，而「检测」按钮是从你的设备、经你的网络发起的。运营商可能屏蔽其中部分服务器，所以你自己的检测结果才最关键——请点「从我的设备全部检测」。</p></details><details><summary>列表多久更新一次？</summary><p>每小时一次：从公开来源和频道收集链接，按地址、端口和密钥去重，逐台检测，只发布有响应的服务器。失效服务器会自动移出列表。</p></details><details><summary>代理突然失效了怎么办？</summary><p>重新打开本页——列表每小时都是新的。换一台标着「在线可用」的服务器。如果全部无响应，可能是运营商做了深度过滤，此时需要使用 VPN。</p></details></div>
-<div class="box"><b>我们的镜像——已验证可用性的 Lite64 代理</b><div class="net" style="margin-top:8px"><a href="https://downloadeconomichide.github.io/" target="_blank" rel="noopener">Telegram MTProxy——2026 可用代理</a><a href="https://civilwalrusprime.github.io/" target="_blank" rel="noopener">免费 Telegram MTProto 代理</a><a href="https://minilawmakerguard.github.io/" target="_blank" rel="noopener">无屏蔽 Telegram 代理</a><a href="https://watchnecromancer79.github.io/" target="_blank" rel="noopener">已验证的 Telegram 可用代理</a><a href="https://arcattorneywire.github.io/" target="_blank" rel="noopener">MTProxy 服务器——快速代理</a><a href="https://weldemperorhypnotize.github.io/" target="_blank" rel="noopener">Telegram 代理 2026 — 在线 MTProxy</a><a href="https://millicoppersmith.github.io/" target="_blank" rel="noopener">突破 Telegram 封锁的代理</a><a href="https://masscommandersouk.github.io/" target="_blank" rel="noopener">最新 Telegram MTProxy</a><a href="https://violetyuheat20.github.io/" target="_blank" rel="noopener">Telegram proxy list——俄罗斯服务器</a><a href="https://jointerrapindefeat.github.io/" target="_blank" rel="noopener">Telegram 快速代理</a><a href="https://worlddisclose.github.io/" target="_blank" rel="noopener">快速灯塔 — Telegram 代理</a><a href="https://barriermessenger.github.io/" target="_blank" rel="noopener">快速目录 — 可用 MTProxy</a><a href="https://crystalteacherpierce.github.io/" target="_blank" rel="noopener">快速节点 — MTProto 代理列表</a><a href="https://gammaengineerconsole.github.io/" target="_blank" rel="noopener">快速端口 — Telegram 代理</a><a href="https://patchcolonel.github.io/" target="_blank" rel="noopener">快速列表 — 已验证 MTProxy</a><a href="https://platoonconjurerburst.github.io/" target="_blank" rel="noopener">最新灯塔 — TG 快速代理</a><a href="https://cindermediator.github.io/" target="_blank" rel="noopener">最新目录 — Telegram 在线代理</a><a href="https://bordersigranary.github.io/" target="_blank" rel="noopener">最新节点 — 最新 MTProxy</a><a href="https://joinsandbushing.github.io/" target="_blank" rel="noopener">最新端口 — Telegram 代理</a><a href="https://manateeminaret.github.io/" target="_blank" rel="noopener">最新列表 — 可用 MTProxy</a><a href="https://plastergradetram.github.io/" target="_blank" rel="noopener">在线灯塔 — MTProto 代理列表</a><a href="https://pennantchevalue.github.io/" target="_blank" rel="noopener">在线目录 — Telegram 代理</a><a href="https://avenuetopergola.github.io/" target="_blank" rel="noopener">在线节点 — 已验证 MTProxy</a><a href="https://alchemistvision.github.io/" target="_blank" rel="noopener">在线端口 — TG 快速代理</a><a href="https://lineflowgrab59.github.io/" target="_blank" rel="noopener">在线列表 — Telegram 在线代理</a><a href="https://layerwarlordvalue.github.io/" target="_blank" rel="noopener">诚信灯塔 — 最新 MTProxy</a><a href="https://tilecoppersmith.github.io/" target="_blank" rel="noopener">诚信目录 — Telegram 代理</a><a href="https://shinobiplaza.github.io/" target="_blank" rel="noopener">诚信节点 — 可用 MTProxy</a><a href="https://clampicepiazza.github.io/" target="_blank" rel="noopener">诚信端口 — MTProto 代理列表</a><a href="https://openlightningfix.github.io/" target="_blank" rel="noopener">诚信列表 — Telegram 代理</a><a href="https://crewsalamanderbear.github.io/" target="_blank" rel="noopener">晴空灯塔 — 已验证 MTProxy</a><a href="https://gigaoctopusslicer.github.io/" target="_blank" rel="noopener">晴空目录 — TG 快速代理</a><a href="https://peasantappreciate.github.io/" target="_blank" rel="noopener">晴空节点 — Telegram 在线代理</a><a href="https://chambertreasurer.github.io/" target="_blank" rel="noopener">晴空端口 — 最新 MTProxy</a><a href="https://exatrooperheed.github.io/" target="_blank" rel="noopener">晴空列表 — Telegram 代理</a><a href="https://frequencyregentwharf.github.io/" target="_blank" rel="noopener">都市灯塔 — 可用 MTProxy</a><a href="https://bisonwarehouse96.github.io/" target="_blank" rel="noopener">都市目录 — MTProto 代理列表</a><a href="https://snatchvanquisher.github.io/" target="_blank" rel="noopener">都市节点 — Telegram 代理</a><a href="https://clampworld87.github.io/" target="_blank" rel="noopener">都市端口 — 已验证 MTProxy</a><a href="https://calmarrowprosper.github.io/" target="_blank" rel="noopener">都市列表 — TG 快速代理</a><a href="https://drakecarrierdefeat.github.io/" target="_blank" rel="noopener">静谧灯塔 — Telegram 在线代理</a><a href="https://ohmglaziertrim.github.io/" target="_blank" rel="noopener">静谧目录 — 最新 MTProxy</a><a href="https://serpenttermite.github.io/" target="_blank" rel="noopener">静谧节点 — Telegram 代理</a><a href="https://nightpremiershanty.github.io/" target="_blank" rel="noopener">静谧端口 — 可用 MTProxy</a><a href="https://capitalchunintrellis.github.io/" target="_blank" rel="noopener">静谧列表 — MTProto 代理列表</a><a href="https://zenithstationquest66.github.io/" target="_blank" rel="noopener">森林灯塔 — Telegram 代理</a><a href="https://quartzcounselor.github.io/" target="_blank" rel="noopener">森林目录 — 已验证 MTProxy</a><a href="https://rimwithinhack.github.io/" target="_blank" rel="noopener">森林节点 — TG 快速代理</a><a href="https://citymarshalportico.github.io/" target="_blank" rel="noopener">森林端口 — Telegram 在线代理</a><a href="https://hairdresserderrick.github.io/" target="_blank" rel="noopener">森林列表 — 最新 MTProxy</a><a href="https://savagebuilderfall52.github.io/" target="_blank" rel="noopener">代理雷达 — 可用 MTProxy</a><a href="https://facetbackerplain.github.io/" target="_blank" rel="noopener">代理监控 — 可用 MTProxy</a><a href="https://tankwindhallway89.github.io/" target="_blank" rel="noopener">代理速览 — 可用 MTProxy</a><a href="https://discordcontrol.github.io/" target="_blank" rel="noopener">代理清单 — 可用 MTProxy</a><a href="https://planetkacreate.github.io/" target="_blank" rel="noopener">代理控制台 — 可用 MTProxy</a><a href="https://nucleusstarfishorbit.github.io/" target="_blank" rel="noopener">代理概览 — 可用 MTProxy</a><a href="https://craftsmanstage.github.io/" target="_blank" rel="noopener">代理列表 — 可用 MTProxy</a><a href="https://surgenoterecord.github.io/" target="_blank" rel="noopener">代理哨兵 — 可用 MTProxy</a><a href="https://apexsupplierdash.github.io/" target="_blank" rel="noopener">代理值班 — 可用 MTProxy</a><a href="https://slatewindstitch.github.io/" target="_blank" rel="noopener">代理路标 — 可用 MTProxy</a><a href="https://patronmarina.github.io/" target="_blank" rel="noopener">代理导航 — 可用 MTProxy</a><a href="https://laneseacompress.github.io/" target="_blank" rel="noopener">代理罗盘 — 可用 MTProxy</a><a href="https://retrobusinesssieve.github.io/" target="_blank" rel="noopener">代理防线 — 可用 MTProxy</a><a href="https://stuccohealerpulse.github.io/" target="_blank" rel="noopener">代理前哨 — 可用 MTProxy</a><a href="https://barrierranger.github.io/" target="_blank" rel="noopener">代理灯塔 — 可用 MTProxy</a><a href="https://ultracluplaza.github.io/" target="_blank" rel="noopener">代理信号 — 可用 MTProxy</a><a href="https://codezumriddle.github.io/" target="_blank" rel="noopener">代理电波 — 可用 MTProxy</a><a href="https://destroyerderenergy.github.io/" target="_blank" rel="noopener">代理追踪 — 可用 MTProxy</a><a href="https://metropoliscaliph.github.io/" target="_blank" rel="noopener">代理扫描 — 可用 MTProxy</a><a href="https://natureiecycle.github.io/" target="_blank" rel="noopener">代理目录 — 可用 MTProxy</a><a href="https://louseapplaud.github.io/" target="_blank" rel="noopener">代理驿站 — 可用 MTProxy</a><a href="https://limitdentist.github.io/" target="_blank" rel="noopener">代理网关 — 可用 MTProxy</a><a href="https://pulseinhypnotize6.github.io/" target="_blank" rel="noopener">代理支柱 — 可用 MTProxy</a><a href="https://sortcyclecultivate.github.io/" target="_blank" rel="noopener">代理信使 — 可用 MTProxy</a><a href="https://holddragonfly.github.io/" target="_blank" rel="noopener">代理文摘 — 可用 MTProxy</a><a href="https://rooffarmerappraise.github.io/" target="_blank" rel="noopener">MTProxy 雷达 — 可用 MTProxy</a><a href="https://conquerorflamehose.github.io/" target="_blank" rel="noopener">MTProxy 监控 — 可用 MTProxy</a><a href="https://fuchsiaovercover.github.io/" target="_blank" rel="noopener">MTProxy 速览 — 可用 MTProxy</a><a href="https://conjurerregenerate.github.io/" target="_blank" rel="noopener">MTProxy 清单 — 可用 MTProxy</a><a href="https://cheetahcupola.github.io/" target="_blank" rel="noopener">MTProxy 控制台 — 可用 MTProxy</a><a href="https://crossagentpier.github.io/" target="_blank" rel="noopener">MTProxy 概览 — 可用 MTProxy</a><a href="https://vicecheengage.github.io/" target="_blank" rel="noopener">MTProxy 列表 — 可用 MTProxy</a><a href="https://stringrealmdone.github.io/" target="_blank" rel="noopener">MTProxy 哨兵 — 可用 MTProxy</a><a href="https://ninjabeefactory.github.io/" target="_blank" rel="noopener">MTProxy 值班 — 可用 MTProxy</a><a href="https://vanquisherladyjump.github.io/" target="_blank" rel="noopener">MTProxy 路标 — 可用 MTProxy</a><a href="https://leechvanquish.github.io/" target="_blank" rel="noopener">MTProxy 导航 — 可用 MTProxy</a><a href="https://vectorclasschange.github.io/" target="_blank" rel="noopener">MTProxy 罗盘 — 可用 MTProxy</a><a href="https://skintonesoul.github.io/" target="_blank" rel="noopener">MTProxy 防线 — 可用 MTProxy</a><a href="https://screwgretrimmer.github.io/" target="_blank" rel="noopener">MTProxy 前哨 — 可用 MTProxy</a><a href="https://eveningkaiser.github.io/" target="_blank" rel="noopener">MTProxy 灯塔 — 可用 MTProxy</a><a href="https://senseiprincipallabel.github.io/" target="_blank" rel="noopener">MTProxy 信号 — 可用 MTProxy</a><a href="https://nadirgrubbraid.github.io/" target="_blank" rel="noopener">MTProxy 电波 — 可用 MTProxy</a><a href="https://tunnelhelpnotice.github.io/" target="_blank" rel="noopener">MTProxy 追踪 — 可用 MTProxy</a><a href="https://burrowtrailhub.github.io/" target="_blank" rel="noopener">MTProxy 扫描 — 可用 MTProxy</a><a href="https://chambervemoon.github.io/" target="_blank" rel="noopener">MTProxy 目录 — 可用 MTProxy</a><a href="https://specterlegendcutter.github.io/" target="_blank" rel="noopener">MTProxy 驿站 — 可用 MTProxy</a><a href="https://beastdistributor.github.io/" target="_blank" rel="noopener">MTProxy 网关 — 可用 MTProxy</a><a href="https://phasekrafortress.github.io/" target="_blank" rel="noopener">MTProxy 支柱 — 可用 MTProxy</a><a href="https://quakeprincetie.github.io/" target="_blank" rel="noopener">MTProxy 信使 — 可用 MTProxy</a><a href="https://heraldmetro13.github.io/" target="_blank" rel="noopener">MTProxy 文摘 — 可用 MTProxy</a><a href="https://patrolgatortreat.github.io/" target="_blank" rel="noopener">MTProto 雷达 — 可用 MTProxy</a><a href="https://gentlekapath.github.io/" target="_blank" rel="noopener">MTProto 监控 — 可用 MTProxy</a><a href="https://bansheedreamfigure.github.io/" target="_blank" rel="noopener">MTProto 速览 — 可用 MTProxy</a><a href="https://akatsukiidolize.github.io/" target="_blank" rel="noopener">MTProto 清单 — 可用 MTProxy</a><a href="https://troopprefect.github.io/" target="_blank" rel="noopener">MTProto 控制台 — 可用 MTProxy</a><a href="https://domechairmanelevator.github.io/" target="_blank" rel="noopener">MTProto 概览 — 可用 MTProxy</a><a href="https://componentunwrinkle.github.io/" target="_blank" rel="noopener">MTProto 列表 — 可用 MTProxy</a><a href="https://mappenguin15.github.io/" target="_blank" rel="noopener">MTProto 哨兵 — 可用 MTProxy</a><a href="https://flockbasecolonnade.github.io/" target="_blank" rel="noopener">MTProto 值班 — 可用 MTProxy</a><a href="https://nanokingfishervilla.github.io/" target="_blank" rel="noopener">MTProto 路标 — 可用 MTProxy</a><a href="https://coatsectorclamp.github.io/" target="_blank" rel="noopener">MTProto 导航 — 可用 MTProxy</a><a href="https://ohmmajorspark.github.io/" target="_blank" rel="noopener">MTProto 罗盘 — 可用 MTProxy</a><a href="https://damcrewmanadapter.github.io/" target="_blank" rel="noopener">MTProto 防线 — 可用 MTProxy</a><a href="https://centaurflichannel.github.io/" target="_blank" rel="noopener">MTProto 前哨 — 可用 MTProxy</a><a href="https://cyclonelegendcommand.github.io/" target="_blank" rel="noopener">MTProto 灯塔 — 可用 MTProxy</a><a href="https://ridgethundertram.github.io/" target="_blank" rel="noopener">MTProto 信号 — 可用 MTProxy</a><a href="https://championsucceed.github.io/" target="_blank" rel="noopener">MTProto 电波 — 可用 MTProxy</a><a href="https://basaltsealcatalog.github.io/" target="_blank" rel="noopener">MTProto 追踪 — 可用 MTProxy</a><a href="https://admiralportray.github.io/" target="_blank" rel="noopener">MTProto 扫描 — 可用 MTProxy</a><a href="https://lengthaccountantsilo.github.io/" target="_blank" rel="noopener">MTProto 目录 — 可用 MTProxy</a><a href="https://glowakatsukisieve.github.io/" target="_blank" rel="noopener">MTProto 驿站 — 可用 MTProxy</a><a href="https://binarysurgeonflange.github.io/" target="_blank" rel="noopener">MTProto 网关 — 可用 MTProxy</a><a href="https://cavemothbolt.github.io/" target="_blank" rel="noopener">MTProto 支柱 — 可用 MTProxy</a><a href="https://hideguarddesign.github.io/" target="_blank" rel="noopener">MTProto 信使 — 可用 MTProxy</a><a href="https://expertculvert.github.io/" target="_blank" rel="noopener">MTProto 文摘 — 可用 MTProxy</a><a href="https://expertescalator.github.io/" target="_blank" rel="noopener">TG 雷达 — 可用 MTProxy</a><a href="https://dometarantula.github.io/" target="_blank" rel="noopener">TG 监控 — 可用 MTProxy</a><a href="https://chordgeckogap.github.io/" target="_blank" rel="noopener">TG 速览 — 可用 MTProxy</a><a href="https://vanquisherglorify.github.io/" target="_blank" rel="noopener">TG 清单 — 可用 MTProxy</a><a href="https://ashshoutworship.github.io/" target="_blank" rel="noopener">TG 控制台 — 可用 MTProxy</a><a href="https://dragonlordcherish39.github.io/" target="_blank" rel="noopener">TG 概览 — 可用 MTProxy</a><a href="https://boltphoenixteach53.github.io/" target="_blank" rel="noopener">TG 列表 — 可用 MTProxy</a><a href="https://loststonethaw.github.io/" target="_blank" rel="noopener">TG 哨兵 — 可用 MTProxy</a><a href="https://coderollershears.github.io/" target="_blank" rel="noopener">TG 值班 — 可用 MTProxy</a><a href="https://desirepatronuncouple.github.io/" target="_blank" rel="noopener">TG 路标 — 可用 MTProxy</a><a href="https://biomancercrimp.github.io/" target="_blank" rel="noopener">TG 导航 — 可用 MTProxy</a><a href="https://beastsorcereradore46.github.io/" target="_blank" rel="noopener">TG 罗盘 — 可用 MTProxy</a><a href="https://meetteacherlose.github.io/" target="_blank" rel="noopener">TG 防线 — 可用 MTProxy</a><a href="https://retrotradesmanpruner.github.io/" target="_blank" rel="noopener">TG 前哨 — 可用 MTProxy</a><a href="https://hectophirecord.github.io/" target="_blank" rel="noopener">TG 灯塔 — 可用 MTProxy</a><a href="https://geomancergirder.github.io/" target="_blank" rel="noopener">TG 信号 — 可用 MTProxy</a><a href="https://carrierstride.github.io/" target="_blank" rel="noopener">TG 电波 — 可用 MTProxy</a><a href="https://glowaxolotlmarket.github.io/" target="_blank" rel="noopener">TG 追踪 — 可用 MTProxy</a><a href="https://bisoncorrect.github.io/" target="_blank" rel="noopener">TG 扫描 — 可用 MTProxy</a><a href="https://brilliancetierturn.github.io/" target="_blank" rel="noopener">TG 目录 — 可用 MTProxy</a><a href="https://magiczurstudio.github.io/" target="_blank" rel="noopener">TG 驿站 — 可用 MTProxy</a><a href="https://pyramidtacompute.github.io/" target="_blank" rel="noopener">TG 网关 — 可用 MTProxy</a><a href="https://surgeonestate.github.io/" target="_blank" rel="noopener">TG 支柱 — 可用 MTProxy</a><a href="https://smokesupervisor.github.io/" target="_blank" rel="noopener">TG 信使 — 可用 MTProxy</a><a href="https://surfacemacawtruss40.github.io/" target="_blank" rel="noopener">TG 文摘 — 可用 MTProxy</a><a href="https://jellyfishcontemplate.github.io/" target="_blank" rel="noopener">Telegram 雷达 — 可用 MTProxy</a><a href="https://loudatscissors.github.io/" target="_blank" rel="noopener">Telegram 监控 — 可用 MTProxy</a><a href="https://shacklekiwiarm.github.io/" target="_blank" rel="noopener">Telegram 速览 — 可用 MTProxy</a><a href="https://tailshapeboiler82.github.io/" target="_blank" rel="noopener">Telegram 清单 — 可用 MTProxy</a><a href="https://oilmagpiejetty.github.io/" target="_blank" rel="noopener">Telegram 控制台 — 可用 MTProxy</a><a href="https://novacoxswain.github.io/" target="_blank" rel="noopener">Telegram 概览 — 可用 MTProxy</a><a href="https://sidemouserevive.github.io/" target="_blank" rel="noopener">Telegram 列表 — 可用 MTProxy</a><a href="https://tilefromrefinery.github.io/" target="_blank" rel="noopener">Telegram 哨兵 — 可用 MTProxy</a><a href="https://waydreoutfit58.github.io/" target="_blank" rel="noopener">Telegram 值班 — 可用 MTProxy</a><a href="https://royalgrilist.github.io/" target="_blank" rel="noopener">Telegram 路标 — 可用 MTProxy</a><a href="https://vectorcheetahgate.github.io/" target="_blank" rel="noopener">Telegram 导航 — 可用 MTProxy</a><a href="https://operativerititle.github.io/" target="_blank" rel="noopener">Telegram 罗盘 — 可用 MTProxy</a><a href="https://tilecloudshow.github.io/" target="_blank" rel="noopener">Telegram 防线 — 可用 MTProxy</a><a href="https://pinstalkerretreat.github.io/" target="_blank" rel="noopener">Telegram 前哨 — 可用 MTProxy</a><a href="https://minisnipersubway.github.io/" target="_blank" rel="noopener">Telegram 灯塔 — 可用 MTProxy</a><a href="https://wildkriimprove.github.io/" target="_blank" rel="noopener">Telegram 信号 — 可用 MTProxy</a><a href="https://keygovernortouch.github.io/" target="_blank" rel="noopener">Telegram 电波 — 可用 MTProxy</a><a href="https://femtobardprime84.github.io/" target="_blank" rel="noopener">Telegram 追踪 — 可用 MTProxy</a><a href="https://electrondelladarn.github.io/" target="_blank" rel="noopener">Telegram 扫描 — 可用 MTProxy</a><a href="https://knotcholevel.github.io/" target="_blank" rel="noopener">Telegram 目录 — 可用 MTProxy</a><a href="https://auditorcrater.github.io/" target="_blank" rel="noopener">Telegram 驿站 — 可用 MTProxy</a><a href="https://gigaglugaze51.github.io/" target="_blank" rel="noopener">Telegram 网关 — 可用 MTProxy</a><a href="https://magicquartermaster.github.io/" target="_blank" rel="noopener">Telegram 支柱 — 可用 MTProxy</a><a href="https://origincyclegirder.github.io/" target="_blank" rel="noopener">Telegram 信使 — 可用 MTProxy</a><a href="https://zettanewtdevelop.github.io/" target="_blank" rel="noopener">Telegram 文摘 — 可用 MTProxy</a></div></div>
-<div class="box"><b>更多相关站点</b><div class="net" style="margin-top:8px"><a href="https://mtprotohelp.com/">Telegram 打不开怎么办</a><a href="https://mtproto.fyi/mtproto-spisok/">MTProto 代理列表</a><a href="https://mtproxy.fyi/">可用 MTProto 代理列表</a><a href="https://tgproxy.fyi/proksi-tg/">TG 代理</a><a href="https://senseiprincipallabel.github.io/">Telegram 可用代理</a><a href="https://crossagentpier.github.io/">Telegram 代理</a><a href="https://vectorclasschange.github.io/">Telegram 代理</a><a href="https://coatsectorclamp.github.io/">Telegram 可用代理</a><a href="https://auditorcrater.github.io/">Telegram 代理</a><a href="https://cindermediator.github.io/">最新 MTProxy</a><a href="https://dragonlordcherish39.github.io/">Telegram 可用代理</a><a href="https://bansheedreamfigure.github.io/">MTProto 代理</a><a href="https://gammaengineerconsole.github.io/">可用代理</a><a href="https://sortcyclecultivate.github.io/">带延迟检测的 Telegram 代理</a><a href="https://proxytelegram.bond/">proxy telegram</a><a href="https://vanquisherladyjump.github.io/">Telegram 代理列表</a></div></div>
-<footer>目录每小时自动更新。 最近检测：2026-10-21 08:08（莫斯科时间）。来源：GitHub 公开仓库与 Telegram 公开频道；除公开链接中的地址、端口和密钥外，我们不保存任何数据。 <a href="https://tgmtproxy.github.io/mtproxy/proxies.txt">proxies.txt</a> · <a href="https://tgmtproxy.github.io/mtproxy/proxies.json">proxies.json</a></footer>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Telegram MTProxy 代理榜 · 每小时全量测速排序</title>
+<meta name="description" content="合并两个公开数据源的 Telegram MTProxy（MTProto）代理，每小时全量做 FakeTLS 握手测速，按访问速率排序，并提供最快前 40 个代理的 JSON。">
+<meta name="theme-color" content="#0b1119" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<link rel="canonical" href="https://consoleaiden.github.io/telegram-mtproto-proxy-list/">
+<meta property="og:title" content="Telegram MTProxy 代理榜 · 每小时全量测速">
+<meta property="og:description" content="两源合并去重 + 全量握手测速 + 按速率排序，附最快 40 个代理的 JSON。">
+<meta property="og:url" content="https://consoleaiden.github.io/telegram-mtproto-proxy-list/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_CN">
+<meta name="robots" content="index,follow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%232aabee'/%3E%3Cpath d='M7 15l17-7-3 16-5-4-3 3v-4l8-8-10 7z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="alternate" type="application/json" href="top40.json" title="最快 40 个代理（JSON）">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"WebSite","name":"Telegram MTProxy 代理榜","url":"https://consoleaiden.github.io/telegram-mtproto-proxy-list/","inLanguage":"zh-CN"},
+ {"@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"这些代理是怎么排序的？","acceptedAnswer":{"@type":"Answer","text":"每小时把两个公开数据源的链接合并去重后，对每一条代理发起真实的 MTProto FakeTLS 握手，测量 TCP 建连与握手往返耗时，按总耗时从快到慢排序。前 40 名另外输出为 top40.json。"}},
+  {"@type":"Question","name":"「握手校验通过」是什么意思？","acceptedAnswer":{"@type":"Answer","text":"服务端返回的 ServerHello 摘要与本机用代理密钥算出的 HMAC 一致，说明这台服务器确实认识该密钥，是真正的 MTProxy，而不是把流量回落到了伪装网站。"}},
+  {"@type":"Question","name":"列表多久更新一次？","acceptedAnswer":{"@type":"Answer","text":"每小时一次。工作流重新抓取两个数据源、去重合并、全量测速并重建本页数据；失效代理会排到列表末尾并标记为失效。"}},
+  {"@type":"Question","name":"为什么我这边的速度和排行不一致？","acceptedAnswer":{"@type":"Answer","text":"排行榜里的耗时来自数据中心的测速节点，而「本机检测」是从你自己的网络发起的。运营商线路、出口位置不同，结果自然不同，请以本机检测为准。"}}]}
+]}
+</script>
+<style>
+:root{
+  --bg:#ffffff; --bg-soft:#f5f7fa; --card:#ffffff; --line:#e3e8ef; --line-soft:#eef2f7;
+  --text:#16202c; --muted:#5f6d7e; --accent:#1f9fdc; --accent-soft:rgba(42,171,238,.12);
+  --ok:#16a34a; --warn:#c2760a; --bad:#dc2626;
+  --shadow:0 1px 2px rgba(16,32,54,.05),0 8px 24px rgba(16,32,54,.06);
+}
+html[data-theme="dark"]{
+  --bg:#0b1119; --bg-soft:#101a24; --card:#121b26; --line:#22303f; --line-soft:#1a2532;
+  --text:#e6edf3; --muted:#93a3b5; --accent:#4cbbf7; --accent-soft:rgba(76,187,247,.15);
+  --ok:#3ddc84; --warn:#ffc043; --bad:#ff6b6b;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.28);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",Roboto,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+code{font:.9em ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:var(--bg-soft);padding:1px 5px;border-radius:5px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 18px}
+/* ---------- 顶栏 ---------- */
+.topbar{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+@supports (backdrop-filter:blur(8px)){
+  .topbar{background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:saturate(1.4) blur(10px)}
+}
+.topbar .wrap{display:flex;align-items:center;gap:14px;height:54px}
+.brand{display:flex;align-items:center;gap:9px;font-weight:700;letter-spacing:-.01em}
+.brand svg{flex:none}
+.spacer{flex:1}
+.topnav{display:flex;align-items:center;gap:4px;font-size:.86rem}
+.topnav a{padding:6px 10px;border-radius:8px;color:var(--muted)}
+.topnav a:hover{background:var(--bg-soft);color:var(--text);text-decoration:none}
+.iconbtn{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;
+  border:1px solid var(--line);border-radius:9px;background:transparent;color:var(--muted);cursor:pointer}
+.iconbtn:hover{color:var(--text);background:var(--bg-soft)}
+/* ---------- Hero ---------- */
+.hero{padding:34px 0 4px}
+h1{font-size:1.72rem;line-height:1.3;margin:0 0 10px;letter-spacing:-.02em}
+.lede{color:var(--muted);margin:0;max-width:66ch}
+.stats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:20px 0 0}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.stat dt{font-size:.72rem;color:var(--muted);letter-spacing:.03em;margin:0 0 2px}
+.stat dd{margin:0;font-size:1.16rem;font-weight:700;font-variant-numeric:tabular-nums}
+.stat dd small{font-size:.72rem;font-weight:500;color:var(--muted);margin-left:1px}
+.freshness{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:12px;font-size:.82rem;color:var(--muted)}
+.pill{display:inline-flex;align-items:center;gap:5px;padding:2px 9px;border-radius:999px;
+  font-size:.76rem;font-weight:600;border:1px solid transparent;font-variant-numeric:tabular-nums}
+.pill.live{background:var(--accent-soft);color:var(--accent)}
+.pill.fast{background:rgba(22,163,74,.13);color:var(--ok)}
+.pill.mid{background:rgba(217,119,6,.14);color:var(--warn)}
+.pill.slow{background:rgba(220,38,38,.12);color:var(--bad)}
+.pill.dead{background:var(--bg-soft);color:var(--muted);border-color:var(--line)}
+.pill.stale{background:rgba(220,38,38,.12);color:var(--bad)}
+/* ---------- 区块 ---------- */
+section{margin:36px 0}
+.sec-head{display:flex;align-items:flex-end;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+h2{font-size:1.16rem;margin:0;letter-spacing:-.01em}
+.sec-head p{margin:0;color:var(--muted);font-size:.84rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);overflow:hidden}
+/* ---------- 表格 ---------- */
+.tablewrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.9rem}
+th{position:sticky;top:54px;background:var(--card);z-index:2;text-align:left;padding:10px 12px;
+  font-size:.72rem;font-weight:600;color:var(--muted);letter-spacing:.05em;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:10px 12px;border-bottom:1px solid var(--line-soft);vertical-align:middle}
+tbody tr:last-child td{border-bottom:0}
+tbody tr:hover td{background:var(--bg-soft)}
+.rk{width:50px;font-variant-numeric:tabular-nums}
+.medal{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;
+  font-size:.74rem;font-weight:800;color:var(--muted);background:var(--bg-soft);border:1px solid var(--line)}
+.medal.g1{background:linear-gradient(135deg,#f7cf52,#d4a017);border-color:transparent;color:#3b2a00}
+.medal.g2{background:linear-gradient(135deg,#dbe3ec,#a8b6c6);border-color:transparent;color:#22303f}
+.medal.g3{background:linear-gradient(135deg,#dda173,#b06b3c);border-color:transparent;color:#2b1608}
+.host{font-weight:600;word-break:break-all;line-height:1.35}
+.host .port{color:var(--muted);font-weight:500;font-size:.84rem}
+.tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px}
+.tag{font-size:.68rem;padding:1px 6px;border-radius:5px;background:var(--bg-soft);
+  color:var(--muted);border:1px solid var(--line);white-space:nowrap}
+.tag.p{background:var(--accent-soft);color:var(--accent);border-color:transparent}
+.latcell{min-width:140px}
+.bar{height:4px;border-radius:2px;background:var(--line-soft);margin-top:6px;overflow:hidden}
+.bar i{display:block;height:100%;border-radius:2px;background:var(--accent)}
+.bar i.fastb{background:var(--ok)}.bar i.midb{background:var(--warn)}.bar i.slowb{background:var(--bad)}
+.sub{color:var(--muted);font-size:.75rem;font-variant-numeric:tabular-nums;line-height:1.5}
+.act{white-space:nowrap;text-align:right}
+.btn{display:inline-flex;align-items:center;gap:5px;padding:8px 14px;border-radius:9px;border:1px solid transparent;
+  background:var(--accent);color:#fff;font:inherit;font-size:.86rem;font-weight:600;cursor:pointer;text-decoration:none}
+.btn:hover{filter:brightness(1.06);text-decoration:none}
+.btn.ghost{background:transparent;border-color:var(--line);color:var(--text)}
+.btn.ghost:hover{background:var(--bg-soft)}
+.btn.sm{padding:5px 11px;font-size:.78rem;border-radius:7px}
+.btn.xs{padding:3px 9px;font-size:.74rem;border-radius:6px;background:transparent;border-color:var(--line);color:var(--muted);font-weight:500}
+.btn.xs:hover{color:var(--text);background:var(--bg-soft)}
+.btn.connect{background:var(--accent-soft);color:var(--accent);border-color:transparent}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+/* ---------- 工具条 ---------- */
+.toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:12px 14px;
+  border-bottom:1px solid var(--line);background:var(--card)}
+.search{position:relative;flex:1;min-width:190px}
+.search input{width:100%;padding:8px 12px 8px 32px;border-radius:9px;border:1px solid var(--line);
+  background:var(--bg);color:var(--text);font:inherit;font-size:.86rem}
+.search input:focus{outline:2px solid var(--accent-soft);border-color:var(--accent)}
+.search svg{position:absolute;left:10px;top:50%;transform:translateY(-50%);color:var(--muted)}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{padding:5px 11px;border-radius:999px;border:1px solid var(--line);background:transparent;
+  color:var(--muted);font:inherit;font-size:.8rem;cursor:pointer;white-space:nowrap}
+.chip:hover{color:var(--text);background:var(--bg-soft)}
+.chip[aria-pressed="true"]{background:var(--accent-soft);border-color:transparent;color:var(--accent);font-weight:600}
+select{padding:7px 10px;border-radius:9px;border:1px solid var(--line);background:var(--bg);
+  color:var(--text);font:inherit;font-size:.82rem}
+/* ---------- 提示 / 状态 ---------- */
+.notice{margin:18px 0;padding:14px 16px;border-radius:12px;border:1px solid var(--line);background:var(--card);
+  color:var(--muted);font-size:.88rem}
+.notice.error{border-color:rgba(220,38,38,.35);background:rgba(220,38,38,.06)}
+.notice h3{margin:0 0 6px;font-size:.95rem;color:var(--text)}
+.notice p{margin:6px 0}
+.loadmore{display:flex;justify-content:center;padding:14px}
+.empty{padding:34px 16px;text-align:center;color:var(--muted)}
+/* ---------- 使用说明 / FAQ ---------- */
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.step .n{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:7px;
+  background:var(--accent-soft);color:var(--accent);font-size:.8rem;font-weight:700;margin-bottom:8px}
+.step h3{margin:0 0 4px;font-size:.95rem}
+.step p{margin:0;color:var(--muted);font-size:.86rem}
+.faq details{border-bottom:1px solid var(--line);padding:12px 0}
+.faq details:last-child{border-bottom:0}
+.faq summary{cursor:pointer;font-weight:600;font-size:.92rem}
+.faq p{margin:8px 0 0;color:var(--muted);font-size:.88rem}
+footer{margin:44px 0 60px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:.82rem}
+footer p{margin:6px 0}
+.toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,16px);opacity:0;pointer-events:none;
+  background:var(--text);color:var(--bg);padding:9px 16px;border-radius:999px;font-size:.84rem;font-weight:600;
+  transition:opacity .18s,transform .18s;z-index:50}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+@media (max-width:860px){
+  .stats{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .steps{grid-template-columns:1fr}
+  .hide-sm{display:none}
+}
+@media (max-width:560px){
+  h1{font-size:1.4rem}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .topnav .navtext{display:none}
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <span class="brand">
+      <svg width="22" height="22" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#2aabee"/><path d="M7 15l17-7-3 16-5-4-3 3v-4l8-8-10 7z" fill="#fff"/></svg>
+      MTProxy 代理榜
+    </span>
+    <span class="spacer"></span>
+    <nav class="topnav">
+      <a href="#top40">速度榜</a>
+      <a href="#all">全部代理</a>
+      <a href="top40.json"><span class="navtext">top40.</span>json</a>
+      <a href="proxies.txt"><span class="navtext">proxies.</span>txt</a>
+      <button class="iconbtn" id="theme" type="button" aria-label="切换深色 / 浅色主题" title="切换主题">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero" aria-labelledby="page-title">
+    <h1 id="page-title">Telegram MTProxy 代理榜</h1>
+    <p class="lede">两个公开数据源合并去重 → 每小时对每一条代理做真实 FakeTLS 握手测速 → 按访问速率排序，最快的排在最前面。前 40 名另附 <a href="top40.json">JSON</a>，全量明细在 <a href="proxies.json">proxies.json</a>。</p>
+
+    <dl class="stats" aria-live="polite">
+      <div class="stat"><dt>合并后代理</dt><dd id="s-total">—</dd></div>
+      <div class="stat"><dt>测速存活</dt><dd id="s-alive">—</dd></div>
+      <div class="stat"><dt>握手校验通过</dt><dd id="s-verified">—</dd></div>
+      <div class="stat"><dt>最快可用延迟</dt><dd id="s-fastest">—</dd></div>
+      <div class="stat"><dt>中位延迟</dt><dd id="s-median">—</dd></div>
+    </dl>
+
+    <div class="freshness">
+      <span class="pill live" id="fresh-pill">加载中…</span>
+      <span id="fresh-text">正在读取 proxies.json</span>
+      <span id="source-info"></span>
+    </div>
+  </section>
+
+  <div class="notice error" id="load-error" hidden>
+    <h3>数据没能加载</h3>
+    <p id="load-error-text">页面需要读取同目录下的 <code>proxies.json</code>。</p>
+    <p><a href="proxies.json">proxies.json</a> · <a href="top40.json">top40.json</a> · <a href="proxies.txt">proxies.txt</a></p>
+    <p><button class="btn ghost sm" id="retry" type="button">重新加载</button></p>
+  </div>
+
+  <section id="top40" aria-labelledby="top40-title">
+    <div class="sec-head">
+      <h2 id="top40-title">最快 40 个代理</h2>
+      <p id="top40-sub">延迟 = TCP 建连 + FakeTLS 握手往返</p>
+      <span class="spacer"></span>
+      <button class="btn ghost sm" id="ping-top" type="button">从我的设备检测 Top 40</button>
+      <button class="btn ghost sm" id="export-top" type="button">导出链接</button>
+    </div>
+    <div class="card tablewrap">
+      <table>
+        <thead><tr><th scope="col">#</th><th scope="col">服务器</th><th scope="col">访问速率</th><th scope="col" class="hide-sm">耗时构成</th><th scope="col" style="text-align:right">操作</th></tr></thead>
+        <tbody id="top40-body"><tr><td colspan="5" class="empty">加载中…</td></tr></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="all" aria-labelledby="all-title">
+    <div class="sec-head">
+      <h2 id="all-title">全部代理（两源合并）</h2>
+      <p id="all-sub"></p>
+    </div>
+    <div class="card">
+      <div class="toolbar">
+        <label class="search">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          <input id="q" type="search" placeholder="搜索服务器、端口或密钥前缀" autocomplete="off" aria-label="搜索代理">
+        </label>
+        <div class="chips" role="group" aria-label="筛选">
+          <button class="chip" data-filter="all" aria-pressed="true" type="button">全部</button>
+          <button class="chip" data-filter="alive" aria-pressed="false" type="button">仅存活</button>
+          <button class="chip" data-filter="verified" aria-pressed="false" type="button">校验通过</button>
+          <button class="chip" data-filter="tgmtproxy" aria-pressed="false" type="button">仅主源</button>
+          <button class="chip" data-filter="dubblebyte" aria-pressed="false" type="button">仅次源</button>
+        </div>
+        <select id="sort" aria-label="排序方式">
+          <option value="speed">按访问速率</option>
+          <option value="host">按服务器名</option>
+          <option value="port">按端口</option>
+        </select>
+      </div>
+      <div class="tablewrap">
+        <table>
+          <thead><tr><th scope="col">#</th><th scope="col">服务器</th><th scope="col">访问速率</th><th scope="col" class="hide-sm">来源</th><th scope="col" class="hide-sm">状态</th><th scope="col" style="text-align:right">操作</th></tr></thead>
+          <tbody id="all-body"><tr><td colspan="6" class="empty">加载中…</td></tr></tbody>
+        </table>
+      </div>
+      <div class="loadmore"><button class="btn ghost" id="more" type="button" hidden>加载更多</button></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="how-title">
+    <div class="sec-head"><h2 id="how-title">怎么用</h2></div>
+    <div class="steps">
+      <div class="step"><span class="n">1</span><h3>点「连接」</h3><p>Telegram 会弹窗询问是否添加该代理，确认即可。桌面端也可以用旁边的 <code>t.me</code> 链接。</p></div>
+      <div class="step"><span class="n">2</span><h3>确认已启用</h3><p>设置 → 数据和存储 → 代理，确认「使用代理」已勾选；连不上就换下一个。</p></div>
+      <div class="step"><span class="n">3</span><h3>备几个能用的</h3><p>公共代理随时会失效。建议收藏 2–3 个本机延迟低的，失效时立刻切换。</p></div>
+    </div>
+  </section>
+
+  <section class="faq" aria-labelledby="faq-title">
+    <div class="sec-head"><h2 id="faq-title">常见问题</h2></div>
+    <details open><summary>「访问速率」是怎么测的？</summary>
+      <p>对每条代理发起真实的 MTProto FakeTLS 握手：TCP 建连耗时 + 发出 ClientHello 到收齐服务端 ServerHello / CCS / AppData 的耗时，两者相加即排序用的延迟（毫秒，越小越快）。每台测两次取中位数，避免单次抖动。</p></details>
+    <details><summary>「握手校验通过」是什么意思？</summary>
+      <p>服务端返回的摘要等于 <code>HMAC-SHA256(密钥, 客户端随机数 + 服务端握手包)</code>，说明它确实持有该 secret、是真正的 MTProxy，而不是把请求回落到了伪装网站。这类代理的存活率明显更高。</p></details>
+    <details><summary>为什么我这里的速度和排行不一致？</summary>
+      <p>排行里的耗时来自测速节点（数据中心网络），「本机检测」是从你自己的网络发起的。出口位置、运营商线路不同，结果差异很正常 —— 自己测出来的才最贴近你的体验。</p></details>
+    <details><summary>数据多久更新一次？</summary>
+      <p>每小时一次：重新抓取两个数据源、去重合并、全量测速、重建 <code>proxies.json</code> 与 <code>top40.json</code>。页头会显示本轮数据的时间。</p></details>
+    <details><summary>能直接拿 JSON 用吗？</summary>
+      <p>可以。<a href="top40.json">top40.json</a> 是速率最快的前 40 条，字段包含 <code>server</code>、<code>port</code>、<code>secret</code>、<code>link</code>、<code>latency_ms</code>、<code>sources</code> 等；<a href="proxies.json">proxies.json</a> 是全量明细；<a href="proxies.txt">proxies.txt</a> 是仅含存活条目、已按速率排序的明文列表。</p></details>
+  </section>
+
+  <footer>
+    <p><b>数据来源</b>：<a href="https://github.com/tgmtproxy/telegram-mtproto-proxy-list" target="_blank" rel="noopener">tgmtproxy</a>（主源） · <a href="https://github.com/dubblebyte/free-mtproto-proxies" target="_blank" rel="noopener">dubblebyte</a>（次源）。合并、测速与排序由 GitHub Actions 每小时执行一次。</p>
+    <p><b>免责声明</b>：所有代理均为互联网公开收集，可用性、速度与安全性无任何担保；不要通过公共代理传输敏感信息。本项目只做数据聚合与测速，不运营任何代理服务器。</p>
+    <p><span id="build-info">数据加载中…</span> · <a href="https://github.com/consoleaiden/telegram-mtproto-proxy-list" target="_blank" rel="noopener">源码</a></p>
+  </footer>
+</main>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
 <script>
-const TIMEOUT=5000,BATCH=8;let sortPing=false,checking=false;
-const rows=()=>[...document.querySelectorAll('tbody tr')];
-function badge(tr,cls,txt){const b=tr.querySelector('.st');b.className='st '+cls;b.innerHTML='<span class="dot"></span>'+txt;}
-async function ping(tr){const s=tr.dataset.s,p=tr.dataset.p;
- // 自有服务器每 10 秒从我们主机检测一次——受 DPI 影响，浏览器端 fetch 的耗时不可靠，因此不重复检测
- if(tr.classList.contains('ours')){const b=tr.querySelector('.st');b.className='st up';stats();return;}
- badge(tr,'chk','检测中…');const t0=performance.now();const ctl=new AbortController();const to=setTimeout(()=>ctl.abort(),TIMEOUT);
- try{await fetch('https://'+s+':'+p+'/?_='+Date.now(),{mode:'no-cors',cache:'no-store',signal:ctl.signal});badge(tr,'up','在线可用');}
- catch(e){if(performance.now()-t0<TIMEOUT-50){badge(tr,'up','在线可用');}else{badge(tr,'down','无响应');}}
- clearTimeout(to);stats();}
-async function checkAll(){if(checking)return;checking=true;const b=document.getElementById('all');b.disabled=true;b.textContent='检测中…';const r=rows();for(let i=0;i<r.length;i+=BATCH){await Promise.all(r.slice(i,i+BATCH).map(ping));}b.disabled=false;b.textContent='从我的设备全部检测';checking=false;}
-function stats(){const r=rows(),up=r.filter(t=>t.querySelector('.st').classList.contains('up')).length;document.getElementById('stat').innerHTML='<b>'+r.length+'</b> 台 · ✓ <b style="color:var(--ok)">'+up+'</b> 台对你有响应';}
-function sortByPing(){sortPing=!sortPing;const tb=document.querySelector('tbody');const r=rows();r.sort((a,b)=>{const oa=a.classList.contains('ours')?0:1,ob=b.classList.contains('ours')?0:1;if(oa!==ob)return oa-ob;if(!sortPing)return a.dataset.i-b.dataset.i;const pa=a.dataset.ping?+a.dataset.ping:1e9,pb=b.dataset.ping?+b.dataset.ping:1e9;return pa-pb;});r.forEach((t,i)=>{tb.appendChild(t);t.querySelector('.n').textContent=i+1;});}
-function copy(t,btn){navigator.clipboard&&navigator.clipboard.writeText(t).then(()=>{const o=btn.textContent;btn.textContent='✓';setTimeout(()=>btn.textContent=o,1200);});}
-</script></body></html>
+(function () {
+  'use strict';
+
+  var PAGE_SIZE = 50;
+  var TOP_N = 40;
+  var LOCAL_PING_TIMEOUT = 5000;
+
+  var state = {
+    data: null,
+    filter: 'all',
+    query: '',
+    sort: 'speed',
+    shown: PAGE_SIZE,
+    localPing: Object.create(null)
+  };
+
+  function el(id) { return document.getElementById(id); }
+
+  /* ---------------- 主题 ---------------- */
+  (function initTheme() {
+    var saved = null;
+    try { saved = localStorage.getItem('mtproxy-theme'); } catch (e) {}
+    var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    document.documentElement.setAttribute('data-theme', saved || (prefersDark ? 'dark' : 'light'));
+  })();
+
+  el('theme').addEventListener('click', function () {
+    var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    try { localStorage.setItem('mtproxy-theme', next); } catch (e) {}
+  });
+
+  /* ---------------- 工具 ---------------- */
+  function esc(value) {
+    return String(value == null ? '' : value).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  function ms(value) {
+    if (value == null || isNaN(value)) return '—';
+    return Math.round(value) + ' ms';
+  }
+
+  function when(iso) {
+    var date = new Date(iso);
+    if (isNaN(date.getTime())) return '未知时间';
+    try {
+      return date.toLocaleString('zh-CN', {
+        timeZone: 'Asia/Shanghai', hour12: false,
+        year: 'numeric', month: '2-digit', day: '2-digit',
+        hour: '2-digit', minute: '2-digit', second: '2-digit'
+      });
+    } catch (e) {
+      return date.toISOString().replace('T', ' ').slice(0, 19) + ' UTC';
+    }
+  }
+
+  function ago(iso) {
+    var diff = Date.now() - new Date(iso).getTime();
+    if (isNaN(diff)) return '';
+    var minutes = Math.max(0, Math.round(diff / 60000));
+    if (minutes < 1) return '刚刚更新';
+    if (minutes < 60) return minutes + ' 分钟前更新';
+    return Math.round(minutes / 60) + ' 小时前更新';
+  }
+
+  var toastTimer = null;
+  function toast(text) {
+    var node = el('toast');
+    node.textContent = text;
+    node.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { node.classList.remove('show'); }, 1600);
+  }
+
+  function copy(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(text).then(function () { toast('已复制链接'); },
+        function () { toast('复制失败，请手动选择'); });
+    }
+    var area = document.createElement('textarea');
+    area.value = text;
+    area.setAttribute('readonly', '');
+    area.style.position = 'fixed';
+    area.style.opacity = '0';
+    document.body.appendChild(area);
+    area.select();
+    try { document.execCommand('copy'); toast('已复制链接'); } catch (e) { toast('复制失败，请手动选择'); }
+    document.body.removeChild(area);
+    return Promise.resolve();
+  }
+
+  var SOURCE_LABELS = { tgmtproxy: '主源', dubblebyte: '次源' };
+
+  function sourceTags(item, extra) {
+    var sources = item.sources || [];
+    var html = sources.map(function (id, index) {
+      return '<span class="tag' + (index === 0 ? ' p' : '') + '">' + esc(SOURCE_LABELS[id] || id) + '</span>';
+    }).join('') + (extra || '');
+    return html ? '<div class="tags">' + html + '</div>' : '';
+  }
+
+  function latencyClass(value, fastest, slowest) {
+    if (value == null) return 'dead';
+    if (!fastest || !slowest || slowest <= fastest) return 'fast';
+    var ratio = (value - fastest) / (slowest - fastest);
+    return ratio <= 0.34 ? 'fast' : (ratio <= 0.7 ? 'mid' : 'slow');
+  }
+
+  function localNote(item) {
+    var local = state.localPing[item.link];
+    return local ? '<div class="sub local">本机 ' + esc(local) + '</div>' : '';
+  }
+
+  function latencyCell(item, fastest, slowest) {
+    if (!item.alive || item.latency_ms == null) {
+      return '<div class="latcell"><span class="pill dead">失效</span>' +
+        (item.error ? '<div class="sub">' + esc(item.error) + '</div>' : '') + '</div>';
+    }
+    var cls = latencyClass(item.latency_ms, fastest, slowest);
+    var width = 8;
+    if (fastest != null && slowest != null && slowest > fastest) {
+      width = 8 + Math.round((item.latency_ms - fastest) / (slowest - fastest) * 92);
+    }
+    return '<div class="latcell"><span class="pill ' + cls + '">' + ms(item.latency_ms) + '</span>' +
+      '<div class="bar"><i class="' + cls + 'b" style="width:' + width + '%"></i></div>' +
+      localNote(item) + '</div>';
+  }
+
+  function actions(item) {
+    if (!item.alive) {
+      return '<button class="btn xs" type="button" data-copy="' + esc(item.link) + '">复制链接</button>';
+    }
+    var tg = 'tg://proxy?server=' + encodeURIComponent(item.server) +
+      '&port=' + item.port + '&secret=' + encodeURIComponent(item.secret);
+    return '<a class="btn sm connect" href="' + esc(tg) + '">连接</a> ' +
+      '<a class="btn sm ghost hide-sm" href="' + esc(item.link) + '" target="_blank" rel="nofollow noopener">t.me</a> ' +
+      '<button class="btn xs" type="button" data-ping="' + esc(item.link) + '" title="从本机测一次可达性与耗时">检测</button>';
+  }
+
+  function row(item, options) {
+    var opts = options || {};
+    var medal = item.rank <= 3 ? ' g' + item.rank : '';
+    var cells = [
+      '<td class="rk"><span class="medal' + medal + '">' + item.rank + '</span></td>',
+      '<td class="host">' + esc(item.server) + ' <span class="port">:' + item.port + '</span>' +
+        (opts.top ? sourceTags(item, item.alive && !item.verified ? '<span class="tag">未校验</span>' : '') : '') + '</td>',
+      '<td>' + latencyCell(item, opts.fastest, opts.slowest) + '</td>'
+    ];
+    if (opts.detail) {
+      cells.push('<td class="hide-sm sub">' +
+        (item.alive ? '建连 ' + ms(item.connect_ms) + '<br>握手 ' + ms(item.tls_ms) : '—') + '</td>');
+    }
+    if (opts.source) {
+      cells.push('<td class="hide-sm">' + sourceTags(item) + '</td>');
+    }
+    if (opts.status) {
+      cells.push('<td class="hide-sm">' + (item.alive
+        ? (item.verified ? '<span class="pill fast">可用 · 校验通过</span>' : '<span class="pill mid">可用</span>')
+        : '<span class="pill dead">失效</span>') + '</td>');
+    }
+    cells.push('<td class="act">' + actions(item) + '</td>');
+    return '<tr data-link="' + esc(item.link) + '">' + cells.join('') + '</tr>';
+  }
+
+  /* ---------------- 统计 ---------------- */
+  function renderStats(data) {
+    var stats = data.stats || {};
+    el('s-total').innerHTML = (stats.tested != null ? stats.tested : '—') +
+      (stats.tested ? ' <small>条</small>' : '');
+    el('s-alive').innerHTML = (stats.alive != null ? stats.alive : '—') +
+      (stats.alive != null ? ' <small>条</small>' : '');
+    el('s-verified').innerHTML = (stats.verified != null ? stats.verified : '—') +
+      (stats.verified != null ? ' <small>条</small>' : '');
+    el('s-fastest').innerHTML = (stats.fastest_ms != null ? Math.round(stats.fastest_ms) : '—') +
+      (stats.fastest_ms != null ? ' <small>ms</small>' : '');
+    el('s-median').innerHTML = (stats.median_ms != null ? Math.round(stats.median_ms) : '—') +
+      (stats.median_ms != null ? ' <small>ms</small>' : '');
+
+    var age = (Date.now() - new Date(data.generated_at).getTime()) / 3600000;
+    var stale = isNaN(age) || age > 3;
+    var pill = el('fresh-pill');
+    pill.className = 'pill ' + (stale ? 'stale' : 'live');
+    pill.textContent = stale ? '数据可能已过期' : '● 数据新鲜';
+    el('fresh-text').textContent = when(data.generated_at) + '（UTC+8） · ' + ago(data.generated_at);
+    el('build-info').textContent = '本轮测速 ' + when(data.generated_at) + '（UTC+8）';
+    el('all-sub').textContent = '共 ' + (stats.tested || 0) + ' 条，按访问速率从快到慢排序';
+
+    var sources = stats.sources || {};
+    var parts = Object.keys(SOURCE_LABELS).filter(function (id) {
+      return sources[id] != null;
+    }).map(function (id) {
+      return SOURCE_LABELS[id] + ' ' + sources[id] + ' 条';
+    });
+    el('source-info').textContent = parts.length ? '· 来源：' + parts.join(' · ') : '';
+  }
+
+  /* ---------------- 列表 ---------------- */
+  function matches(item, filter) {
+    if (filter === 'alive') return !!item.alive;
+    if (filter === 'verified') return !!item.verified;
+    if (filter === 'tgmtproxy' || filter === 'dubblebyte') {
+      return (item.sources || []).indexOf(filter) !== -1;
+    }
+    return true;
+  }
+
+  function view() {
+    var data = state.data;
+    if (!data) return [];
+    var query = state.query.trim().toLowerCase();
+    var items = (data.proxies || []).filter(function (item) {
+      if (!matches(item, state.filter)) return false;
+      if (!query) return true;
+      return (item.server || '').toLowerCase().indexOf(query) !== -1 ||
+        String(item.port) === query ||
+        (item.secret || '').toLowerCase().indexOf(query) !== -1;
+    });
+
+    if (state.sort === 'host') {
+      return items.slice().sort(function (a, b) { return String(a.server).localeCompare(String(b.server)); });
+    }
+    if (state.sort === 'port') {
+      return items.slice().sort(function (a, b) { return a.port - b.port || a.rank - b.rank; });
+    }
+    return items;
+  }
+
+  function aliveBounds(items) {
+    var values = items.filter(function (item) {
+      return item.alive && item.latency_ms != null;
+    }).map(function (item) { return item.latency_ms; });
+    if (!values.length) return [null, null];
+    return [Math.min.apply(null, values), Math.max.apply(null, values)];
+  }
+
+  function renderTop(data) {
+    var alive = (data.proxies || []).filter(function (item) {
+      return item.alive && item.latency_ms != null;
+    }).slice(0, TOP_N);
+    var body = el('top40-body');
+    if (!alive.length) {
+      body.innerHTML = '<tr><td colspan="5" class="empty">本轮没有可用的代理，稍后再来看</td></tr>';
+      el('top40-sub').textContent = '本轮测速没有存活代理';
+      return;
+    }
+    var bounds = aliveBounds(alive);
+    body.innerHTML = alive.map(function (item) {
+      return row(item, { top: true, detail: true, fastest: bounds[0], slowest: bounds[1] });
+    }).join('');
+    el('top40-sub').textContent = '延迟 = TCP 建连 + FakeTLS 握手往返 · 最快 ' + ms(bounds[0]);
+  }
+
+  function renderAll() {
+    if (!state.data) return;
+    var items = view();
+    var body = el('all-body');
+    if (!items.length) {
+      body.innerHTML = '<tr><td colspan="6" class="empty">没有符合条件的代理</td></tr>';
+      el('more').hidden = true;
+      return;
+    }
+    var bounds = aliveBounds(items);
+    var slice = items.slice(0, state.shown);
+    body.innerHTML = slice.map(function (item) {
+      return row(item, { source: true, status: true, fastest: bounds[0], slowest: bounds[1] });
+    }).join('');
+
+    var more = el('more');
+    more.hidden = items.length <= state.shown;
+    more.textContent = '加载更多（已显示 ' + slice.length + ' / ' + items.length + '）';
+  }
+
+  function render() {
+    if (!state.data) return;
+    renderTop(state.data);
+    renderAll();
+  }
+
+  /* ---------------- 本机检测 ---------------- */
+  function markLocal(link, text) {
+    var rows = document.querySelectorAll('tr[data-link]');
+    for (var i = 0; i < rows.length; i += 1) {
+      if (rows[i].getAttribute('data-link') !== link) continue;
+      var cell = rows[i].querySelector('.latcell');
+      if (!cell) continue;
+      var note = cell.querySelector('.local');
+      if (!note) {
+        note = document.createElement('div');
+        note.className = 'sub local';
+        cell.appendChild(note);
+      }
+      note.textContent = '本机 ' + text;
+    }
+  }
+
+  function localPing(link) {
+    var parts = link.match(/server=([^&]+)&port=(\d+)/);
+    if (!parts) return Promise.resolve(null);
+    var url = 'https://' + decodeURIComponent(parts[1]) + ':' + parts[2] + '/?_=' + Date.now();
+    var now = function () { return (window.performance && performance.now) ? performance.now() : Date.now(); };
+    var started = now();
+    var controller = typeof AbortController === 'function' ? new AbortController() : null;
+    var timer = setTimeout(function () { if (controller) controller.abort(); }, LOCAL_PING_TIMEOUT);
+
+    return fetch(url, { mode: 'no-cors', cache: 'no-store', signal: controller ? controller.signal : undefined })
+      .then(function () {
+        return Math.round(now() - started) + ' ms（可达）';
+      }, function () {
+        var elapsed = now() - started;
+        // no-cors 访问非 HTTP 服务通常会被快速中断，快速失败同样说明端口有响应
+        return elapsed < LOCAL_PING_TIMEOUT - 100 ? Math.round(elapsed) + ' ms（有响应）' : null;
+      })
+      .then(function (result) {
+        clearTimeout(timer);
+        if (result) {
+          state.localPing[link] = result;
+          markLocal(link, result);
+        } else {
+          toast('本机无响应，该代理可能对你不通');
+        }
+        return result;
+      });
+  }
+
+  /* ---------------- 事件 ---------------- */
+  document.addEventListener('click', function (event) {
+    var copyBtn = event.target.closest('[data-copy]');
+    if (copyBtn) { copy(copyBtn.getAttribute('data-copy')); return; }
+
+    var pingBtn = event.target.closest('[data-ping]');
+    if (pingBtn) {
+      pingBtn.disabled = true;
+      pingBtn.textContent = '检测中';
+      localPing(pingBtn.getAttribute('data-ping')).then(function () {
+        pingBtn.disabled = false;
+        pingBtn.textContent = '检测';
+      });
+    }
+  });
+
+  el('q').addEventListener('input', function (event) {
+    state.query = event.target.value;
+    state.shown = PAGE_SIZE;
+    renderAll();
+  });
+
+  Array.prototype.forEach.call(document.querySelectorAll('.chip'), function (chip) {
+    chip.addEventListener('click', function () {
+      Array.prototype.forEach.call(document.querySelectorAll('.chip'), function (other) {
+        other.setAttribute('aria-pressed', String(other === chip));
+      });
+      state.filter = chip.getAttribute('data-filter');
+      state.shown = PAGE_SIZE;
+      renderAll();
+    });
+  });
+
+  el('sort').addEventListener('change', function (event) {
+    state.sort = event.target.value;
+    state.shown = PAGE_SIZE;
+    renderAll();
+  });
+
+  el('more').addEventListener('click', function () {
+    state.shown += PAGE_SIZE;
+    renderAll();
+  });
+
+  el('ping-top').addEventListener('click', function () {
+    var button = this;
+    if (button.disabled) return;
+    button.disabled = true;
+    var alive = (state.data ? state.data.proxies : []).filter(function (item) {
+      return item.alive && item.latency_ms != null;
+    }).slice(0, TOP_N);
+    var index = 0;
+    function step() {
+      if (index >= alive.length) {
+        button.disabled = false;
+        button.textContent = '从我的设备检测 Top 40';
+        toast('本机检测完成');
+        return;
+      }
+      var batch = alive.slice(index, index + 4);
+      index += batch.length;
+      button.textContent = '检测中 ' + Math.min(index, alive.length) + '/' + alive.length;
+      Promise.all(batch.map(function (item) { return localPing(item.link); })).then(step);
+    }
+    step();
+  });
+
+  el('export-top').addEventListener('click', function () {
+    var alive = (state.data ? state.data.proxies : []).filter(function (item) {
+      return item.alive && item.latency_ms != null;
+    }).slice(0, TOP_N);
+    if (!alive.length) { toast('没有可导出的代理'); return; }
+    var text = alive.map(function (item) {
+      return item.link + '  # ' + Math.round(item.latency_ms) + ' ms';
+    }).join('\n');
+    var blob = new Blob([text + '\n'], { type: 'text/plain;charset=utf-8' });
+    var url = URL.createObjectURL(blob);
+    var anchor = document.createElement('a');
+    anchor.href = url;
+    anchor.download = 'top40.txt';
+    document.body.appendChild(anchor);
+    anchor.click();
+    document.body.removeChild(anchor);
+    setTimeout(function () { URL.revokeObjectURL(url); }, 2000);
+    toast('已导出 top40.txt');
+  });
+
+  el('retry').addEventListener('click', load);
+
+  /* ---------------- 加载 ---------------- */
+  var FIELDS = ['server', 'port', 'secret', 'sources', 'alive', 'verified',
+    'latency_ms', 'connect_ms', 'tls_ms', 'success_rate', 'error'];
+
+  function linkOf(item) {
+    return 'https://t.me/proxy?server=' + encodeURIComponent(item.server) +
+      '&port=' + item.port + '&secret=' + encodeURIComponent(item.secret);
+  }
+
+  // proxies.json 用二维数组存储（体积小）；这里还原成对象并补齐 rank / link
+  function normalize(raw) {
+    var fields = Array.isArray(raw.fields) && raw.fields.length ? raw.fields : FIELDS;
+    var rows = raw.proxies || [];
+    var proxies = rows.map(function (row, index) {
+      var item = {};
+      if (Array.isArray(row)) {
+        for (var i = 0; i < fields.length; i += 1) item[fields[i]] = row[i];
+      } else {
+        item = row;
+      }
+      item.sources = item.sources || [];
+      item.alive = !!item.alive;
+      item.verified = !!item.verified;
+      item.rank = index + 1;
+      item.link = item.link || linkOf(item);
+      return item;
+    });
+    raw.proxies = proxies;
+    return raw;
+  }
+
+  function load() {
+    el('load-error').hidden = true;
+    el('fresh-pill').className = 'pill live';
+    el('fresh-pill').textContent = '加载中…';
+
+    fetch('proxies.json?v=' + Date.now(), { cache: 'no-store' })
+      .then(function (response) {
+        if (!response.ok) throw new Error('HTTP ' + response.status);
+        return response.json();
+      })
+      .then(function (raw) {
+        if (!raw || !Array.isArray(raw.proxies)) throw new Error('数据格式不正确');
+        var data = normalize(raw);
+        state.data = data;
+        state.shown = PAGE_SIZE;
+        renderStats(data);
+        render();
+      })
+      .catch(function (err) {
+        el('load-error-text').textContent = '读取 proxies.json 失败（' + err.message +
+          '）。如果你是双击本地文件打开本页，浏览器会拦截文件读取；请通过 HTTP 访问，或直接下载数据文件：';
+        el('load-error').hidden = false;
+        el('fresh-pill').className = 'pill stale';
+        el('fresh-pill').textContent = '数据不可用';
+        el('fresh-text').textContent = '无法读取 proxies.json';
+        el('top40-body').innerHTML = '<tr><td colspan="5" class="empty">数据未加载</td></tr>';
+        el('all-body').innerHTML = '<tr><td colspan="6" class="empty">数据未加载</td></tr>';
+      });
+  }
+
+  load();
+})();
+</script>
+</body>
+</html>
