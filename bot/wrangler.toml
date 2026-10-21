@@ -1,0 +1,21 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "mtproxy-bot"
+main = "src/index.js"
+compatibility_date = "2025-09-01"
+workers_dev = true
+
+# 每小时第 25 分钟推送（上游 GitHub Actions 在 :17 开始跑，约 1-2 分钟出数据，Pages 再构建约 30s）
+[triggers]
+crons = ["25 * * * *"]
+
+# 绑定关系与数据缓存
+[[kv_namespaces]]
+binding = "STATE"
+id = "edf53fd518414446b88b40c8bfa55ebb"
+
+[vars]
+PUSH_LIMIT = "10"
+WORKER_HOST = "mtproxy-bot.84339075.workers.dev"
+SITE_URL = "https://consoleaiden.github.io/telegram-mtproto-proxy-list/"
+TOP_URL = "https://consoleaiden.github.io/telegram-mtproto-proxy-list/top40.json"
+ALL_URL = "https://consoleaiden.github.io/telegram-mtproto-proxy-list/proxies.json"
