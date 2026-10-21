@@ -36,8 +36,10 @@ jobs:
       - name: Re-localize index.html and sync data files
         run: |
           python3 translate.py /tmp/upstream/index.html index.html
-          # data / support files come from upstream verbatim
-          for f in proxies.txt robots.txt .nojekyll README.md README_RU.md; do
+          # data / support files come from upstream verbatim.
+          # README.md is intentionally NOT synced: it documents this fork's
+          # localization pipeline and must not be replaced by the upstream dump.
+          for f in proxies.txt robots.txt .nojekyll; do
             if [ -f "/tmp/upstream/$f" ]; then cp "/tmp/upstream/$f" "$f"; fi
           done
           # never pull upstream automation over ours
