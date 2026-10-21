@@ -40,7 +40,7 @@ html[data-theme="dark"]{
   --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.28);
 }
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:70px}
 body{
   margin:0;background:var(--bg);color:var(--text);
   font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",Roboto,sans-serif;
@@ -90,9 +90,12 @@ h2{font-size:1.16rem;margin:0;letter-spacing:-.01em}
 .sec-head p{margin:0;color:var(--muted);font-size:.84rem}
 .card{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);overflow:hidden}
 /* ---------- 表格 ---------- */
-.tablewrap{overflow-x:auto}
-table{width:100%;border-collapse:collapse;font-size:.9rem}
-th{position:sticky;top:54px;background:var(--card);z-index:2;text-align:left;padding:10px 12px;
+/* 卡内滚动 + 表头常驻：thead th 的 sticky 以 .tablewrap 为滚动容器（top:0），
+   这是各浏览器一致支持的可靠用法；不要对视口做 sticky（配合 overflow-x 容器
+   与 border-collapse:collapse 会出现表头错位、遮住第一行的绘制缺陷） */
+.tablewrap{overflow:auto;max-height:min(72vh,820px)}
+table{width:100%;border-collapse:separate;border-spacing:0;font-size:.9rem}
+th{position:sticky;top:0;z-index:2;background:var(--card);text-align:left;padding:10px 12px;
   font-size:.72rem;font-weight:600;color:var(--muted);letter-spacing:.05em;border-bottom:1px solid var(--line);white-space:nowrap}
 td{padding:10px 12px;border-bottom:1px solid var(--line-soft);vertical-align:middle}
 tbody tr:last-child td{border-bottom:0}
