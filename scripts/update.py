@@ -7,6 +7,10 @@
   proxies.txt   存活代理链接，按访问速率从快到慢排序（每行一条 t.me 链接）
   proxies.json  全量测速明细（含失效条目、来源标签、分段耗时），供 index.html 渲染
   top40.json    访问速率最快的前 40 个代理
+  top100.json   访问速率最快的前 100 个代理（与 top40.json 同结构，同一轮测速切片）
+
+榜单档位由 --tops 控制（默认 40,100），每个档位都从同一份排序结果里切前 N 个存活条目，
+所以 top40.json 恒等于 top100.json 的前 40 条，两者不会出现口径漂移。
 
 设计要点：
 
@@ -17,7 +21,8 @@
 
 用法：
 
-  python3 scripts/update.py                          # 完整流程
+  python3 scripts/update.py                          # 完整流程（写 top40.json + top100.json）
+  python3 scripts/update.py --tops 20,50,100         # 自定义榜单档位
   python3 scripts/update.py --limit 60               # 只测前 60 条（调试）
   python3 scripts/update.py --primary-file a.txt \\
                             --secondary-file b.txt   # 离线用本地文件代替上游
@@ -71,7 +76,8 @@ SOURCES: list[dict[str, str]] = [
 ]
 
 USER_AGENT = "telegram-mtproto-proxy-list/2.0 (+https://github.com/consoleaiden/telegram-mtproto-proxy-list)"
-DEFAULT_TOP = 40
+# 榜单档位：同一份排序结果切前 N 个存活条目，各写一个 topN.json
+DEFAULT_TOP_TIERS: tuple[int, ...] = (40, 100)
 MAX_PROXIES = 5000
 FETCH_RETRIES = 3
 
@@ -186,17 +192,49 @@ def write_atomic(path: Path, text: str) -> None:
         raise
 
 
+def top_filename(tier: int) -> str:
+    """档位对应的文件名：40 -> top40.json。"""
+    return "top%d.json" % tier
+
+
+def build_top_payload(
+    ranked: list[dict[str, Any]], tier: int, *, generated_at: str, stats: dict[str, Any]
+) -> dict[str, Any]:
+    """从排好序的全量结果里切出前 N 个「存活」条目，组装对外 JSON。
+
+    只收存活条目（失效的在 Telegram 里连不上，放进榜单没有意义）；
+    存活不足 N 个时按实际数量输出，rank 重新从 1 连续编号。
+    """
+    top: list[dict[str, Any]] = []
+    for item in ranked:
+        if len(top) >= tier:
+            break
+        if not item["alive"]:
+            continue
+        entry = dict(item)
+        entry["rank"] = len(top) + 1
+        top.append(entry)
+    return {
+        "generated_at": generated_at,
+        "method": "faketls-handshake",
+        "note": "访问速率（TCP 建连 + FakeTLS 握手往返）最快的前 %d 个代理" % len(top),
+        "stats": stats,
+        "proxies": top,
+    }
+
+
 def build_payload(
     ranked: list[dict[str, Any]],
     *,
     generated_at: str,
     per_source: dict[str, int],
-    top_n: int = DEFAULT_TOP,
-) -> tuple[dict[str, Any], dict[str, Any], list[dict[str, Any]]]:
-    """组装 proxies.json / top40.json 的数据结构。
+    top_tiers: Sequence[int] = DEFAULT_TOP_TIERS,
+) -> tuple[dict[str, Any], dict[int, dict[str, Any]]]:
+    """组装 proxies.json 与各档位 topN.json 的数据结构。
 
     proxies.json 给页面用，按 FIELDS 顺序存成二维数组，体积约为对象格式的 1/3；
-    top40.json 是对外接口，保留完整字段名与现成的 link，方便直接消费。
+    topN.json 是对外接口，保留完整字段名与现成的 link，方便直接消费。
+    返回 (全量 payload, {档位: 榜单 payload})。
     """
     alive = [item for item in ranked if item["alive"]]
     verified = [item for item in alive if item["verified"]]
@@ -225,23 +263,11 @@ def build_payload(
         "proxies": [[item.get(name) for name in FIELDS] for item in ranked],
     }
 
-    top: list[dict[str, Any]] = []
-    for item in ranked:
-        if len(top) >= top_n:
-            break
-        if not item["alive"]:
-            continue
-        entry = dict(item)
-        entry["rank"] = len(top) + 1
-        top.append(entry)
-    top_payload = {
-        "generated_at": generated_at,
-        "method": "faketls-handshake",
-        "note": "访问速率（TCP 建连 + FakeTLS 握手往返）最快的前 %d 个代理" % len(top),
-        "stats": stats,
-        "proxies": top,
+    tops = {
+        tier: build_top_payload(ranked, tier, generated_at=generated_at, stats=stats)
+        for tier in top_tiers
     }
-    return full, top_payload, top
+    return full, tops
 
 
 def build_proxies_txt(
@@ -261,6 +287,22 @@ def build_proxies_txt(
     return header + "".join(item["link"] + "\n" for item in items)
 
 
+def parse_tiers(text: str) -> tuple[int, ...]:
+    """把 "40,100" 解析成 (40, 100)：去重、升序，非法项直接报错。"""
+    tiers: list[int] = []
+    for chunk in str(text).replace("，", ",").split(","):
+        chunk = chunk.strip()
+        if not chunk:
+            continue
+        if not chunk.isdigit() or int(chunk) <= 0:
+            raise ValueError("榜单档位必须是正整数：%s" % chunk)
+        if int(chunk) not in tiers:
+            tiers.append(int(chunk))
+    if not tiers:
+        raise ValueError("没有解析到任何榜单档位：%r" % text)
+    return tuple(sorted(tiers))
+
+
 # --------------------------------------------------------------------------- #
 # 主流程
 # --------------------------------------------------------------------------- #
@@ -268,7 +310,10 @@ def build_proxies_txt(
 def main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="拉取合并上游代理并全量测速")
     parser.add_argument("--out-dir", default=str(REPO_ROOT), help="产物输出目录")
-    parser.add_argument("--top", type=int, default=DEFAULT_TOP, help="top40.json 条数")
+    parser.add_argument("--tops", default=None,
+                        help="榜单档位，逗号分隔，每个档位写一个 topN.json（默认 40,100）")
+    parser.add_argument("--top", type=int, default=0,
+                        help="兼容旧参数：等同 --tops N（只输出一个档位）")
     parser.add_argument("--concurrency", type=int, default=DEFAULT_CONCURRENCY)
     parser.add_argument("--attempts", type=int, default=DEFAULT_ATTEMPTS)
     parser.add_argument("--timeout", type=float, default=DEFAULT_TIMEOUT, help="握手超时（秒）")
@@ -279,6 +324,16 @@ def main(argv: Sequence[str] | None = None) -> int:
     parser.add_argument("--primary-file", help="用本地文件代替主源（离线调试）")
     parser.add_argument("--secondary-file", help="用本地文件代替次源（离线调试）")
     args = parser.parse_args(argv)
+
+    if args.tops:
+        try:
+            tiers = parse_tiers(args.tops)
+        except ValueError as exc:
+            parser.error(str(exc))
+    elif args.top:
+        tiers = (args.top,)
+    else:
+        tiers = DEFAULT_TOP_TIERS
 
     out_dir = Path(args.out_dir).resolve()
     started = time.monotonic()
@@ -335,23 +390,27 @@ def main(argv: Sequence[str] | None = None) -> int:
 
     print("[4/4] 写出产物", file=sys.stderr)
     generated_at = datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
-    full, top_payload, top = build_payload(
-        ranked, generated_at=generated_at, per_source=per_source, top_n=args.top
+    full, tops = build_payload(
+        ranked, generated_at=generated_at, per_source=per_source, top_tiers=tiers
     )
 
     write_atomic(out_dir / "proxies.txt",
                  build_proxies_txt(alive, generated_at, per_source))
     write_atomic(out_dir / "proxies.json",
                  json.dumps(full, ensure_ascii=False, separators=(",", ":")) + "\n")
-    write_atomic(out_dir / f"top{args.top}.json",
-                 json.dumps(top_payload, ensure_ascii=False, indent=2) + "\n")
 
     print("  proxies.txt  %d 条存活" % len(alive), file=sys.stderr)
     print("  proxies.json %d 条明细" % len(ranked), file=sys.stderr)
-    print("  top%d.json  %d 条" % (args.top, len(top)), file=sys.stderr)
+    for tier in tiers:
+        payload = tops[tier]
+        write_atomic(out_dir / top_filename(tier),
+                     json.dumps(payload, ensure_ascii=False, indent=2) + "\n")
+        print("  %-11s %d 条" % (top_filename(tier), len(payload["proxies"])),
+              file=sys.stderr)
 
-    print("\n最快的前 %d 个代理：" % min(10, len(top)), file=sys.stderr)
-    for item in top[:10]:
+    headline = tops[max(tiers)]["proxies"] if tiers else []
+    print("\n最快的前 %d 个代理：" % min(10, len(headline)), file=sys.stderr)
+    for item in headline[:10]:
         print("  %2d. %-38s %7.1f ms  %s"
               % (item["rank"], "%s:%d" % (item["server"], item["port"]),
                  item["latency_ms"], "/".join(item["sources"])), file=sys.stderr)
@@ -368,6 +427,9 @@ def main(argv: Sequence[str] | None = None) -> int:
                          % sum(1 for item in alive if item["verified"]))
             handle.write("| 最快 | %s ms |\n"
                          % (alive[0]["latency_ms"] if alive else "—"))
+            handle.write("| 榜单 | %s |\n" % " · ".join(
+                "%s %d 条" % (top_filename(tier), len(tops[tier]["proxies"]))
+                for tier in tiers))
             if failed:
                 handle.write("| 失败数据源 | %s |\n" % ", ".join(failed))
             handle.write("\n")

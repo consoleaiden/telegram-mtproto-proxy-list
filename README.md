@@ -1,10 +1,10 @@
 # Telegram MTProto 代理榜 · 中文版
 
 > 每小时合并两个公开数据源、对**每一条**代理做真实 MTProto 握手测速，按访问速率排序，
-> 输出最快 40 个代理的 JSON，并用这份合并数据重建页面。
+> 输出最快 40 个 / 100 个代理的 JSON，并用这份合并数据重建页面。
 
 **🌐 在线站点：[consoleaiden.github.io/telegram-mtproto-proxy-list](https://consoleaiden.github.io/telegram-mtproto-proxy-list/)**
-**⚡ 最快 40 个：[`top40.json`](top40.json)** · **📄 明文列表：[`proxies.txt`](proxies.txt)** · **📊 全量明细：[`proxies.json`](proxies.json)**
+**⚡ 最快 40 个：[`top40.json`](top40.json)** · **🏅 最快 100 个：[`top100.json`](top100.json)** · **📄 明文列表：[`proxies.txt`](proxies.txt)** · **📊 全量明细：[`proxies.json`](proxies.json)**
 
 ---
 
@@ -20,18 +20,18 @@ Telegram 在部分网络环境下无法直连，需要 MTProto 代理（MTProxy�
 | 数据来源 | 单一来源 | 两个来源合并去重（带来源标签） |
 | 排序 | 未验证 / 按发现顺序 | 真实握手测速，最快在前 |
 | 存活标记 | 部分 | 全量，含失败原因 |
-| 交付物 | `proxies.txt` | `proxies.txt` + `proxies.json` + `top40.json` |
+| 交付物 | `proxies.txt` | `proxies.txt` + `proxies.json` + `top40.json` + `top100.json` |
 | 页面 | 上游生成，靠正则汉化 | 本项目自建，直接渲染合并数据 |
 
 ## 数据流
 
 ```
-主源 tgmtproxy/proxies.txt ─┐
-                            ├─ 去重合并（server+port+secret）─ 全量握手测速（并发 128）─ 按速率排序 ─┬─ proxies.txt
-次源 dubblebyte/all_proxies.txt ─┘                                                                ├─ proxies.json
-                                                                                                  └─ top40.json
-                                                                                                        │
-                                                                                          有变化才 commit ─→ Pages 重建
+主源 tgmtproxy/proxies.txt ─┐                             ┌─ proxies.txt
+                            ├─ 去重合并 ─ 全量握手测速 ─ 排序 ─┼─ proxies.json
+次源 dubblebyte/all_proxies.txt ─┘  (server+port+secret) (并发 128)  ├─ top40.json  （前 40 个存活）
+                                                                  └─ top100.json （前 100 个存活）
+                                                                        │
+                                                          有变化才 commit ─→ Pages 重建
 ```
 
 每小时的流水线见 [`.github/workflows/update.yml`](.github/workflows/update.yml)（`cron: 17 * * * *`）。
@@ -65,7 +65,11 @@ Telegram 在部分网络环境下无法直连，需要 MTProto 代理（MTProxy�
 
 ## 数据文件
 
-### `top40.json`（对外接口，前 40 名）
+### `top40.json` / `top100.json`（对外接口，前 40 / 前 100 名）
+
+两个文件**结构完全一致**，都是同一轮测速排序结果的切片：`top40.json` 是前 40 个存活条目，
+`top100.json` 是前 100 个 —— 也就是说 `top40.json` 恒等于 `top100.json` 的前 40 条，
+不会出现两份榜单口径不一致。档位可用 `--tops` 自定义（见「本地运行」）。
 
 ```json
 {
@@ -111,7 +115,7 @@ Telegram 在部分网络环境下无法直连，需要 MTProto 代理（MTProxy�
 |---|---|
 | `index.html` | 页面：速度榜 Top 40 + 全量列表（搜索 / 筛选 / 本机检测），运行时读取 `proxies.json` |
 | `scripts/mtproxy_probe.py` | 探测引擎：FakeTLS 握手、摘要校验、并发调度、排序（纯标准库） |
-| `scripts/update.py` | 流水线：抓取两源 → 去重合并 → 全量测速 → 写出三个数据文件 |
+| `scripts/update.py` | 流水线：抓取两源 → 去重合并 → 全量测速 → 写出四个数据文件（`proxies.txt` / `proxies.json` / `top40.json` / `top100.json`） |
 | `tests/test_pipeline.py` | 离线单元测试（secret 解析、ClientHello 结构、摘要校验、合并去重、排序、产物格式） |
 | `.github/workflows/update.yml` | 每小时执行一次，有变化才提交 |
 
@@ -120,8 +124,11 @@ Telegram 在部分网络环境下无法直连，需要 MTProto 代理（MTProxy�
 无需任何第三方依赖（Python 3.10+）：
 
 ```bash
-# 完整流水线（会真的联网测速，约 1–3 分钟）
+# 完整流水线（会真的联网测速，约 1–3 分钟），写 top40.json + top100.json
 python3 scripts/update.py
+
+# 自定义榜单档位（每个档位一个 topN.json）
+python3 scripts/update.py --tops 20,50,100
 
 # 只测前 50 条，输出到临时目录
 python3 scripts/update.py --limit 50 --out-dir /tmp/proxy-check
@@ -152,6 +159,8 @@ python3 -m http.server 8000
 - **调阈值**：`--min-alive-ratio`（默认 0.05）——一轮测速存活率低于该比例会判定为「runner 出网异常」，
   中止且**不覆盖**上一轮产物，避免一次网络抖动把列表清空。
 - **调并发/超时**：`--concurrency`（默认 128）、`--timeout`、`--connect-timeout`。runner 出网慢时适当放大超时。
+- **加榜单档位**：`--tops 40,100,200`（默认 `40,100`），或改 `scripts/update.py` 里的 `DEFAULT_TOP_TIERS`；
+  工作流的 `git add` / 产物上传列表要同步加上新文件名。
 - **页面改版**：直接改 `index.html`，数据契约见上面的 `proxies.json` / `top40.json` 小节，不再依赖上游 HTML。
 - **历史遗留**：`translate.py`（上游俄语页面汉化）与 `merge_proxies.py`（旧合并脚本）已随页面自建而下线，
   功能分别由 `index.html` 自建模板与 `scripts/update.py` 承担。

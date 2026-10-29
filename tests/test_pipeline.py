@@ -14,6 +14,7 @@ import struct
 import sys
 import tempfile
 import unittest
+import unittest.mock
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
@@ -258,12 +259,82 @@ class RankingTest(unittest.TestCase):
         self.assertEqual(ranked[0]["server"], "b.example.com")
 
 
+class FakeMtproxyTest(unittest.TestCase):
+    """回环地址上的迷你 MTProxy：验证「真实握手 + 摘要校验」这条完整链路。
+
+    服务端按 mtg 的算法回包（ServerHello + CCS + AppData，摘要 = HMAC(密钥, 客户端随机数 + 整包)），
+    客户端应该判定存活且 verified=True —— 比只测 verify_server_digest 更接近线上行为。
+    """
+
+    def test_full_handshake_is_verified(self):
+        import asyncio
+
+        async def handler(reader, writer):
+            try:
+                hello = await reader.readexactly(517)
+                writer.write(make_server_packet(probe.client_random(hello)))
+                await writer.drain()
+            except (asyncio.IncompleteReadError, ConnectionError):
+                pass
+            finally:
+                writer.close()
+
+        async def scenario():
+            server = await asyncio.start_server(handler, "127.0.0.1", 0)
+            port = server.sockets[0].getsockname()[1]
+            target = probe.Target("127.0.0.1", port, SECRET_HEX)
+            try:
+                return await probe.probe_target(
+                    target, attempts=2, connect_timeout=3, handshake_timeout=3)
+            finally:
+                server.close()
+                await server.wait_closed()
+
+        result = asyncio.run(scenario())
+        self.assertTrue(result["alive"])
+        self.assertTrue(result["verified"])
+        self.assertEqual(result["mode"], "faketls")
+        self.assertEqual(result["success_rate"], 1.0)
+        self.assertIsNotNone(result["latency_ms"])
+        self.assertGreater(result["latency_ms"], 0)
+
+    def test_wrong_key_is_alive_but_unverified(self):
+        """密钥不对时服务端摘要校验不过：算存活但不 verified，排序会压到第二档。"""
+        import asyncio
+
+        async def handler(reader, writer):
+            try:
+                hello = await reader.readexactly(517)
+                writer.write(make_server_packet(probe.client_random(hello), key=b"\x11" * 16))
+                await writer.drain()
+            except (asyncio.IncompleteReadError, ConnectionError):
+                pass
+            finally:
+                writer.close()
+
+        async def scenario():
+            server = await asyncio.start_server(handler, "127.0.0.1", 0)
+            port = server.sockets[0].getsockname()[1]
+            target = probe.Target("127.0.0.1", port, SECRET_HEX)
+            try:
+                return await probe.probe_target(
+                    target, attempts=1, connect_timeout=3, handshake_timeout=3)
+            finally:
+                server.close()
+                await server.wait_closed()
+
+        result = asyncio.run(scenario())
+        self.assertTrue(result["alive"])
+        self.assertFalse(result["verified"])
+
+
 class PayloadTest(unittest.TestCase):
     def setUp(self):
         self.ranked = probe.rank_results(sample_results())
-        self.full, self.top, self.top_list = update.build_payload(
+        self.full, self.tops = update.build_payload(
             self.ranked, generated_at="2026-10-21T06:17:00Z",
-            per_source={"tgmtproxy": 2, "dubblebyte": 1}, top_n=2)
+            per_source={"tgmtproxy": 2, "dubblebyte": 1}, top_tiers=(2, 5))
+        self.top = self.tops[2]
 
     def test_stats(self):
         stats = self.full["stats"]
@@ -289,9 +360,24 @@ class PayloadTest(unittest.TestCase):
         self.assertEqual(self.top["proxies"][0]["server"], "slow.example.com")
 
     def test_top_truncates(self):
-        _, top, _ = update.build_payload(self.ranked, generated_at="x",
-                                         per_source={}, top_n=1)
-        self.assertEqual(len(top["proxies"]), 1)
+        _, tops = update.build_payload(self.ranked, generated_at="x",
+                                       per_source={}, top_tiers=(1,))
+        self.assertEqual(len(tops[1]["proxies"]), 1)
+
+    def test_tier_beyond_alive_count_is_clamped(self):
+        # 只有 2 条存活，100 档位不能凭空造数据，也不能报错
+        _, tops = update.build_payload(self.ranked, generated_at="x",
+                                       per_source={}, top_tiers=(40, 100))
+        self.assertEqual(len(tops[40]["proxies"]), 2)
+        self.assertEqual(len(tops[100]["proxies"]), 2)
+        self.assertEqual([item["rank"] for item in tops[100]["proxies"]], [1, 2])
+
+    def test_tiers_are_consistent_slices(self):
+        # 同一轮排序的两个档位必须是前缀关系，小档位恒等于大档位的前 N 条
+        _, tops = update.build_payload(self.ranked, generated_at="x",
+                                       per_source={}, top_tiers=(1, 2))
+        self.assertEqual(tops[1]["proxies"], tops[2]["proxies"][:1])
+        self.assertEqual(tops[2]["stats"], tops[1]["stats"])
 
     def test_proxies_txt_sorted_alive_only(self):
         text = update.build_proxies_txt(
@@ -304,6 +390,115 @@ class PayloadTest(unittest.TestCase):
         self.assertEqual(len(links), 2)
         self.assertIn("slow.example.com", links[0])
         self.assertIn("fast.example.com", links[1])
+
+
+class TierConfigTest(unittest.TestCase):
+    """榜单档位解析：--tops / DEFAULT_TOP_TIERS / 文件名映射。"""
+
+    def test_default_tiers(self):
+        self.assertEqual(update.DEFAULT_TOP_TIERS, (40, 100))
+
+    def test_parse_tiers(self):
+        self.assertEqual(update.parse_tiers("40,100"), (40, 100))
+        self.assertEqual(update.parse_tiers("100, 40,100"), (40, 100))  # 去重 + 升序
+        self.assertEqual(update.parse_tiers("40，100"), (40, 100))       # 中文逗号
+        for bad in ("", "abc", "0", "40,-1"):
+            with self.assertRaises(ValueError):
+                update.parse_tiers(bad)
+
+    def test_top_filename(self):
+        self.assertEqual(update.top_filename(40), "top40.json")
+        self.assertEqual(update.top_filename(100), "top100.json")
+
+
+def fake_results(targets, *, alive_ratio=0.5, **kwargs):
+    """替代真实探测：按顺序让前 alive_ratio 的目标存活，延迟递增。"""
+    alive_count = int(len(targets) * alive_ratio)
+    results = []
+    for index, target in enumerate(targets):
+        alive = index < alive_count
+        results.append({
+            "server": target.server, "port": target.port, "secret": target.secret,
+            "sources": list(target.sources), "alive": alive, "verified": alive,
+            "mode": "faketls", "latency_ms": float(10 + index) if alive else None,
+            "connect_ms": 5.0 if alive else None, "tls_ms": 5.0 if alive else None,
+            "success_rate": 1.0 if alive else 0.0, "samples": 2,
+            "error": "" if alive else "connect_timeout",
+        })
+    return results
+
+
+class PipelineWriteTest(unittest.TestCase):
+    """端到端（离线）：本地文件当两源 + 假探测，验证四个产物都落盘且口径一致。"""
+
+    def run_pipeline(self, tmp: Path, extra_argv=(), total=120, alive_ratio=0.5) -> None:
+        snapshot = "\n".join(
+            "https://t.me/proxy?server=h%d.example.com&port=443&secret=%s"
+            % (i, SECRET_HEX) for i in range(total))
+        source = tmp / "source.txt"
+        source.write_text(snapshot, encoding="utf-8")
+        out = tmp / "out"
+
+        async def fake_probe_many(targets, **kwargs):
+            return fake_results(targets, alive_ratio=alive_ratio)
+
+        with unittest.mock.patch.object(update, "probe_many", fake_probe_many):
+            code = update.main([
+                "--out-dir", str(out),
+                "--primary-file", str(source), "--secondary-file", str(source),
+                "--min-alive-ratio", "0",
+                *extra_argv,
+            ])
+        self.assertEqual(code, 0)
+        self.out = out
+
+    def test_default_outputs_top40_and_top100(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            self.run_pipeline(Path(tmp))
+            self.assertEqual(
+                sorted(p.name for p in self.out.iterdir()),
+                ["proxies.json", "proxies.txt", "top100.json", "top40.json"])
+
+            top40 = json.loads((self.out / "top40.json").read_text(encoding="utf-8"))
+            top100 = json.loads((self.out / "top100.json").read_text(encoding="utf-8"))
+
+            self.assertEqual(len(top40["proxies"]), 40)
+            self.assertEqual(len(top100["proxies"]), 60)   # 只有 60 条存活
+            self.assertEqual([item["rank"] for item in top40["proxies"]], list(range(1, 41)))
+            self.assertEqual([item["rank"] for item in top100["proxies"]], list(range(1, 61)))
+            # 延迟升序：第一名必须是最快的那条
+            latencies = [item["latency_ms"] for item in top100["proxies"]]
+            self.assertEqual(latencies, sorted(latencies))
+            # 两个档位是同一份排序的切片
+            self.assertEqual(top40["proxies"], top100["proxies"][:40])
+            self.assertEqual(top40["stats"], top100["stats"])
+            for payload in (top40, top100):
+                self.assertTrue(payload["proxies"][0]["link"].startswith("https://t.me/proxy?"))
+
+            # 全量明细里失效条目同样存在，且按 FIELDS 顺序
+            full = json.loads((self.out / "proxies.json").read_text(encoding="utf-8"))
+            self.assertEqual(full["stats"]["tested"], 120)
+            self.assertEqual(full["stats"]["alive"], 60)
+            self.assertEqual(len(full["proxies"]), 120)
+
+    def test_custom_tiers(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            self.run_pipeline(Path(tmp), extra_argv=("--tops", "5,10"))
+            names = sorted(p.name for p in self.out.iterdir())
+            self.assertEqual(names, ["proxies.json", "proxies.txt", "top10.json", "top5.json"])
+
+    def test_legacy_top_flag_still_works(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            self.run_pipeline(Path(tmp), extra_argv=("--top", "7"))
+            names = sorted(p.name for p in self.out.iterdir())
+            self.assertEqual(names, ["proxies.json", "proxies.txt", "top7.json"])
+
+    def test_no_alive_keeps_empty_tiers(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            self.run_pipeline(Path(tmp), alive_ratio=0.0)
+            top100 = json.loads((self.out / "top100.json").read_text(encoding="utf-8"))
+            self.assertEqual(top100["proxies"], [])
+            self.assertEqual(top100["note"], "访问速率（TCP 建连 + FakeTLS 握手往返）最快的前 0 个代理")
 
 
 class WriteAtomicTest(unittest.TestCase):
@@ -323,6 +518,7 @@ class SiteTemplateTest(unittest.TestCase):
         html = (Path(__file__).resolve().parent.parent / "index.html").read_text(encoding="utf-8")
         self.assertIn("proxies.json", html)
         self.assertIn("top40.json", html)
+        self.assertIn("top100.json", html)
         self.assertNotIn("<tbody><tr class=\"ours\"", html)
         self.assertLess(len(html), 60000)
 

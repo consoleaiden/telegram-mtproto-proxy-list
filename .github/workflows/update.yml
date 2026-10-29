@@ -4,7 +4,7 @@ name: 每小时更新代理数据（合并 + 全量测速）
 #   1. 抓取两个上游数据源（tgmtproxy 主源 + dubblebyte 次源）
 #   2. 按 server+port+secret 去重合并，打来源标签
 #   3. 对合并后的每一条代理做真实 FakeTLS 握手测速（并发）
-#   4. 按访问速率排序，产出 proxies.txt / proxies.json / top40.json
+#   4. 按访问速率排序，产出 proxies.txt / proxies.json / top40.json / top100.json
 #   5. 有变化才提交，GitHub Pages 自动重建
 
 on:
@@ -51,7 +51,7 @@ jobs:
         run: |
           set +e
           python scripts/update.py \
-            --top 40 \
+            --tops 40,100 \
             --concurrency 128 \
             --attempts "$ATTEMPTS" \
             --timeout 6 \
@@ -75,13 +75,14 @@ jobs:
             proxies.txt
             proxies.json
             top40.json
+            top100.json
           retention-days: 7
 
       - name: 有变化才提交
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add proxies.txt proxies.json top40.json
+          git add proxies.txt proxies.json top40.json top100.json
           if git diff --cached --quiet; then
             echo "本轮数据与上一轮一致，跳过提交"
             exit 0

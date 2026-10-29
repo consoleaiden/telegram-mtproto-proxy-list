@@ -9,18 +9,19 @@
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 <link rel="canonical" href="https://consoleaiden.github.io/telegram-mtproto-proxy-list/">
 <meta property="og:title" content="Telegram MTProxy 代理榜 · 每小时全量测速">
-<meta property="og:description" content="两源合并去重 + 全量握手测速 + 按速率排序，附最快 40 个代理的 JSON。">
+<meta property="og:description" content="两源合并去重 + 全量握手测速 + 按速率排序，附最快 40 / 100 个代理的 JSON。">
 <meta property="og:url" content="https://consoleaiden.github.io/telegram-mtproto-proxy-list/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="zh_CN">
 <meta name="robots" content="index,follow">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%232aabee'/%3E%3Cpath d='M7 15l17-7-3 16-5-4-3 3v-4l8-8-10 7z' fill='%23fff'/%3E%3C/svg%3E">
 <link rel="alternate" type="application/json" href="top40.json" title="最快 40 个代理（JSON）">
+<link rel="alternate" type="application/json" href="top100.json" title="最快 100 个代理（JSON）">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
  {"@type":"WebSite","name":"Telegram MTProxy 代理榜","url":"https://consoleaiden.github.io/telegram-mtproto-proxy-list/","inLanguage":"zh-CN"},
  {"@type":"FAQPage","mainEntity":[
-  {"@type":"Question","name":"这些代理是怎么排序的？","acceptedAnswer":{"@type":"Answer","text":"每小时把两个公开数据源的链接合并去重后，对每一条代理发起真实的 MTProto FakeTLS 握手，测量 TCP 建连与握手往返耗时，按总耗时从快到慢排序。前 40 名另外输出为 top40.json。"}},
+  {"@type":"Question","name":"这些代理是怎么排序的？","acceptedAnswer":{"@type":"Answer","text":"每小时把两个公开数据源的链接合并去重后，对每一条代理发起真实的 MTProto FakeTLS 握手，测量 TCP 建连与握手往返耗时，按总耗时从快到慢排序。前 40 名输出为 top40.json，前 100 名输出为 top100.json。"}},
   {"@type":"Question","name":"「握手校验通过」是什么意思？","acceptedAnswer":{"@type":"Answer","text":"服务端返回的 ServerHello 摘要与本机用代理密钥算出的 HMAC 一致，说明这台服务器确实认识该密钥，是真正的 MTProxy，而不是把流量回落到了伪装网站。"}},
   {"@type":"Question","name":"列表多久更新一次？","acceptedAnswer":{"@type":"Answer","text":"每小时一次。工作流重新抓取两个数据源、去重合并、全量测速并重建本页数据；失效代理会排到列表末尾并标记为失效。"}},
   {"@type":"Question","name":"为什么我这边的速度和排行不一致？","acceptedAnswer":{"@type":"Answer","text":"排行榜里的耗时来自数据中心的测速节点，而「本机检测」是从你自己的网络发起的。运营商线路、出口位置不同，结果自然不同，请以本机检测为准。"}}]}
@@ -192,6 +193,7 @@ footer p{margin:6px 0}
       <a href="#top40">速度榜</a>
       <a href="#all">全部代理</a>
       <a href="top40.json"><span class="navtext">top40.</span>json</a>
+      <a href="top100.json"><span class="navtext">top100.</span>json</a>
       <a href="proxies.txt"><span class="navtext">proxies.</span>txt</a>
       <button class="iconbtn" id="theme" type="button" aria-label="切换深色 / 浅色主题" title="切换主题">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
@@ -203,7 +205,7 @@ footer p{margin:6px 0}
 <main class="wrap">
   <section class="hero" aria-labelledby="page-title">
     <h1 id="page-title">Telegram MTProxy 代理榜</h1>
-    <p class="lede">两个公开数据源合并去重 → 每小时对每一条代理做真实 FakeTLS 握手测速 → 按访问速率排序，最快的排在最前面。前 40 名另附 <a href="top40.json">JSON</a>，全量明细在 <a href="proxies.json">proxies.json</a>。</p>
+    <p class="lede">两个公开数据源合并去重 → 每小时对每一条代理做真实 FakeTLS 握手测速 → 按访问速率排序，最快的排在最前面。前 40 / 100 名另附 <a href="top40.json">top40.json</a> / <a href="top100.json">top100.json</a>，全量明细在 <a href="proxies.json">proxies.json</a>。</p>
 
     <dl class="stats" aria-live="polite">
       <div class="stat"><dt>合并后代理</dt><dd id="s-total">—</dd></div>
@@ -223,7 +225,7 @@ footer p{margin:6px 0}
   <div class="notice error" id="load-error" hidden>
     <h3>数据没能加载</h3>
     <p id="load-error-text">页面需要读取同目录下的 <code>proxies.json</code>。</p>
-    <p><a href="proxies.json">proxies.json</a> · <a href="top40.json">top40.json</a> · <a href="proxies.txt">proxies.txt</a></p>
+    <p><a href="proxies.json">proxies.json</a> · <a href="top40.json">top40.json</a> · <a href="top100.json">top100.json</a> · <a href="proxies.txt">proxies.txt</a></p>
     <p><button class="btn ghost sm" id="retry" type="button">重新加载</button></p>
   </div>
 
@@ -295,9 +297,9 @@ footer p{margin:6px 0}
     <details><summary>为什么我这里的速度和排行不一致？</summary>
       <p>排行里的耗时来自测速节点（数据中心网络），「本机检测」是从你自己的网络发起的。出口位置、运营商线路不同，结果差异很正常 —— 自己测出来的才最贴近你的体验。</p></details>
     <details><summary>数据多久更新一次？</summary>
-      <p>每小时一次：重新抓取两个数据源、去重合并、全量测速、重建 <code>proxies.json</code> 与 <code>top40.json</code>。页头会显示本轮数据的时间。</p></details>
+      <p>每小时一次：重新抓取两个数据源、去重合并、全量测速、重建 <code>proxies.json</code>、<code>top40.json</code> 与 <code>top100.json</code>。页头会显示本轮数据的时间。</p></details>
     <details><summary>能直接拿 JSON 用吗？</summary>
-      <p>可以。<a href="top40.json">top40.json</a> 是速率最快的前 40 条，字段包含 <code>server</code>、<code>port</code>、<code>secret</code>、<code>link</code>、<code>latency_ms</code>、<code>sources</code> 等；<a href="proxies.json">proxies.json</a> 是全量明细；<a href="proxies.txt">proxies.txt</a> 是仅含存活条目、已按速率排序的明文列表。</p></details>
+      <p>可以。<a href="top40.json">top40.json</a> 是速率最快的前 40 条，<a href="top100.json">top100.json</a> 是前 100 条（同结构、包含前 40 条），字段包含 <code>server</code>、<code>port</code>、<code>secret</code>、<code>link</code>、<code>latency_ms</code>、<code>sources</code> 等；<a href="proxies.json">proxies.json</a> 是全量明细；<a href="proxies.txt">proxies.txt</a> 是仅含存活条目、已按速率排序的明文列表。</p></details>
   </section>
 
   <footer>
