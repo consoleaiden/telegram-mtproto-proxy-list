@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-11-27T23:34:55Z",
+  "generated_at": "2026-11-28T08:02:00Z",
   "method": "faketls-handshake",
   "note": "访问速率（TCP 建连 + FakeTLS 握手往返）最快的前 100 个代理",
   "stats": {
-    "tested": 980,
-    "alive": 916,
-    "verified": 762,
-    "fastest_ms": 21.0,
-    "median_ms": 403.70000000000005,
+    "tested": 977,
+    "alive": 918,
+    "verified": 767,
+    "fastest_ms": 109.5,
+    "median_ms": 325.9,
     "sources": {
-      "tgmtproxy": 872,
+      "tgmtproxy": 871,
       "dubblebyte": 200
     }
   },
@@ -24,33 +24,14 @@
       "alive": true,
       "verified": true,
       "mode": "faketls",
-      "latency_ms": 21.0,
-      "connect_ms": 11.5,
-      "tls_ms": 9.6,
+      "latency_ms": 109.5,
+      "connect_ms": 54.6,
+      "tls_ms": 54.9,
       "success_rate": 1.0,
       "samples": 2,
       "error": "",
       "rank": 1,
       "link": "https://t.me/proxy?server=156.229.167.222&port=5201&secret=ee3a51554a1c8542cc36572fd59c2f63f4617a7572652e6d6963726f736f66742e636f6d"
-    },
-    {
-      "server": "156.229.164.62",
-      "port": 5202,
-      "secret": "ee6ca8e315abf7fb512ec858e61679a9e8617a7572652e6d6963726f736f66742e636f6d",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 22.0,
-      "connect_ms": 12.3,
-      "tls_ms": 9.6,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 2,
-      "link": "https://t.me/proxy?server=156.229.164.62&port=5202&secret=ee6ca8e315abf7fb512ec858e61679a9e8617a7572652e6d6963726f736f66742e636f6d"
     },
     {
       "server": "156.229.160.116",
@@ -62,14 +43,33 @@
       "alive": true,
       "verified": true,
       "mode": "faketls",
-      "latency_ms": 23.4,
-      "connect_ms": 14.0,
-      "tls_ms": 9.4,
+      "latency_ms": 110.2,
+      "connect_ms": 55.1,
+      "tls_ms": 55.0,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 2,
+      "link": "https://t.me/proxy?server=156.229.160.116&port=5203&secret=eea09f796ed6891c5b7afb9d9019e9a350617a7572652e6d6963726f736f66742e636f6d"
+    },
+    {
+      "server": "156.229.164.62",
+      "port": 5202,
+      "secret": "ee6ca8e315abf7fb512ec858e61679a9e8617a7572652e6d6963726f736f66742e636f6d",
+      "sources": [
+        "tgmtproxy"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 110.5,
+      "connect_ms": 55.8,
+      "tls_ms": 54.7,
       "success_rate": 1.0,
       "samples": 2,
       "error": "",
       "rank": 3,
-      "link": "https://t.me/proxy?server=156.229.160.116&port=5203&secret=eea09f796ed6891c5b7afb9d9019e9a350617a7572652e6d6963726f736f66742e636f6d"
+      "link": "https://t.me/proxy?server=156.229.164.62&port=5202&secret=ee6ca8e315abf7fb512ec858e61679a9e8617a7572652e6d6963726f736f66742e636f6d"
     },
     {
       "server": "216.36.108.1",
@@ -81,9 +81,9 @@
       "alive": true,
       "verified": true,
       "mode": "faketls",
-      "latency_ms": 23.4,
-      "connect_ms": 13.7,
-      "tls_ms": 9.6,
+      "latency_ms": 112.7,
+      "connect_ms": 55.8,
+      "tls_ms": 57.0,
       "success_rate": 1.0,
       "samples": 2,
       "error": "",
@@ -91,61 +91,23 @@
       "link": "https://t.me/proxy?server=216.36.108.1&port=5201&secret=ee497495a13920f0f753e80925c6f9c840617a7572652e6d6963726f736f66742e636f6d"
     },
     {
-      "server": "43.165.180.203",
-      "port": 443,
-      "secret": "ee4eb8f095f3d51f6461ad723e6c39245763646e2e6a7364656c6976722e6e6574",
+      "server": "172.65.119.133",
+      "port": 25565,
+      "secret": "ee104462821249bd7ac519130220c25d0963646e2e79656b74616e65742e636f6d",
       "sources": [
         "tgmtproxy"
       ],
       "alive": true,
       "verified": true,
       "mode": "faketls",
-      "latency_ms": 231.8,
-      "connect_ms": 109.2,
-      "tls_ms": 122.5,
+      "latency_ms": 176.1,
+      "connect_ms": 8.3,
+      "tls_ms": 167.7,
       "success_rate": 1.0,
       "samples": 2,
       "error": "",
       "rank": 5,
-      "link": "https://t.me/proxy?server=43.165.180.203&port=443&secret=ee4eb8f095f3d51f6461ad723e6c39245763646e2e6a7364656c6976722e6e6574"
-    },
-    {
-      "server": "176.65.151.69",
-      "port": 443,
-      "secret": "eeb3ecb15b607e2a3e74c70ecd23da05627777772e7370656564746573742e6e6574",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 268.7,
-      "connect_ms": 134.7,
-      "tls_ms": 134.1,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 6,
-      "link": "https://t.me/proxy?server=176.65.151.69&port=443&secret=eeb3ecb15b607e2a3e74c70ecd23da05627777772e7370656564746573742e6e6574"
-    },
-    {
-      "server": "89.124.95.185",
-      "port": 8443,
-      "secret": "ee6403877430086085167456439119957338392e3132342e39352e313835",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 274.1,
-      "connect_ms": 131.2,
-      "tls_ms": 142.9,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 7,
-      "link": "https://t.me/proxy?server=89.124.95.185&port=8443&secret=ee6403877430086085167456439119957338392e3132342e39352e313835"
+      "link": "https://t.me/proxy?server=172.65.119.133&port=25565&secret=ee104462821249bd7ac519130220c25d0963646e2e79656b74616e65742e636f6d"
     },
     {
       "server": "37.114.37.93",
@@ -157,14 +119,185 @@
       "alive": true,
       "verified": true,
       "mode": "faketls",
-      "latency_ms": 275.6,
-      "connect_ms": 138.2,
-      "tls_ms": 137.3,
+      "latency_ms": 178.6,
+      "connect_ms": 90.2,
+      "tls_ms": 88.3,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 6,
+      "link": "https://t.me/proxy?server=37.114.37.93&port=443&secret=ee100bf723c989ac93cf96a44e108fe87e6769746875622e636f6d"
+    },
+    {
+      "server": "87.248.129.130",
+      "port": 443,
+      "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
+      "sources": [
+        "tgmtproxy"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 181.4,
+      "connect_ms": 91.0,
+      "tls_ms": 90.4,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 7,
+      "link": "https://t.me/proxy?server=87.248.129.130&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d"
+    },
+    {
+      "server": "87.248.129.16",
+      "port": 8443,
+      "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
+      "sources": [
+        "tgmtproxy"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 181.4,
+      "connect_ms": 90.8,
+      "tls_ms": 90.7,
       "success_rate": 1.0,
       "samples": 2,
       "error": "",
       "rank": 8,
-      "link": "https://t.me/proxy?server=37.114.37.93&port=443&secret=ee100bf723c989ac93cf96a44e108fe87e6769746875622e636f6d"
+      "link": "https://t.me/proxy?server=87.248.129.16&port=8443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d"
+    },
+    {
+      "server": "87.248.129.195",
+      "port": 443,
+      "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
+      "sources": [
+        "tgmtproxy"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 181.8,
+      "connect_ms": 90.7,
+      "tls_ms": 91.1,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 9,
+      "link": "https://t.me/proxy?server=87.248.129.195&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d"
+    },
+    {
+      "server": "87.248.129.216",
+      "port": 443,
+      "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
+      "sources": [
+        "tgmtproxy"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 181.9,
+      "connect_ms": 91.1,
+      "tls_ms": 90.8,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 10,
+      "link": "https://t.me/proxy?server=87.248.129.216&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d"
+    },
+    {
+      "server": "87.248.129.105",
+      "port": 443,
+      "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
+      "sources": [
+        "tgmtproxy"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 182.2,
+      "connect_ms": 91.2,
+      "tls_ms": 91.0,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 11,
+      "link": "https://t.me/proxy?server=87.248.129.105&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d"
+    },
+    {
+      "server": "87.248.129.137",
+      "port": 443,
+      "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
+      "sources": [
+        "tgmtproxy"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 182.5,
+      "connect_ms": 92.0,
+      "tls_ms": 90.5,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 12,
+      "link": "https://t.me/proxy?server=87.248.129.137&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d"
+    },
+    {
+      "server": "176.65.151.69",
+      "port": 443,
+      "secret": "eeb3ecb15b607e2a3e74c70ecd23da05627777772e7370656564746573742e6e6574",
+      "sources": [
+        "tgmtproxy"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 182.7,
+      "connect_ms": 91.5,
+      "tls_ms": 91.2,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 13,
+      "link": "https://t.me/proxy?server=176.65.151.69&port=443&secret=eeb3ecb15b607e2a3e74c70ecd23da05627777772e7370656564746573742e6e6574"
+    },
+    {
+      "server": "185.166.214.158",
+      "port": 8443,
+      "secret": "ee7df267fe48b21537dd516ef91256edf67777772e6170706c652e636f6d",
+      "sources": [
+        "tgmtproxy"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 182.7,
+      "connect_ms": 91.4,
+      "tls_ms": 91.2,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 14,
+      "link": "https://t.me/proxy?server=185.166.214.158&port=8443&secret=ee7df267fe48b21537dd516ef91256edf67777772e6170706c652e636f6d"
+    },
+    {
+      "server": "87.248.129.47",
+      "port": 443,
+      "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
+      "sources": [
+        "tgmtproxy"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 183.1,
+      "connect_ms": 91.7,
+      "tls_ms": 91.4,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 15,
+      "link": "https://t.me/proxy?server=87.248.129.47&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d"
     },
     {
       "server": "87.248.129.97",
@@ -176,17 +309,17 @@
       "alive": true,
       "verified": true,
       "mode": "faketls",
-      "latency_ms": 276.0,
-      "connect_ms": 137.8,
-      "tls_ms": 138.2,
+      "latency_ms": 183.2,
+      "connect_ms": 92.8,
+      "tls_ms": 90.3,
       "success_rate": 1.0,
       "samples": 2,
       "error": "",
-      "rank": 9,
+      "rank": 16,
       "link": "https://t.me/proxy?server=87.248.129.97&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d"
     },
     {
-      "server": "87.248.129.101",
+      "server": "87.248.129.98",
       "port": 443,
       "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
       "sources": [
@@ -195,14 +328,71 @@
       "alive": true,
       "verified": true,
       "mode": "faketls",
-      "latency_ms": 276.2,
-      "connect_ms": 138.3,
-      "tls_ms": 137.9,
+      "latency_ms": 183.2,
+      "connect_ms": 92.7,
+      "tls_ms": 90.5,
       "success_rate": 1.0,
       "samples": 2,
       "error": "",
-      "rank": 10,
-      "link": "https://t.me/proxy?server=87.248.129.101&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d"
+      "rank": 17,
+      "link": "https://t.me/proxy?server=87.248.129.98&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d"
+    },
+    {
+      "server": "87.248.129.201",
+      "port": 443,
+      "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
+      "sources": [
+        "tgmtproxy"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 183.6,
+      "connect_ms": 92.9,
+      "tls_ms": 90.7,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 18,
+      "link": "https://t.me/proxy?server=87.248.129.201&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d"
+    },
+    {
+      "server": "87.248.129.99",
+      "port": 443,
+      "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
+      "sources": [
+        "tgmtproxy"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 183.9,
+      "connect_ms": 92.8,
+      "tls_ms": 91.1,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 19,
+      "link": "https://t.me/proxy?server=87.248.129.99&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d"
+    },
+    {
+      "server": "87.248.129.130",
+      "port": 15,
+      "secret": "ee1603010200010001fc030386e24c3add63646e2e79656b74616e65742e636f6d",
+      "sources": [
+        "tgmtproxy"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 184.5,
+      "connect_ms": 92.4,
+      "tls_ms": 92.1,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 20,
+      "link": "https://t.me/proxy?server=87.248.129.130&port=15&secret=ee1603010200010001fc030386e24c3add63646e2e79656b74616e65742e636f6d"
     },
     {
       "server": "87.248.129.106",
@@ -214,13 +404,13 @@
       "alive": true,
       "verified": true,
       "mode": "faketls",
-      "latency_ms": 276.3,
-      "connect_ms": 137.7,
-      "tls_ms": 138.6,
+      "latency_ms": 184.6,
+      "connect_ms": 93.7,
+      "tls_ms": 90.9,
       "success_rate": 1.0,
       "samples": 2,
       "error": "",
-      "rank": 11,
+      "rank": 21,
       "link": "https://t.me/proxy?server=87.248.129.106&port=8443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d"
     },
     {
@@ -233,71 +423,14 @@
       "alive": true,
       "verified": true,
       "mode": "faketls",
-      "latency_ms": 276.3,
-      "connect_ms": 137.6,
-      "tls_ms": 138.6,
+      "latency_ms": 185.1,
+      "connect_ms": 92.5,
+      "tls_ms": 92.5,
       "success_rate": 1.0,
       "samples": 2,
       "error": "",
-      "rank": 12,
+      "rank": 22,
       "link": "https://t.me/proxy?server=87.248.129.221&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d"
-    },
-    {
-      "server": "87.248.129.201",
-      "port": 443,
-      "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 276.9,
-      "connect_ms": 138.8,
-      "tls_ms": 138.1,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 13,
-      "link": "https://t.me/proxy?server=87.248.129.201&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d"
-    },
-    {
-      "server": "190.2.144.63",
-      "port": 443,
-      "secret": "eea3c15217ac9f487f3a9c2a1cab661ebb7777772e676f6f676c652e636f6d",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 277.1,
-      "connect_ms": 132.5,
-      "tls_ms": 144.6,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 14,
-      "link": "https://t.me/proxy?server=190.2.144.63&port=443&secret=eea3c15217ac9f487f3a9c2a1cab661ebb7777772e676f6f676c652e636f6d"
-    },
-    {
-      "server": "87.248.129.135",
-      "port": 443,
-      "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 277.1,
-      "connect_ms": 139.2,
-      "tls_ms": 137.9,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 15,
-      "link": "https://t.me/proxy?server=87.248.129.135&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d"
     },
     {
       "server": "87.248.129.190",
@@ -309,318 +442,14 @@
       "alive": true,
       "verified": true,
       "mode": "faketls",
-      "latency_ms": 277.1,
-      "connect_ms": 138.6,
-      "tls_ms": 138.5,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 16,
-      "link": "https://t.me/proxy?server=87.248.129.190&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d"
-    },
-    {
-      "server": "87.248.129.99",
-      "port": 443,
-      "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 277.3,
-      "connect_ms": 139.4,
-      "tls_ms": 137.9,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 17,
-      "link": "https://t.me/proxy?server=87.248.129.99&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d"
-    },
-    {
-      "server": "87.248.129.16",
-      "port": 8443,
-      "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 277.6,
-      "connect_ms": 138.7,
-      "tls_ms": 138.9,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 18,
-      "link": "https://t.me/proxy?server=87.248.129.16&port=8443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d"
-    },
-    {
-      "server": "87.248.129.186",
-      "port": 443,
-      "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 277.7,
-      "connect_ms": 138.5,
-      "tls_ms": 139.2,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 19,
-      "link": "https://t.me/proxy?server=87.248.129.186&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d"
-    },
-    {
-      "server": "87.248.129.130",
-      "port": 15,
-      "secret": "ee1603010200010001fc030386e24c3add63646e2e79656b74616e65742e636f6d",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 277.9,
-      "connect_ms": 139.6,
-      "tls_ms": 138.4,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 20,
-      "link": "https://t.me/proxy?server=87.248.129.130&port=15&secret=ee1603010200010001fc030386e24c3add63646e2e79656b74616e65742e636f6d"
-    },
-    {
-      "server": "87.248.129.130",
-      "port": 443,
-      "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 278.7,
-      "connect_ms": 140.4,
-      "tls_ms": 138.3,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 21,
-      "link": "https://t.me/proxy?server=87.248.129.130&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d"
-    },
-    {
-      "server": "87.248.129.137",
-      "port": 443,
-      "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 278.8,
-      "connect_ms": 141.3,
-      "tls_ms": 137.4,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 22,
-      "link": "https://t.me/proxy?server=87.248.129.137&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d"
-    },
-    {
-      "server": "85.17.89.193",
-      "port": 443,
-      "secret": "ee76f6583e6b509d946c56287a9ca59dc362726f7773696e672e79616e6465782e636f6d",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 278.9,
-      "connect_ms": 135.1,
-      "tls_ms": 143.9,
+      "latency_ms": 185.6,
+      "connect_ms": 93.1,
+      "tls_ms": 92.5,
       "success_rate": 1.0,
       "samples": 2,
       "error": "",
       "rank": 23,
-      "link": "https://t.me/proxy?server=85.17.89.193&port=443&secret=ee76f6583e6b509d946c56287a9ca59dc362726f7773696e672e79616e6465782e636f6d"
-    },
-    {
-      "server": "87.248.129.105",
-      "port": 443,
-      "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 278.9,
-      "connect_ms": 140.1,
-      "tls_ms": 138.9,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 24,
-      "link": "https://t.me/proxy?server=87.248.129.105&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d"
-    },
-    {
-      "server": "87.248.129.101",
-      "port": 8443,
-      "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 279.3,
-      "connect_ms": 140.8,
-      "tls_ms": 138.4,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 25,
-      "link": "https://t.me/proxy?server=87.248.129.101&port=8443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d"
-    },
-    {
-      "server": "87.248.129.47",
-      "port": 443,
-      "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 279.3,
-      "connect_ms": 141.2,
-      "tls_ms": 138.2,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 26,
-      "link": "https://t.me/proxy?server=87.248.129.47&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d"
-    },
-    {
-      "server": "87.248.129.216",
-      "port": 443,
-      "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 279.5,
-      "connect_ms": 141.5,
-      "tls_ms": 138.0,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 27,
-      "link": "https://t.me/proxy?server=87.248.129.216&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d"
-    },
-    {
-      "server": "185.166.214.158",
-      "port": 8443,
-      "secret": "ee7df267fe48b21537dd516ef91256edf67777772e6170706c652e636f6d",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 279.9,
-      "connect_ms": 141.9,
-      "tls_ms": 138.0,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 28,
-      "link": "https://t.me/proxy?server=185.166.214.158&port=8443&secret=ee7df267fe48b21537dd516ef91256edf67777772e6170706c652e636f6d"
-    },
-    {
-      "server": "87.248.129.195",
-      "port": 443,
-      "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 279.9,
-      "connect_ms": 140.6,
-      "tls_ms": 139.2,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 29,
-      "link": "https://t.me/proxy?server=87.248.129.195&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d"
-    },
-    {
-      "server": "87.248.129.13",
-      "port": 15,
-      "secret": "ee1603010200010001fc030386e24c3add63646e2e79656b74616e65742e636f6d",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 280.1,
-      "connect_ms": 141.3,
-      "tls_ms": 138.8,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 30,
-      "link": "https://t.me/proxy?server=87.248.129.13&port=15&secret=ee1603010200010001fc030386e24c3add63646e2e79656b74616e65742e636f6d"
-    },
-    {
-      "server": "87.248.129.196",
-      "port": 443,
-      "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 280.1,
-      "connect_ms": 141.8,
-      "tls_ms": 138.2,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 31,
-      "link": "https://t.me/proxy?server=87.248.129.196&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d"
-    },
-    {
-      "server": "87.248.129.53",
-      "port": 15,
-      "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 280.6,
-      "connect_ms": 142.6,
-      "tls_ms": 138.0,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 32,
-      "link": "https://t.me/proxy?server=87.248.129.53&port=15&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d"
+      "link": "https://t.me/proxy?server=87.248.129.190&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d"
     },
     {
       "server": "87.248.129.49",
@@ -632,17 +461,55 @@
       "alive": true,
       "verified": true,
       "mode": "faketls",
-      "latency_ms": 280.9,
-      "connect_ms": 140.7,
-      "tls_ms": 140.2,
+      "latency_ms": 185.9,
+      "connect_ms": 95.0,
+      "tls_ms": 90.9,
       "success_rate": 1.0,
       "samples": 2,
       "error": "",
-      "rank": 33,
+      "rank": 24,
       "link": "https://t.me/proxy?server=87.248.129.49&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d"
     },
     {
-      "server": "87.248.129.98",
+      "server": "194.146.12.253",
+      "port": 8443,
+      "secret": "ee4cdc677c2048afa846136f4a70c05e827777772e6461726b646570742e73746f7265",
+      "sources": [
+        "tgmtproxy"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 187.1,
+      "connect_ms": 93.2,
+      "tls_ms": 93.8,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 25,
+      "link": "https://t.me/proxy?server=194.146.12.253&port=8443&secret=ee4cdc677c2048afa846136f4a70c05e827777772e6461726b646570742e73746f7265"
+    },
+    {
+      "server": "87.248.129.13",
+      "port": 15,
+      "secret": "ee1603010200010001fc030386e24c3add63646e2e79656b74616e65742e636f6d",
+      "sources": [
+        "tgmtproxy"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 187.1,
+      "connect_ms": 94.1,
+      "tls_ms": 93.0,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 26,
+      "link": "https://t.me/proxy?server=87.248.129.13&port=15&secret=ee1603010200010001fc030386e24c3add63646e2e79656b74616e65742e636f6d"
+    },
+    {
+      "server": "87.248.129.186",
       "port": 443,
       "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
       "sources": [
@@ -651,112 +518,17 @@
       "alive": true,
       "verified": true,
       "mode": "faketls",
-      "latency_ms": 287.4,
-      "connect_ms": 148.7,
-      "tls_ms": 138.8,
+      "latency_ms": 187.2,
+      "connect_ms": 94.4,
+      "tls_ms": 92.8,
       "success_rate": 1.0,
       "samples": 2,
       "error": "",
-      "rank": 34,
-      "link": "https://t.me/proxy?server=87.248.129.98&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d"
+      "rank": 27,
+      "link": "https://t.me/proxy?server=87.248.129.186&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d"
     },
     {
-      "server": "95.179.255.101",
-      "port": 443,
-      "secret": "ee7a6047adf345e77b0fcb75c92485211a7777772e6d6f7a696c6c612e6f7267",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 291.2,
-      "connect_ms": 136.2,
-      "tls_ms": 155.0,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 35,
-      "link": "https://t.me/proxy?server=95.179.255.101&port=443&secret=ee7a6047adf345e77b0fcb75c92485211a7777772e6d6f7a696c6c612e6f7267"
-    },
-    {
-      "server": "217.138.215.102",
-      "port": 443,
-      "secret": "ee8357954a3df5c26e32a7b8a7978c3f107777772e636974696c696e6b2e7275",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 297.6,
-      "connect_ms": 136.2,
-      "tls_ms": 161.4,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 36,
-      "link": "https://t.me/proxy?server=217.138.215.102&port=443&secret=ee8357954a3df5c26e32a7b8a7978c3f107777772e636974696c696e6b2e7275"
-    },
-    {
-      "server": "172.65.119.133",
-      "port": 25565,
-      "secret": "ee104462821249bd7ac519130220c25d0963646e2e79656b74616e65742e636f6d",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 298.8,
-      "connect_ms": 10.9,
-      "tls_ms": 287.9,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 37,
-      "link": "https://t.me/proxy?server=172.65.119.133&port=25565&secret=ee104462821249bd7ac519130220c25d0963646e2e79656b74616e65742e636f6d"
-    },
-    {
-      "server": "tabahor.darsad.org",
-      "port": 443,
-      "secret": "ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 299.9,
-      "connect_ms": 167.3,
-      "tls_ms": 132.5,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 38,
-      "link": "https://t.me/proxy?server=tabahor.darsad.org&port=443&secret=ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d"
-    },
-    {
-      "server": "mehrsam.org",
-      "port": 443,
-      "secret": "ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 301.1,
-      "connect_ms": 168.6,
-      "tls_ms": 132.6,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 39,
-      "link": "https://t.me/proxy?server=mehrsam.org&port=443&secret=ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d"
-    },
-    {
-      "server": "yazdan.htop.info",
+      "server": "87.248.129.135",
       "port": 443,
       "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
       "sources": [
@@ -765,226 +537,90 @@
       "alive": true,
       "verified": true,
       "mode": "faketls",
-      "latency_ms": 304.0,
-      "connect_ms": 172.1,
-      "tls_ms": 131.9,
+      "latency_ms": 187.8,
+      "connect_ms": 95.6,
+      "tls_ms": 92.2,
       "success_rate": 1.0,
       "samples": 2,
       "error": "",
-      "rank": 40,
-      "link": "https://t.me/proxy?server=yazdan.htop.info&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d"
+      "rank": 28,
+      "link": "https://t.me/proxy?server=87.248.129.135&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d"
     },
     {
-      "server": "156.226.168.65",
-      "port": 22781,
-      "secret": "eef7ced66eebb29358676b40763f7eb545617a7572652e6d6963726f736f66742e636f6d",
+      "server": "87.248.129.53",
+      "port": 15,
+      "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
       "sources": [
         "tgmtproxy"
       ],
       "alive": true,
       "verified": true,
       "mode": "faketls",
-      "latency_ms": 304.8,
-      "connect_ms": 152.5,
-      "tls_ms": 152.3,
+      "latency_ms": 188.2,
+      "connect_ms": 93.4,
+      "tls_ms": 94.8,
       "success_rate": 1.0,
       "samples": 2,
       "error": "",
-      "rank": 41,
-      "link": "https://t.me/proxy?server=156.226.168.65&port=22781&secret=eef7ced66eebb29358676b40763f7eb545617a7572652e6d6963726f736f66742e636f6d"
+      "rank": 29,
+      "link": "https://t.me/proxy?server=87.248.129.53&port=15&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d"
     },
     {
-      "server": "79.137.196.223",
-      "port": 1443,
-      "secret": "eeee52288a1c9bf20ef3423488f8418c3f087777772e636c6f7564666c6172652e636f6d",
+      "server": "87.248.129.101",
+      "port": 443,
+      "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
       "sources": [
         "tgmtproxy"
       ],
       "alive": true,
       "verified": true,
       "mode": "faketls",
-      "latency_ms": 307.6,
-      "connect_ms": 154.0,
-      "tls_ms": 153.6,
+      "latency_ms": 190.2,
+      "connect_ms": 96.2,
+      "tls_ms": 94.1,
       "success_rate": 1.0,
       "samples": 2,
       "error": "",
-      "rank": 42,
-      "link": "https://t.me/proxy?server=79.137.196.223&port=1443&secret=eeee52288a1c9bf20ef3423488f8418c3f087777772e636c6f7564666c6172652e636f6d"
+      "rank": 30,
+      "link": "https://t.me/proxy?server=87.248.129.101&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d"
     },
     {
-      "server": "79.137.196.223",
-      "port": 2443,
-      "secret": "eeeed28dc05b23b7ccba27a3d352abf1467c7777772e636c6f7564666c6172652e636f6d",
+      "server": "87.248.129.101",
+      "port": 8443,
+      "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
       "sources": [
         "tgmtproxy"
       ],
       "alive": true,
       "verified": true,
       "mode": "faketls",
-      "latency_ms": 307.9,
-      "connect_ms": 154.5,
-      "tls_ms": 153.4,
+      "latency_ms": 190.3,
+      "connect_ms": 95.2,
+      "tls_ms": 95.1,
       "success_rate": 1.0,
       "samples": 2,
       "error": "",
-      "rank": 43,
-      "link": "https://t.me/proxy?server=79.137.196.223&port=2443&secret=eeeed28dc05b23b7ccba27a3d352abf1467c7777772e636c6f7564666c6172652e636f6d"
+      "rank": 31,
+      "link": "https://t.me/proxy?server=87.248.129.101&port=8443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d"
     },
     {
-      "server": "79.137.196.223",
-      "port": 6443,
-      "secret": "eeee121e233e90f2720d1154f701937cc5b67777772e636c6f7564666c6172652e636f6d",
+      "server": "190.2.144.63",
+      "port": 443,
+      "secret": "eea3c15217ac9f487f3a9c2a1cab661ebb7777772e676f6f676c652e636f6d",
       "sources": [
         "tgmtproxy"
       ],
       "alive": true,
       "verified": true,
       "mode": "faketls",
-      "latency_ms": 307.9,
-      "connect_ms": 154.7,
-      "tls_ms": 153.2,
+      "latency_ms": 190.6,
+      "connect_ms": 89.7,
+      "tls_ms": 100.8,
       "success_rate": 1.0,
       "samples": 2,
       "error": "",
-      "rank": 44,
-      "link": "https://t.me/proxy?server=79.137.196.223&port=6443&secret=eeee121e233e90f2720d1154f701937cc5b67777772e636c6f7564666c6172652e636f6d"
-    },
-    {
-      "server": "79.137.196.223",
-      "port": 17443,
-      "secret": "ee619628651747706ea93bfbd344ba3fc17777772e636c6f7564666c6172652e636f6d",
-      "sources": [
-        "tgmtproxy",
-        "dubblebyte"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 308.1,
-      "connect_ms": 154.8,
-      "tls_ms": 153.3,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 45,
-      "link": "https://t.me/proxy?server=79.137.196.223&port=17443&secret=ee619628651747706ea93bfbd344ba3fc17777772e636c6f7564666c6172652e636f6d"
-    },
-    {
-      "server": "79.137.196.223",
-      "port": 13443,
-      "secret": "eee06596f5753c0dc9b56fe4864a4665e57777772e636c6f7564666c6172652e636f6d",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 308.2,
-      "connect_ms": 154.4,
-      "tls_ms": 153.8,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 46,
-      "link": "https://t.me/proxy?server=79.137.196.223&port=13443&secret=eee06596f5753c0dc9b56fe4864a4665e57777772e636c6f7564666c6172652e636f6d"
-    },
-    {
-      "server": "79.137.196.223",
-      "port": 4443,
-      "secret": "eeee4026e99e99216664b0cb156da676d7707777772e636c6f7564666c6172652e636f6d",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 308.4,
-      "connect_ms": 154.9,
-      "tls_ms": 153.4,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 47,
-      "link": "https://t.me/proxy?server=79.137.196.223&port=4443&secret=eeee4026e99e99216664b0cb156da676d7707777772e636c6f7564666c6172652e636f6d"
-    },
-    {
-      "server": "79.137.196.223",
-      "port": 19443,
-      "secret": "ee34faea79631cc8b7b884a3d513857e7b7777772e636c6f7564666c6172652e636f6d",
-      "sources": [
-        "tgmtproxy",
-        "dubblebyte"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 308.4,
-      "connect_ms": 154.8,
-      "tls_ms": 153.6,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 48,
-      "link": "https://t.me/proxy?server=79.137.196.223&port=19443&secret=ee34faea79631cc8b7b884a3d513857e7b7777772e636c6f7564666c6172652e636f6d"
-    },
-    {
-      "server": "79.137.196.223",
-      "port": 12443,
-      "secret": "eebc63866dd7a052dbd741a691486a82127777772e636c6f7564666c6172652e636f6d",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 308.4,
-      "connect_ms": 154.3,
-      "tls_ms": 154.1,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 49,
-      "link": "https://t.me/proxy?server=79.137.196.223&port=12443&secret=eebc63866dd7a052dbd741a691486a82127777772e636c6f7564666c6172652e636f6d"
-    },
-    {
-      "server": "79.137.196.223",
-      "port": 21443,
-      "secret": "ee70d02df07ecb5669b6eb010aba55eab07777772e636c6f7564666c6172652e636f6d",
-      "sources": [
-        "tgmtproxy",
-        "dubblebyte"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 308.5,
-      "connect_ms": 154.8,
-      "tls_ms": 153.6,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 50,
-      "link": "https://t.me/proxy?server=79.137.196.223&port=21443&secret=ee70d02df07ecb5669b6eb010aba55eab07777772e636c6f7564666c6172652e636f6d"
-    },
-    {
-      "server": "79.137.196.223",
-      "port": 9443,
-      "secret": "eeeed3431eaef666469f9beb5286a544d96f7777772e636c6f7564666c6172652e636f6d",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 308.6,
-      "connect_ms": 155.1,
-      "tls_ms": 153.6,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 51,
-      "link": "https://t.me/proxy?server=79.137.196.223&port=9443&secret=eeeed3431eaef666469f9beb5286a544d96f7777772e636c6f7564666c6172652e636f6d"
+      "rank": 32,
+      "link": "https://t.me/proxy?server=190.2.144.63&port=443&secret=eea3c15217ac9f487f3a9c2a1cab661ebb7777772e676f6f676c652e636f6d"
     },
     {
       "server": "79.137.196.223",
@@ -996,73 +632,71 @@
       "alive": true,
       "verified": true,
       "mode": "faketls",
-      "latency_ms": 308.6,
-      "connect_ms": 154.4,
-      "tls_ms": 154.2,
+      "latency_ms": 190.9,
+      "connect_ms": 95.8,
+      "tls_ms": 95.1,
       "success_rate": 1.0,
       "samples": 2,
       "error": "",
-      "rank": 52,
+      "rank": 33,
       "link": "https://t.me/proxy?server=79.137.196.223&port=11443&secret=ee8a160975fad14b21992a65e0db4b7cfa7777772e636c6f7564666c6172652e636f6d"
     },
     {
       "server": "79.137.196.223",
-      "port": 20443,
-      "secret": "ee19cebd24e6780701cc9839053c6da7677777772e636c6f7564666c6172652e636f6d",
-      "sources": [
-        "tgmtproxy",
-        "dubblebyte"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 308.6,
-      "connect_ms": 155.4,
-      "tls_ms": 153.2,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 53,
-      "link": "https://t.me/proxy?server=79.137.196.223&port=20443&secret=ee19cebd24e6780701cc9839053c6da7677777772e636c6f7564666c6172652e636f6d"
-    },
-    {
-      "server": "79.137.196.223",
-      "port": 16443,
-      "secret": "ee64cb94437cedd507cf9c4d83fbc229287777772e636c6f7564666c6172652e636f6d",
-      "sources": [
-        "tgmtproxy",
-        "dubblebyte"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 308.7,
-      "connect_ms": 154.9,
-      "tls_ms": 153.8,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 54,
-      "link": "https://t.me/proxy?server=79.137.196.223&port=16443&secret=ee64cb94437cedd507cf9c4d83fbc229287777772e636c6f7564666c6172652e636f6d"
-    },
-    {
-      "server": "79.137.196.223",
-      "port": 15443,
-      "secret": "ee5d739d0cab70b86961816e3a9c27d4c17777772e636c6f7564666c6172652e636f6d",
+      "port": 12443,
+      "secret": "eebc63866dd7a052dbd741a691486a82127777772e636c6f7564666c6172652e636f6d",
       "sources": [
         "tgmtproxy"
       ],
       "alive": true,
       "verified": true,
       "mode": "faketls",
-      "latency_ms": 308.8,
-      "connect_ms": 155.1,
-      "tls_ms": 153.7,
+      "latency_ms": 191.1,
+      "connect_ms": 95.9,
+      "tls_ms": 95.2,
       "success_rate": 1.0,
       "samples": 2,
       "error": "",
-      "rank": 55,
-      "link": "https://t.me/proxy?server=79.137.196.223&port=15443&secret=ee5d739d0cab70b86961816e3a9c27d4c17777772e636c6f7564666c6172652e636f6d"
+      "rank": 34,
+      "link": "https://t.me/proxy?server=79.137.196.223&port=12443&secret=eebc63866dd7a052dbd741a691486a82127777772e636c6f7564666c6172652e636f6d"
+    },
+    {
+      "server": "79.137.196.223",
+      "port": 6443,
+      "secret": "eeee121e233e90f2720d1154f701937cc5b67777772e636c6f7564666c6172652e636f6d",
+      "sources": [
+        "tgmtproxy"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 191.1,
+      "connect_ms": 95.9,
+      "tls_ms": 95.2,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 35,
+      "link": "https://t.me/proxy?server=79.137.196.223&port=6443&secret=eeee121e233e90f2720d1154f701937cc5b67777772e636c6f7564666c6172652e636f6d"
+    },
+    {
+      "server": "85.17.89.193",
+      "port": 443,
+      "secret": "ee76f6583e6b509d946c56287a9ca59dc362726f7773696e672e79616e6465782e636f6d",
+      "sources": [
+        "tgmtproxy"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 191.2,
+      "connect_ms": 90.2,
+      "tls_ms": 100.9,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 36,
+      "link": "https://t.me/proxy?server=85.17.89.193&port=443&secret=ee76f6583e6b509d946c56287a9ca59dc362726f7773696e672e79616e6465782e636f6d"
     },
     {
       "server": "79.137.196.223",
@@ -1074,14 +708,71 @@
       "alive": true,
       "verified": true,
       "mode": "faketls",
-      "latency_ms": 308.9,
-      "connect_ms": 154.2,
-      "tls_ms": 154.6,
+      "latency_ms": 191.6,
+      "connect_ms": 95.8,
+      "tls_ms": 95.8,
       "success_rate": 1.0,
       "samples": 2,
       "error": "",
-      "rank": 56,
+      "rank": 37,
       "link": "https://t.me/proxy?server=79.137.196.223&port=10443&secret=ee63fccdeb9951e5f99d66d274148278b97777772e636c6f7564666c6172652e636f6d"
+    },
+    {
+      "server": "79.137.196.223",
+      "port": 2443,
+      "secret": "eeeed28dc05b23b7ccba27a3d352abf1467c7777772e636c6f7564666c6172652e636f6d",
+      "sources": [
+        "tgmtproxy"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 191.7,
+      "connect_ms": 96.3,
+      "tls_ms": 95.4,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 38,
+      "link": "https://t.me/proxy?server=79.137.196.223&port=2443&secret=eeeed28dc05b23b7ccba27a3d352abf1467c7777772e636c6f7564666c6172652e636f6d"
+    },
+    {
+      "server": "144.31.214.17",
+      "port": 12443,
+      "secret": "ee58aba87ec920b3890dd18ebf4ec5bf4c6672312e616e6b6f76706e2e6f6e6c696e65",
+      "sources": [
+        "tgmtproxy"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 192.6,
+      "connect_ms": 98.4,
+      "tls_ms": 94.2,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 39,
+      "link": "https://t.me/proxy?server=144.31.214.17&port=12443&secret=ee58aba87ec920b3890dd18ebf4ec5bf4c6672312e616e6b6f76706e2e6f6e6c696e65"
+    },
+    {
+      "server": "79.137.196.223",
+      "port": 8843,
+      "secret": "eeeecd971a62719a1ccaee3177da037511167777772e636c6f7564666c6172652e636f6d",
+      "sources": [
+        "tgmtproxy"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 192.8,
+      "connect_ms": 96.5,
+      "tls_ms": 96.2,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 40,
+      "link": "https://t.me/proxy?server=79.137.196.223&port=8843&secret=eeeecd971a62719a1ccaee3177da037511167777772e636c6f7564666c6172652e636f6d"
     },
     {
       "server": "79.137.196.223",
@@ -1093,51 +784,109 @@
       "alive": true,
       "verified": true,
       "mode": "faketls",
-      "latency_ms": 309.1,
-      "connect_ms": 154.4,
-      "tls_ms": 154.7,
+      "latency_ms": 192.8,
+      "connect_ms": 98.1,
+      "tls_ms": 94.7,
       "success_rate": 1.0,
       "samples": 2,
       "error": "",
-      "rank": 57,
+      "rank": 41,
       "link": "https://t.me/proxy?server=79.137.196.223&port=443&secret=eeee525b778775d1c3b1e2beb8af08e2017777772e636c6f7564666c6172652e636f6d"
     },
     {
       "server": "79.137.196.223",
-      "port": 2053,
-      "secret": "eeee1701dff011da0ee1313d584fc565187777772e636c6f7564666c6172652e636f6d",
+      "port": 5443,
+      "secret": "eeee1b84950935ebf99951bc30e394445c9b7777772e636c6f7564666c6172652e636f6d",
       "sources": [
         "tgmtproxy"
       ],
       "alive": true,
       "verified": true,
       "mode": "faketls",
-      "latency_ms": 309.1,
-      "connect_ms": 154.4,
-      "tls_ms": 154.6,
+      "latency_ms": 192.9,
+      "connect_ms": 97.4,
+      "tls_ms": 95.6,
       "success_rate": 1.0,
       "samples": 2,
       "error": "",
-      "rank": 58,
-      "link": "https://t.me/proxy?server=79.137.196.223&port=2053&secret=eeee1701dff011da0ee1313d584fc565187777772e636c6f7564666c6172652e636f6d"
+      "rank": 42,
+      "link": "https://t.me/proxy?server=79.137.196.223&port=5443&secret=eeee1b84950935ebf99951bc30e394445c9b7777772e636c6f7564666c6172652e636f6d"
+    },
+    {
+      "server": "79.137.196.223",
+      "port": 20443,
+      "secret": "ee19cebd24e6780701cc9839053c6da7677777772e636c6f7564666c6172652e636f6d",
+      "sources": [
+        "tgmtproxy"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 193.0,
+      "connect_ms": 97.1,
+      "tls_ms": 95.9,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 43,
+      "link": "https://t.me/proxy?server=79.137.196.223&port=20443&secret=ee19cebd24e6780701cc9839053c6da7677777772e636c6f7564666c6172652e636f6d"
+    },
+    {
+      "server": "79.137.196.223",
+      "port": 17443,
+      "secret": "ee619628651747706ea93bfbd344ba3fc17777772e636c6f7564666c6172652e636f6d",
+      "sources": [
+        "tgmtproxy"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 193.8,
+      "connect_ms": 97.3,
+      "tls_ms": 96.6,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 44,
+      "link": "https://t.me/proxy?server=79.137.196.223&port=17443&secret=ee619628651747706ea93bfbd344ba3fc17777772e636c6f7564666c6172652e636f6d"
+    },
+    {
+      "server": "79.137.196.223",
+      "port": 19443,
+      "secret": "ee34faea79631cc8b7b884a3d513857e7b7777772e636c6f7564666c6172652e636f6d",
+      "sources": [
+        "tgmtproxy"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 195.6,
+      "connect_ms": 98.8,
+      "tls_ms": 96.8,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 45,
+      "link": "https://t.me/proxy?server=79.137.196.223&port=19443&secret=ee34faea79631cc8b7b884a3d513857e7b7777772e636c6f7564666c6172652e636f6d"
     },
     {
       "server": "79.137.196.223",
       "port": 3443,
       "secret": "eeee33159ebd0ee0dcafef811a9bc7c2ab8d7777772e636c6f7564666c6172652e636f6d",
       "sources": [
-        "tgmtproxy"
+        "tgmtproxy",
+        "dubblebyte"
       ],
       "alive": true,
       "verified": true,
       "mode": "faketls",
-      "latency_ms": 309.2,
-      "connect_ms": 155.7,
-      "tls_ms": 153.5,
+      "latency_ms": 196.4,
+      "connect_ms": 99.1,
+      "tls_ms": 97.3,
       "success_rate": 1.0,
       "samples": 2,
       "error": "",
-      "rank": 59,
+      "rank": 46,
       "link": "https://t.me/proxy?server=79.137.196.223&port=3443&secret=eeee33159ebd0ee0dcafef811a9bc7c2ab8d7777772e636c6f7564666c6172652e636f6d"
     },
     {
@@ -1150,33 +899,206 @@
       "alive": true,
       "verified": true,
       "mode": "faketls",
-      "latency_ms": 309.4,
-      "connect_ms": 155.8,
-      "tls_ms": 153.7,
+      "latency_ms": 196.8,
+      "connect_ms": 98.8,
+      "tls_ms": 98.0,
       "success_rate": 1.0,
       "samples": 2,
       "error": "",
-      "rank": 60,
+      "rank": 47,
       "link": "https://t.me/proxy?server=79.137.196.223&port=8443&secret=eeeeacd334a255675ccc880cb6b8c9caf07777772e636c6f7564666c6172652e636f6d"
     },
     {
-      "server": "144.31.214.17",
-      "port": 12443,
-      "secret": "ee58aba87ec920b3890dd18ebf4ec5bf4c6672312e616e6b6f76706e2e6f6e6c696e65",
+      "server": "79.137.196.223",
+      "port": 7443,
+      "secret": "eeeeb30662ee79541fb143515ad872d2e9dd7777772e636c6f7564666c6172652e636f6d",
+      "sources": [
+        "tgmtproxy",
+        "dubblebyte"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 197.1,
+      "connect_ms": 99.8,
+      "tls_ms": 97.3,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 48,
+      "link": "https://t.me/proxy?server=79.137.196.223&port=7443&secret=eeeeb30662ee79541fb143515ad872d2e9dd7777772e636c6f7564666c6172652e636f6d"
+    },
+    {
+      "server": "79.137.196.223",
+      "port": 21443,
+      "secret": "ee70d02df07ecb5669b6eb010aba55eab07777772e636c6f7564666c6172652e636f6d",
       "sources": [
         "tgmtproxy"
       ],
       "alive": true,
       "verified": true,
       "mode": "faketls",
-      "latency_ms": 309.5,
-      "connect_ms": 154.8,
-      "tls_ms": 154.7,
+      "latency_ms": 198.6,
+      "connect_ms": 100.2,
+      "tls_ms": 98.4,
       "success_rate": 1.0,
       "samples": 2,
       "error": "",
-      "rank": 61,
-      "link": "https://t.me/proxy?server=144.31.214.17&port=12443&secret=ee58aba87ec920b3890dd18ebf4ec5bf4c6672312e616e6b6f76706e2e6f6e6c696e65"
+      "rank": 49,
+      "link": "https://t.me/proxy?server=79.137.196.223&port=21443&secret=ee70d02df07ecb5669b6eb010aba55eab07777772e636c6f7564666c6172652e636f6d"
+    },
+    {
+      "server": "79.137.196.223",
+      "port": 18443,
+      "secret": "eefd7ec32323aa5b4fc5cdd6b7dd28836a7777772e636c6f7564666c6172652e636f6d",
+      "sources": [
+        "tgmtproxy"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 198.9,
+      "connect_ms": 100.1,
+      "tls_ms": 98.8,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 50,
+      "link": "https://t.me/proxy?server=79.137.196.223&port=18443&secret=eefd7ec32323aa5b4fc5cdd6b7dd28836a7777772e636c6f7564666c6172652e636f6d"
+    },
+    {
+      "server": "79.137.196.223",
+      "port": 4443,
+      "secret": "eeee4026e99e99216664b0cb156da676d7707777772e636c6f7564666c6172652e636f6d",
+      "sources": [
+        "tgmtproxy"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 200.8,
+      "connect_ms": 101.2,
+      "tls_ms": 99.7,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 51,
+      "link": "https://t.me/proxy?server=79.137.196.223&port=4443&secret=eeee4026e99e99216664b0cb156da676d7707777772e636c6f7564666c6172652e636f6d"
+    },
+    {
+      "server": "79.137.196.223",
+      "port": 2053,
+      "secret": "eeee1701dff011da0ee1313d584fc565187777772e636c6f7564666c6172652e636f6d",
+      "sources": [
+        "tgmtproxy",
+        "dubblebyte"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 202.2,
+      "connect_ms": 103.3,
+      "tls_ms": 99.0,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 52,
+      "link": "https://t.me/proxy?server=79.137.196.223&port=2053&secret=eeee1701dff011da0ee1313d584fc565187777772e636c6f7564666c6172652e636f6d"
+    },
+    {
+      "server": "79.137.196.223",
+      "port": 15443,
+      "secret": "ee5d739d0cab70b86961816e3a9c27d4c17777772e636c6f7564666c6172652e636f6d",
+      "sources": [
+        "tgmtproxy"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 203.4,
+      "connect_ms": 102.5,
+      "tls_ms": 101.0,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 53,
+      "link": "https://t.me/proxy?server=79.137.196.223&port=15443&secret=ee5d739d0cab70b86961816e3a9c27d4c17777772e636c6f7564666c6172652e636f6d"
+    },
+    {
+      "server": "95.179.255.101",
+      "port": 443,
+      "secret": "ee7a6047adf345e77b0fcb75c92485211a7777772e6d6f7a696c6c612e6f7267",
+      "sources": [
+        "tgmtproxy"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 203.5,
+      "connect_ms": 96.5,
+      "tls_ms": 107.0,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 54,
+      "link": "https://t.me/proxy?server=95.179.255.101&port=443&secret=ee7a6047adf345e77b0fcb75c92485211a7777772e6d6f7a696c6c612e6f7267"
+    },
+    {
+      "server": "79.137.196.223",
+      "port": 13443,
+      "secret": "eee06596f5753c0dc9b56fe4864a4665e57777772e636c6f7564666c6172652e636f6d",
+      "sources": [
+        "tgmtproxy"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 203.6,
+      "connect_ms": 102.6,
+      "tls_ms": 101.0,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 55,
+      "link": "https://t.me/proxy?server=79.137.196.223&port=13443&secret=eee06596f5753c0dc9b56fe4864a4665e57777772e636c6f7564666c6172652e636f6d"
+    },
+    {
+      "server": "79.137.196.223",
+      "port": 16443,
+      "secret": "ee64cb94437cedd507cf9c4d83fbc229287777772e636c6f7564666c6172652e636f6d",
+      "sources": [
+        "tgmtproxy"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 204.0,
+      "connect_ms": 102.9,
+      "tls_ms": 101.1,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 56,
+      "link": "https://t.me/proxy?server=79.137.196.223&port=16443&secret=ee64cb94437cedd507cf9c4d83fbc229287777772e636c6f7564666c6172652e636f6d"
+    },
+    {
+      "server": "79.137.196.223",
+      "port": 1443,
+      "secret": "eeee52288a1c9bf20ef3423488f8418c3f087777772e636c6f7564666c6172652e636f6d",
+      "sources": [
+        "tgmtproxy"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 204.2,
+      "connect_ms": 103.3,
+      "tls_ms": 100.9,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 57,
+      "link": "https://t.me/proxy?server=79.137.196.223&port=1443&secret=eeee52288a1c9bf20ef3423488f8418c3f087777772e636c6f7564666c6172652e636f6d"
     },
     {
       "server": "79.137.196.223",
@@ -1188,19 +1110,19 @@
       "alive": true,
       "verified": true,
       "mode": "faketls",
-      "latency_ms": 310.0,
-      "connect_ms": 155.7,
-      "tls_ms": 154.3,
+      "latency_ms": 204.6,
+      "connect_ms": 103.7,
+      "tls_ms": 100.9,
       "success_rate": 1.0,
       "samples": 2,
       "error": "",
-      "rank": 62,
+      "rank": 58,
       "link": "https://t.me/proxy?server=79.137.196.223&port=14443&secret=ee9e28cf588967add684c5e759fea036d47777772e636c6f7564666c6172652e636f6d"
     },
     {
       "server": "79.137.196.223",
-      "port": 18443,
-      "secret": "eefd7ec32323aa5b4fc5cdd6b7dd28836a7777772e636c6f7564666c6172652e636f6d",
+      "port": 9443,
+      "secret": "eeeed3431eaef666469f9beb5286a544d96f7777772e636c6f7564666c6172652e636f6d",
       "sources": [
         "tgmtproxy",
         "dubblebyte"
@@ -1208,109 +1130,52 @@
       "alive": true,
       "verified": true,
       "mode": "faketls",
-      "latency_ms": 310.0,
-      "connect_ms": 155.5,
-      "tls_ms": 154.6,
+      "latency_ms": 207.8,
+      "connect_ms": 103.8,
+      "tls_ms": 103.9,
       "success_rate": 1.0,
       "samples": 2,
       "error": "",
-      "rank": 63,
-      "link": "https://t.me/proxy?server=79.137.196.223&port=18443&secret=eefd7ec32323aa5b4fc5cdd6b7dd28836a7777772e636c6f7564666c6172652e636f6d"
+      "rank": 59,
+      "link": "https://t.me/proxy?server=79.137.196.223&port=9443&secret=eeeed3431eaef666469f9beb5286a544d96f7777772e636c6f7564666c6172652e636f6d"
     },
     {
-      "server": "79.137.196.223",
-      "port": 8843,
-      "secret": "eeeecd971a62719a1ccaee3177da037511167777772e636c6f7564666c6172652e636f6d",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 310.0,
-      "connect_ms": 155.2,
-      "tls_ms": 154.8,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 64,
-      "link": "https://t.me/proxy?server=79.137.196.223&port=8843&secret=eeeecd971a62719a1ccaee3177da037511167777772e636c6f7564666c6172652e636f6d"
-    },
-    {
-      "server": "79.137.196.223",
-      "port": 7443,
-      "secret": "eeeeb30662ee79541fb143515ad872d2e9dd7777772e636c6f7564666c6172652e636f6d",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 310.8,
-      "connect_ms": 157.0,
-      "tls_ms": 153.8,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 65,
-      "link": "https://t.me/proxy?server=79.137.196.223&port=7443&secret=eeeeb30662ee79541fb143515ad872d2e9dd7777772e636c6f7564666c6172652e636f6d"
-    },
-    {
-      "server": "79.137.196.223",
-      "port": 5443,
-      "secret": "eeee1b84950935ebf99951bc30e394445c9b7777772e636c6f7564666c6172652e636f6d",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 311.7,
-      "connect_ms": 157.1,
-      "tls_ms": 154.6,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 66,
-      "link": "https://t.me/proxy?server=79.137.196.223&port=5443&secret=eeee1b84950935ebf99951bc30e394445c9b7777772e636c6f7564666c6172652e636f6d"
-    },
-    {
-      "server": "for-iranian-users.ir.gole-baghche.info",
-      "port": 88,
-      "secret": "ee0000f00f0f775555fffffff5006e2e697374617469632e666172616b61762e636f6d",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 317.2,
-      "connect_ms": 168.1,
-      "tls_ms": 149.1,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 67,
-      "link": "https://t.me/proxy?server=for-iranian-users.ir.gole-baghche.info&port=88&secret=ee0000f00f0f775555fffffff5006e2e697374617469632e666172616b61762e636f6d"
-    },
-    {
-      "server": "212.147.241.136",
+      "server": "217.138.215.102",
       "port": 443,
-      "secret": "eeed0542373d8297f689458ff7dd1a4ba87777772e636c6f7564666c6172652e636f6d",
+      "secret": "ee8357954a3df5c26e32a7b8a7978c3f107777772e636974696c696e6b2e7275",
       "sources": [
         "tgmtproxy"
       ],
       "alive": true,
       "verified": true,
       "mode": "faketls",
-      "latency_ms": 317.4,
-      "connect_ms": 152.9,
-      "tls_ms": 164.5,
+      "latency_ms": 209.4,
+      "connect_ms": 94.7,
+      "tls_ms": 114.7,
       "success_rate": 1.0,
       "samples": 2,
       "error": "",
-      "rank": 68,
-      "link": "https://t.me/proxy?server=212.147.241.136&port=443&secret=eeed0542373d8297f689458ff7dd1a4ba87777772e636c6f7564666c6172652e636f6d"
+      "rank": 60,
+      "link": "https://t.me/proxy?server=217.138.215.102&port=443&secret=ee8357954a3df5c26e32a7b8a7978c3f107777772e636974696c696e6b2e7275"
+    },
+    {
+      "server": "89.124.95.185",
+      "port": 8443,
+      "secret": "ee6403877430086085167456439119957338392e3132342e39352e313835",
+      "sources": [
+        "tgmtproxy"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 213.8,
+      "connect_ms": 100.6,
+      "tls_ms": 113.2,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 61,
+      "link": "https://t.me/proxy?server=89.124.95.185&port=8443&secret=ee6403877430086085167456439119957338392e3132342e39352e313835"
     },
     {
       "server": "89.127.201.206",
@@ -1322,52 +1187,14 @@
       "alive": true,
       "verified": true,
       "mode": "faketls",
-      "latency_ms": 317.9,
-      "connect_ms": 154.2,
-      "tls_ms": 163.8,
+      "latency_ms": 227.9,
+      "connect_ms": 108.1,
+      "tls_ms": 119.8,
       "success_rate": 1.0,
       "samples": 2,
       "error": "",
-      "rank": 69,
+      "rank": 62,
       "link": "https://t.me/proxy?server=89.127.201.206&port=443&secret=ee02ad2cb059cc54486e3499efc3170e2c7777772e617669746f2e7275"
-    },
-    {
-      "server": "77.216.4.82",
-      "port": 443,
-      "secret": "ee2b867f9c2ab429ed3b5abcaa1fd90f5864726976652e676f6f676c652e636f6d",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 320.5,
-      "connect_ms": 151.4,
-      "tls_ms": 169.1,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 70,
-      "link": "https://t.me/proxy?server=77.216.4.82&port=443&secret=ee2b867f9c2ab429ed3b5abcaa1fd90f5864726976652e676f6f676c652e636f6d"
-    },
-    {
-      "server": "khanom.rastapor.org",
-      "port": 443,
-      "secret": "ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 320.5,
-      "connect_ms": 188.0,
-      "tls_ms": 132.5,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 71,
-      "link": "https://t.me/proxy?server=khanom.rastapor.org&port=443&secret=ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d"
     },
     {
       "server": "87.58.149.247",
@@ -1379,33 +1206,71 @@
       "alive": true,
       "verified": true,
       "mode": "faketls",
-      "latency_ms": 323.8,
-      "connect_ms": 157.1,
-      "tls_ms": 166.7,
+      "latency_ms": 229.3,
+      "connect_ms": 108.7,
+      "tls_ms": 120.7,
       "success_rate": 1.0,
       "samples": 2,
       "error": "",
-      "rank": 72,
+      "rank": 63,
       "link": "https://t.me/proxy?server=87.58.149.247&port=443&secret=eeaaa7b0dbdfce2f2a3e7bc5563c900e297777772e636c6f7564666c6172652e636f6d"
     },
     {
-      "server": "46.62.132.241",
+      "server": "mehrsam.org",
       "port": 443,
-      "secret": "eeae762d0e4d199c7a7085525d37e230c97777772e636c6f7564666c6172652e636f6d",
+      "secret": "ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d",
       "sources": [
         "tgmtproxy"
       ],
       "alive": true,
       "verified": true,
       "mode": "faketls",
-      "latency_ms": 324.5,
-      "connect_ms": 163.0,
-      "tls_ms": 161.6,
+      "latency_ms": 230.9,
+      "connect_ms": 141.2,
+      "tls_ms": 89.7,
       "success_rate": 1.0,
       "samples": 2,
       "error": "",
-      "rank": 73,
-      "link": "https://t.me/proxy?server=46.62.132.241&port=443&secret=eeae762d0e4d199c7a7085525d37e230c97777772e636c6f7564666c6172652e636f6d"
+      "rank": 64,
+      "link": "https://t.me/proxy?server=mehrsam.org&port=443&secret=ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d"
+    },
+    {
+      "server": "bb.ew-n.xyz",
+      "port": 8443,
+      "secret": "ee5d1b98ffa9c654ee8d2c63a2bd4d9df962622e65772d6e2e78797a",
+      "sources": [
+        "dubblebyte"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 233.4,
+      "connect_ms": 129.4,
+      "tls_ms": 103.9,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 65,
+      "link": "https://t.me/proxy?server=bb.ew-n.xyz&port=8443&secret=ee5d1b98ffa9c654ee8d2c63a2bd4d9df962622e65772d6e2e78797a"
+    },
+    {
+      "server": "77.216.4.82",
+      "port": 443,
+      "secret": "ee2b867f9c2ab429ed3b5abcaa1fd90f5864726976652e676f6f676c652e636f6d",
+      "sources": [
+        "tgmtproxy"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 235.2,
+      "connect_ms": 110.3,
+      "tls_ms": 124.9,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 66,
+      "link": "https://t.me/proxy?server=77.216.4.82&port=443&secret=ee2b867f9c2ab429ed3b5abcaa1fd90f5864726976652e676f6f676c652e636f6d"
     },
     {
       "server": "37.27.38.205",
@@ -1417,109 +1282,109 @@
       "alive": true,
       "verified": true,
       "mode": "faketls",
-      "latency_ms": 324.7,
-      "connect_ms": 164.1,
-      "tls_ms": 160.6,
+      "latency_ms": 236.1,
+      "connect_ms": 118.2,
+      "tls_ms": 118.0,
       "success_rate": 1.0,
       "samples": 2,
       "error": "",
-      "rank": 74,
+      "rank": 67,
       "link": "https://t.me/proxy?server=37.27.38.205&port=443&secret=ee9d659fc2ae43e0b8323c082960233d7b7777772e636c6f7564666c6172652e636f6d"
     },
     {
-      "server": "po.hermesss.de5.net",
+      "server": "46.62.132.241",
       "port": 443,
-      "secret": "ee1c770940ea7b3d67be7ecd6e24b8ca54706574726f766963682e7275",
+      "secret": "eeae762d0e4d199c7a7085525d37e230c97777772e636c6f7564666c6172652e636f6d",
       "sources": [
         "tgmtproxy"
       ],
       "alive": true,
       "verified": true,
       "mode": "faketls",
-      "latency_ms": 326.5,
-      "connect_ms": 166.7,
-      "tls_ms": 159.8,
+      "latency_ms": 237.9,
+      "connect_ms": 120.5,
+      "tls_ms": 117.4,
       "success_rate": 1.0,
       "samples": 2,
       "error": "",
-      "rank": 75,
-      "link": "https://t.me/proxy?server=po.hermesss.de5.net&port=443&secret=ee1c770940ea7b3d67be7ecd6e24b8ca54706574726f766963682e7275"
+      "rank": 68,
+      "link": "https://t.me/proxy?server=46.62.132.241&port=443&secret=eeae762d0e4d199c7a7085525d37e230c97777772e636c6f7564666c6172652e636f6d"
     },
     {
-      "server": "vinyga35.quillmarsh.xyz",
+      "server": "ganemi87.tidelark.cc",
       "port": 8443,
-      "secret": "ee66209693c31923590235bff3baec4bc1786170692e6f7a6f6e2e7275",
+      "secret": "eedc3799b42ede3b50888183dcda40d67064726976652e676f6f676c652e636f6d",
       "sources": [
         "dubblebyte"
       ],
       "alive": true,
       "verified": true,
       "mode": "faketls",
-      "latency_ms": 327.2,
-      "connect_ms": 159.9,
-      "tls_ms": 167.4,
+      "latency_ms": 240.1,
+      "connect_ms": 110.1,
+      "tls_ms": 129.9,
       "success_rate": 1.0,
       "samples": 2,
       "error": "",
-      "rank": 76,
-      "link": "https://t.me/proxy?server=vinyga35.quillmarsh.xyz&port=8443&secret=ee66209693c31923590235bff3baec4bc1786170692e6f7a6f6e2e7275"
+      "rank": 69,
+      "link": "https://t.me/proxy?server=ganemi87.tidelark.cc&port=8443&secret=eedc3799b42ede3b50888183dcda40d67064726976652e676f6f676c652e636f6d"
     },
     {
-      "server": "river.sorrelbay.xyz",
-      "port": 8443,
-      "secret": "ee6fcf868535df2309ee2f6ea5a6563ef9617669746f2e7275",
+      "server": "212.147.241.136",
+      "port": 443,
+      "secret": "eeed0542373d8297f689458ff7dd1a4ba87777772e636c6f7564666c6172652e636f6d",
+      "sources": [
+        "tgmtproxy"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 240.7,
+      "connect_ms": 113.6,
+      "tls_ms": 127.1,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 70,
+      "link": "https://t.me/proxy?server=212.147.241.136&port=443&secret=eeed0542373d8297f689458ff7dd1a4ba87777772e636c6f7564666c6172652e636f6d"
+    },
+    {
+      "server": "quill.velvetwindow.cc",
+      "port": 443,
+      "secret": "eed09fb30e9ba945e3eb272875413c8c947175696c6c2e76656c76657477696e646f772e6363",
       "sources": [
         "dubblebyte"
       ],
       "alive": true,
       "verified": true,
       "mode": "faketls",
-      "latency_ms": 328.4,
-      "connect_ms": 166.6,
-      "tls_ms": 161.8,
+      "latency_ms": 244.1,
+      "connect_ms": 119.1,
+      "tls_ms": 125.0,
       "success_rate": 1.0,
       "samples": 2,
       "error": "",
-      "rank": 77,
-      "link": "https://t.me/proxy?server=river.sorrelbay.xyz&port=8443&secret=ee6fcf868535df2309ee2f6ea5a6563ef9617669746f2e7275"
+      "rank": 71,
+      "link": "https://t.me/proxy?server=quill.velvetwindow.cc&port=443&secret=eed09fb30e9ba945e3eb272875413c8c947175696c6c2e76656c76657477696e646f772e6363"
     },
     {
-      "server": "rile85.mosswren.vip",
+      "server": "fast.telehelp.top",
       "port": 443,
-      "secret": "eeae5ab45be1bccbba85eec21085b2fd2072696c6538352e6d6f73737772656e2e766970",
+      "secret": "eea767a7821af88983492880c0752e434264726976652e676f6f676c652e636f6d",
       "sources": [
-        "tgmtproxy"
+        "dubblebyte"
       ],
       "alive": true,
       "verified": true,
       "mode": "faketls",
-      "latency_ms": 328.6,
-      "connect_ms": 167.6,
-      "tls_ms": 160.9,
+      "latency_ms": 244.8,
+      "connect_ms": 119.2,
+      "tls_ms": 125.6,
       "success_rate": 1.0,
       "samples": 2,
       "error": "",
-      "rank": 78,
-      "link": "https://t.me/proxy?server=rile85.mosswren.vip&port=443&secret=eeae5ab45be1bccbba85eec21085b2fd2072696c6538352e6d6f73737772656e2e766970"
-    },
-    {
-      "server": "nema57.quietfjord.click",
-      "port": 443,
-      "secret": "eeb8e5365580b9ad3c2ee355dfcbc245e56e656d6135372e7175696574666a6f72642e636c69636b",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 328.8,
-      "connect_ms": 162.5,
-      "tls_ms": 166.3,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 79,
-      "link": "https://t.me/proxy?server=nema57.quietfjord.click&port=443&secret=eeb8e5365580b9ad3c2ee355dfcbc245e56e656d6135372e7175696574666a6f72642e636c69636b"
+      "rank": 72,
+      "link": "https://t.me/proxy?server=fast.telehelp.top&port=443&secret=eea767a7821af88983492880c0752e434264726976652e676f6f676c652e636f6d"
     },
     {
       "server": "65.109.218.46",
@@ -1531,320 +1396,14 @@
       "alive": true,
       "verified": true,
       "mode": "faketls",
-      "latency_ms": 328.9,
-      "connect_ms": 168.5,
-      "tls_ms": 160.4,
+      "latency_ms": 245.2,
+      "connect_ms": 125.0,
+      "tls_ms": 120.2,
       "success_rate": 1.0,
       "samples": 2,
       "error": "",
-      "rank": 80,
+      "rank": 73,
       "link": "https://t.me/proxy?server=65.109.218.46&port=443&secret=eef0eeb0bd9adc4fd4a93994ee3b2a216b63646e2e79656b74616e65742e636f6d"
-    },
-    {
-      "server": "quartz.sorrelbay.xyz",
-      "port": 8443,
-      "secret": "eea6765d2e85cb4496f4e0fd16b26b94c4786170692e6f7a6f6e2e7275",
-      "sources": [
-        "dubblebyte"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 329.4,
-      "connect_ms": 166.8,
-      "tls_ms": 162.6,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 81,
-      "link": "https://t.me/proxy?server=quartz.sorrelbay.xyz&port=8443&secret=eea6765d2e85cb4496f4e0fd16b26b94c4786170692e6f7a6f6e2e7275"
-    },
-    {
-      "server": "sv4.hajhossein.observer",
-      "port": 443,
-      "secret": "ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 329.4,
-      "connect_ms": 191.9,
-      "tls_ms": 137.5,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 82,
-      "link": "https://t.me/proxy?server=sv4.hajhossein.observer&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d"
-    },
-    {
-      "server": "quill.paperteapot.com",
-      "port": 443,
-      "secret": "eed09fb30e9ba945e3eb272875413c8c947175696c6c2e7061706572746561706f742e636f6d",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 330.6,
-      "connect_ms": 168.1,
-      "tls_ms": 162.6,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 83,
-      "link": "https://t.me/proxy?server=quill.paperteapot.com&port=443&secret=eed09fb30e9ba945e3eb272875413c8c947175696c6c2e7061706572746561706f742e636f6d"
-    },
-    {
-      "server": "static.b-telega.shop",
-      "port": 443,
-      "secret": "eec9f4da3fdfbfccdb13cd63d487b4804273746f72652e737465616d706f77657265642e636f6d",
-      "sources": [
-        "dubblebyte"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 330.9,
-      "connect_ms": 176.2,
-      "tls_ms": 154.7,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 84,
-      "link": "https://t.me/proxy?server=static.b-telega.shop&port=443&secret=eec9f4da3fdfbfccdb13cd63d487b4804273746f72652e737465616d706f77657265642e636f6d"
-    },
-    {
-      "server": "lilythistle.heronglade.space",
-      "port": 8443,
-      "secret": "eef34d88320a4d0b6e8aaf11541681dd7c786170692e6f7a6f6e2e7275",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 331.1,
-      "connect_ms": 163.0,
-      "tls_ms": 168.1,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 85,
-      "link": "https://t.me/proxy?server=lilythistle.heronglade.space&port=8443&secret=eef34d88320a4d0b6e8aaf11541681dd7c786170692e6f7a6f6e2e7275"
-    },
-    {
-      "server": "comet.heronglade.space",
-      "port": 443,
-      "secret": "ee69ddd419c3b2269c2959013a2265f734706574726f766963682e7275",
-      "sources": [
-        "dubblebyte"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 331.2,
-      "connect_ms": 171.2,
-      "tls_ms": 160.0,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 86,
-      "link": "https://t.me/proxy?server=comet.heronglade.space&port=443&secret=ee69ddd419c3b2269c2959013a2265f734706574726f766963682e7275"
-    },
-    {
-      "server": "together-for-iran.jetish.info",
-      "port": 88,
-      "secret": "ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 331.6,
-      "connect_ms": 185.0,
-      "tls_ms": 146.6,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 87,
-      "link": "https://t.me/proxy?server=together-for-iran.jetish.info&port=88&secret=ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d"
-    },
-    {
-      "server": "loleri73.saltfern.xyz",
-      "port": 443,
-      "secret": "eeeb412b6cdc3b179f63eefdb41aa6a4fc706574726f766963682e7275",
-      "sources": [
-        "tgmtproxy",
-        "dubblebyte"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 332.6,
-      "connect_ms": 167.6,
-      "tls_ms": 165.1,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 88,
-      "link": "https://t.me/proxy?server=loleri73.saltfern.xyz&port=443&secret=eeeb412b6cdc3b179f63eefdb41aa6a4fc706574726f766963682e7275"
-    },
-    {
-      "server": "lolo89.larchmere.xyz",
-      "port": 443,
-      "secret": "ee24c8636b7e946779a023ee708370719b6c6f6c6f38392e6c617263686d6572652e78797a",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 332.8,
-      "connect_ms": 171.9,
-      "tls_ms": 160.8,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 89,
-      "link": "https://t.me/proxy?server=lolo89.larchmere.xyz&port=443&secret=ee24c8636b7e946779a023ee708370719b6c6f6c6f38392e6c617263686d6572652e78797a"
-    },
-    {
-      "server": "lolo65.quillmarsh.xyz",
-      "port": 8443,
-      "secret": "eeae5ab45be1bccbba85eec21085b2fd20706574726f766963682e7275",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 333.2,
-      "connect_ms": 168.2,
-      "tls_ms": 165.1,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 90,
-      "link": "https://t.me/proxy?server=lolo65.quillmarsh.xyz&port=8443&secret=eeae5ab45be1bccbba85eec21085b2fd20706574726f766963682e7275"
-    },
-    {
-      "server": "vitori41.tidelark.cc",
-      "port": 443,
-      "secret": "ee214011ba04108a7b1836df3a5e918b3b7669746f726934312e746964656c61726b2e6363",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 333.3,
-      "connect_ms": 170.1,
-      "tls_ms": 163.2,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 91,
-      "link": "https://t.me/proxy?server=vitori41.tidelark.cc&port=443&secret=ee214011ba04108a7b1836df3a5e918b3b7669746f726934312e746964656c61726b2e6363"
-    },
-    {
-      "server": "forest.paperteapot.com",
-      "port": 443,
-      "secret": "eed09fb30e9ba945e3eb272875413c8c94666f726573742e7061706572746561706f742e636f6d",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 334.2,
-      "connect_ms": 169.7,
-      "tls_ms": 164.6,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 92,
-      "link": "https://t.me/proxy?server=forest.paperteapot.com&port=443&secret=eed09fb30e9ba945e3eb272875413c8c94666f726573742e7061706572746561706f742e636f6d"
-    },
-    {
-      "server": "sierra.paperteapot.com",
-      "port": 443,
-      "secret": "eed09fb30e9ba945e3eb272875413c8c947369657272612e7061706572746561706f742e636f6d",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 334.2,
-      "connect_ms": 168.1,
-      "tls_ms": 166.2,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 93,
-      "link": "https://t.me/proxy?server=sierra.paperteapot.com&port=443&secret=eed09fb30e9ba945e3eb272875413c8c947369657272612e7061706572746561706f742e636f6d"
-    },
-    {
-      "server": "bushehr.ir.hdhdhfdrde.info",
-      "port": 88,
-      "secret": "ee0000f00f0f775555fffffff5006e2e69626973636f7474692e79656b74616e65742e636f6d",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 334.5,
-      "connect_ms": 186.4,
-      "tls_ms": 148.1,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 94,
-      "link": "https://t.me/proxy?server=bushehr.ir.hdhdhfdrde.info&port=88&secret=ee0000f00f0f775555fffffff5006e2e69626973636f7474692e79656b74616e65742e636f6d"
-    },
-    {
-      "server": "orbit.velvetwindow.cc",
-      "port": 443,
-      "secret": "eed09fb30e9ba945e3eb272875413c8c946f726269742e76656c76657477696e646f772e6363",
-      "sources": [
-        "tgmtproxy",
-        "dubblebyte"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 334.8,
-      "connect_ms": 167.4,
-      "tls_ms": 167.4,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 95,
-      "link": "https://t.me/proxy?server=orbit.velvetwindow.cc&port=443&secret=eed09fb30e9ba945e3eb272875413c8c946f726269742e76656c76657477696e646f772e6363"
-    },
-    {
-      "server": "gavi88.mosswren.vip",
-      "port": 443,
-      "secret": "eeb8e5365580b9ad3c2ee355dfcbc245e56761766938382e6d6f73737772656e2e766970",
-      "sources": [
-        "tgmtproxy"
-      ],
-      "alive": true,
-      "verified": true,
-      "mode": "faketls",
-      "latency_ms": 335.2,
-      "connect_ms": 170.4,
-      "tls_ms": 164.8,
-      "success_rate": 1.0,
-      "samples": 2,
-      "error": "",
-      "rank": 96,
-      "link": "https://t.me/proxy?server=gavi88.mosswren.vip&port=443&secret=eeb8e5365580b9ad3c2ee355dfcbc245e56761766938382e6d6f73737772656e2e766970"
     },
     {
       "server": "193.163.203.247",
@@ -1856,73 +1415,508 @@
       "alive": true,
       "verified": true,
       "mode": "faketls",
-      "latency_ms": 335.5,
-      "connect_ms": 168.3,
-      "tls_ms": 167.2,
+      "latency_ms": 245.4,
+      "connect_ms": 123.0,
+      "tls_ms": 122.4,
       "success_rate": 1.0,
       "samples": 2,
       "error": "",
-      "rank": 97,
+      "rank": 74,
       "link": "https://t.me/proxy?server=193.163.203.247&port=443&secret=eeedc92b816769e7ca95e42be4ae45eac53139332e31"
     },
     {
-      "server": "opal.velvetwindow.cc",
+      "server": "n391810.tidalcache.com",
       "port": 443,
-      "secret": "eed09fb30e9ba945e3eb272875413c8c946f70616c2e76656c76657477696e646f772e6363",
+      "secret": "ee5c89ab20266ce759f96a0745b63d7cdf656467652e746964616c63616368652e636f6d",
       "sources": [
-        "tgmtproxy",
         "dubblebyte"
       ],
       "alive": true,
       "verified": true,
       "mode": "faketls",
-      "latency_ms": 335.6,
-      "connect_ms": 170.5,
-      "tls_ms": 165.2,
+      "latency_ms": 246.0,
+      "connect_ms": 136.9,
+      "tls_ms": 109.2,
       "success_rate": 1.0,
       "samples": 2,
       "error": "",
-      "rank": 98,
-      "link": "https://t.me/proxy?server=opal.velvetwindow.cc&port=443&secret=eed09fb30e9ba945e3eb272875413c8c946f70616c2e76656c76657477696e646f772e6363"
+      "rank": 75,
+      "link": "https://t.me/proxy?server=n391810.tidalcache.com&port=443&secret=ee5c89ab20266ce759f96a0745b63d7cdf656467652e746964616c63616368652e636f6d"
     },
     {
-      "server": "nemazo76.larchmere.xyz",
+      "server": "valley.velvetwindow.cc",
       "port": 443,
-      "secret": "ee44f33295547b09ac13649a4c51c296f6706574726f766963682e7275",
+      "secret": "eed09fb30e9ba945e3eb272875413c8c9476616c6c65792e76656c76657477696e646f772e6363",
+      "sources": [
+        "dubblebyte"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 248.2,
+      "connect_ms": 123.2,
+      "tls_ms": 124.9,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 76,
+      "link": "https://t.me/proxy?server=valley.velvetwindow.cc&port=443&secret=eed09fb30e9ba945e3eb272875413c8c9476616c6c65792e76656c76657477696e646f772e6363"
+    },
+    {
+      "server": "sage.heronglade.space",
+      "port": 8443,
+      "secret": "ee98d3085f116d2177ffad4b9fdbf359a2786170692e6f7a6f6e2e7275",
+      "sources": [
+        "dubblebyte"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 248.9,
+      "connect_ms": 121.8,
+      "tls_ms": 127.0,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 77,
+      "link": "https://t.me/proxy?server=sage.heronglade.space&port=8443&secret=ee98d3085f116d2177ffad4b9fdbf359a2786170692e6f7a6f6e2e7275"
+    },
+    {
+      "server": "lotus.ashwren.xyz",
+      "port": 443,
+      "secret": "ee4744890f29a9d82cf4673d7fed152ea06f7a6f6e2e7275",
+      "sources": [
+        "dubblebyte"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 250.0,
+      "connect_ms": 123.2,
+      "tls_ms": 126.8,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 78,
+      "link": "https://t.me/proxy?server=lotus.ashwren.xyz&port=443&secret=ee4744890f29a9d82cf4673d7fed152ea06f7a6f6e2e7275"
+    },
+    {
+      "server": "heron.heronglade.space",
+      "port": 443,
+      "secret": "eedbace7941bf820ff0ea426e464021476706574726f766963682e7275",
+      "sources": [
+        "dubblebyte"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 252.8,
+      "connect_ms": 128.6,
+      "tls_ms": 124.2,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 79,
+      "link": "https://t.me/proxy?server=heron.heronglade.space&port=443&secret=eedbace7941bf820ff0ea426e464021476706574726f766963682e7275"
+    },
+    {
+      "server": "nega49.mosswren.vip",
+      "port": 8443,
+      "secret": "ee8052a5757cc12faa6dc818a508165565786170692e6f7a6f6e2e7275",
+      "sources": [
+        "dubblebyte"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 252.8,
+      "connect_ms": 129.2,
+      "tls_ms": 123.5,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 80,
+      "link": "https://t.me/proxy?server=nega49.mosswren.vip&port=8443&secret=ee8052a5757cc12faa6dc818a508165565786170692e6f7a6f6e2e7275"
+    },
+    {
+      "server": "deri80.quillmarsh.xyz",
+      "port": 8443,
+      "secret": "ee6ea1d0dba312024f5fa8eed472cb99d4706574726f766963682e7275",
+      "sources": [
+        "dubblebyte"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 253.6,
+      "connect_ms": 119.8,
+      "tls_ms": 133.9,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 81,
+      "link": "https://t.me/proxy?server=deri80.quillmarsh.xyz&port=8443&secret=ee6ea1d0dba312024f5fa8eed472cb99d4706574726f766963682e7275"
+    },
+    {
+      "server": "junipergalaxy.heronglade.space",
+      "port": 8443,
+      "secret": "ee00d12f51c9933e45b4a420734e2693ab706574726f766963682e7275",
+      "sources": [
+        "dubblebyte"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 254.0,
+      "connect_ms": 134.6,
+      "tls_ms": 119.3,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 82,
+      "link": "https://t.me/proxy?server=junipergalaxy.heronglade.space&port=8443&secret=ee00d12f51c9933e45b4a420734e2693ab706574726f766963682e7275"
+    },
+    {
+      "server": "marble.heronglade.space",
+      "port": 8443,
+      "secret": "ee00d12f51c9933e45b4a420734e2693ab706574726f766963682e7275",
+      "sources": [
+        "dubblebyte"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 254.0,
+      "connect_ms": 134.0,
+      "tls_ms": 120.0,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 83,
+      "link": "https://t.me/proxy?server=marble.heronglade.space&port=8443&secret=ee00d12f51c9933e45b4a420734e2693ab706574726f766963682e7275"
+    },
+    {
+      "server": "nezomi22.kelpmoor.xyz",
+      "port": 443,
+      "secret": "ee6fcf868535df2309ee2f6ea5a6563ef9706574726f766963682e7275",
+      "sources": [
+        "dubblebyte"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 254.6,
+      "connect_ms": 135.8,
+      "tls_ms": 118.8,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 84,
+      "link": "https://t.me/proxy?server=nezomi22.kelpmoor.xyz&port=443&secret=ee6fcf868535df2309ee2f6ea5a6563ef9706574726f766963682e7275"
+    },
+    {
+      "server": "north.tealbriar.xyz",
+      "port": 8443,
+      "secret": "eed8e23b55798e53b64877d42e6ef94a3f706574726f766963682e7275",
+      "sources": [
+        "dubblebyte"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 254.9,
+      "connect_ms": 125.0,
+      "tls_ms": 129.9,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 85,
+      "link": "https://t.me/proxy?server=north.tealbriar.xyz&port=8443&secret=eed8e23b55798e53b64877d42e6ef94a3f706574726f766963682e7275"
+    },
+    {
+      "server": "ganymi63.sorrelbay.xyz",
+      "port": 8443,
+      "secret": "ee0387ddee19bfe48499262c18214228ec617669746f2e7275",
+      "sources": [
+        "dubblebyte"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 255.3,
+      "connect_ms": 125.2,
+      "tls_ms": 130.2,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 86,
+      "link": "https://t.me/proxy?server=ganymi63.sorrelbay.xyz&port=8443&secret=ee0387ddee19bfe48499262c18214228ec617669746f2e7275"
+    },
+    {
+      "server": "marblerobin.heronglade.space",
+      "port": 8443,
+      "secret": "eedbace7941bf820ff0ea426e464021476786170692e6f7a6f6e2e7275",
+      "sources": [
+        "dubblebyte"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 255.7,
+      "connect_ms": 128.6,
+      "tls_ms": 127.2,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 87,
+      "link": "https://t.me/proxy?server=marblerobin.heronglade.space&port=8443&secret=eedbace7941bf820ff0ea426e464021476786170692e6f7a6f6e2e7275"
+    },
+    {
+      "server": "net88.telehelp.top",
+      "port": 443,
+      "secret": "ee64d82259209aa26cf44e9883ccbc15d964726976652e676f6f676c652e636f6d",
+      "sources": [
+        "dubblebyte"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 255.9,
+      "connect_ms": 128.2,
+      "tls_ms": 127.6,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 88,
+      "link": "https://t.me/proxy?server=net88.telehelp.top&port=443&secret=ee64d82259209aa26cf44e9883ccbc15d964726976652e676f6f676c652e636f6d"
+    },
+    {
+      "server": "ririny44.tidelark.cc",
+      "port": 8443,
+      "secret": "ee908a3490ac6759588ba515fac7ff5099706574726f766963682e7275",
+      "sources": [
+        "dubblebyte"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 256.3,
+      "connect_ms": 134.1,
+      "tls_ms": 122.2,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 89,
+      "link": "https://t.me/proxy?server=ririny44.tidelark.cc&port=8443&secret=ee908a3490ac6759588ba515fac7ff5099706574726f766963682e7275"
+    },
+    {
+      "server": "nema94.foxglade.xyz",
+      "port": 8443,
+      "secret": "eea44b781cdf4cc1eb82c52c854e48e674706574726f766963682e7275",
+      "sources": [
+        "dubblebyte"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 256.8,
+      "connect_ms": 127.5,
+      "tls_ms": 129.3,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 90,
+      "link": "https://t.me/proxy?server=nema94.foxglade.xyz&port=8443&secret=eea44b781cdf4cc1eb82c52c854e48e674706574726f766963682e7275"
+    },
+    {
+      "server": "indigo.paperteapot.com",
+      "port": 443,
+      "secret": "eed09fb30e9ba945e3eb272875413c8c94696e6469676f2e7061706572746561706f742e636f6d",
+      "sources": [
+        "dubblebyte"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 257.2,
+      "connect_ms": 122.7,
+      "tls_ms": 134.6,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 91,
+      "link": "https://t.me/proxy?server=indigo.paperteapot.com&port=443&secret=eed09fb30e9ba945e3eb272875413c8c94696e6469676f2e7061706572746561706f742e636f6d"
+    },
+    {
+      "server": "falcon.heronglade.space",
+      "port": 8443,
+      "secret": "ee00d12f51c9933e45b4a420734e2693ab706574726f766963682e7275",
+      "sources": [
+        "dubblebyte"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 257.9,
+      "connect_ms": 134.9,
+      "tls_ms": 123.0,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 92,
+      "link": "https://t.me/proxy?server=falcon.heronglade.space&port=8443&secret=ee00d12f51c9933e45b4a420734e2693ab706574726f766963682e7275"
+    },
+    {
+      "server": "medium.telehelp.top",
+      "port": 443,
+      "secret": "eeea7500a9c0f0ea17067f675842aeb1cb6d656469756d2e74656c6568656c702e746f70",
+      "sources": [
+        "dubblebyte"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 257.9,
+      "connect_ms": 140.7,
+      "tls_ms": 117.2,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 93,
+      "link": "https://t.me/proxy?server=medium.telehelp.top&port=443&secret=eeea7500a9c0f0ea17067f675842aeb1cb6d656469756d2e74656c6568656c702e746f70"
+    },
+    {
+      "server": "lomi89.mossharbor.xyz",
+      "port": 8443,
+      "secret": "ee82d6829fbd02ca3261c2d2c349db064e706574726f766963682e7275",
+      "sources": [
+        "dubblebyte"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 258.4,
+      "connect_ms": 130.1,
+      "tls_ms": 128.3,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 94,
+      "link": "https://t.me/proxy?server=lomi89.mossharbor.xyz&port=8443&secret=ee82d6829fbd02ca3261c2d2c349db064e706574726f766963682e7275"
+    },
+    {
+      "server": "swanshore.heronglade.space",
+      "port": 443,
+      "secret": "eedbace7941bf820ff0ea426e464021476706574726f766963682e7275",
+      "sources": [
+        "dubblebyte"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 258.4,
+      "connect_ms": 123.6,
+      "tls_ms": 134.8,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 95,
+      "link": "https://t.me/proxy?server=swanshore.heronglade.space&port=443&secret=eedbace7941bf820ff0ea426e464021476706574726f766963682e7275"
+    },
+    {
+      "server": "khanom.rastapor.org",
+      "port": 443,
+      "secret": "ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d",
       "sources": [
         "tgmtproxy"
       ],
       "alive": true,
       "verified": true,
       "mode": "faketls",
-      "latency_ms": 335.8,
-      "connect_ms": 171.1,
-      "tls_ms": 164.8,
+      "latency_ms": 259.1,
+      "connect_ms": 169.8,
+      "tls_ms": 89.2,
       "success_rate": 1.0,
       "samples": 2,
       "error": "",
-      "rank": 99,
-      "link": "https://t.me/proxy?server=nemazo76.larchmere.xyz&port=443&secret=ee44f33295547b09ac13649a4c51c296f6706574726f766963682e7275"
+      "rank": 96,
+      "link": "https://t.me/proxy?server=khanom.rastapor.org&port=443&secret=ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d"
     },
     {
-      "server": "grovewillow.paperteapot.com",
+      "server": "fleet.telehelp.top",
       "port": 443,
-      "secret": "eed09fb30e9ba945e3eb272875413c8c9467726f766577696c6c6f772e7061706572746561706f742e636f6d",
+      "secret": "ee77bbf78a169e505b117bc2c1df39463d666c6565742e74656c6568656c702e746f70",
       "sources": [
-        "tgmtproxy",
         "dubblebyte"
       ],
       "alive": true,
       "verified": true,
       "mode": "faketls",
-      "latency_ms": 336.4,
-      "connect_ms": 166.8,
-      "tls_ms": 169.6,
+      "latency_ms": 259.2,
+      "connect_ms": 134.1,
+      "tls_ms": 125.1,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 97,
+      "link": "https://t.me/proxy?server=fleet.telehelp.top&port=443&secret=ee77bbf78a169e505b117bc2c1df39463d666c6565742e74656c6568656c702e746f70"
+    },
+    {
+      "server": "link.telehelp.top",
+      "port": 443,
+      "secret": "ee243af7382f8853a59265ac6dd3aa39a26c696e6b2e74656c6568656c702e746f70",
+      "sources": [
+        "dubblebyte"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 260.0,
+      "connect_ms": 136.0,
+      "tls_ms": 124.0,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 98,
+      "link": "https://t.me/proxy?server=link.telehelp.top&port=443&secret=ee243af7382f8853a59265ac6dd3aa39a26c696e6b2e74656c6568656c702e746f70"
+    },
+    {
+      "server": "crest.velvetwindow.cc",
+      "port": 443,
+      "secret": "eed09fb30e9ba945e3eb272875413c8c9463726573742e76656c76657477696e646f772e6363",
+      "sources": [
+        "dubblebyte"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 260.2,
+      "connect_ms": 139.9,
+      "tls_ms": 120.3,
+      "success_rate": 1.0,
+      "samples": 2,
+      "error": "",
+      "rank": 99,
+      "link": "https://t.me/proxy?server=crest.velvetwindow.cc&port=443&secret=eed09fb30e9ba945e3eb272875413c8c9463726573742e76656c76657477696e646f772e6363"
+    },
+    {
+      "server": "autumn.sorrelbay.xyz",
+      "port": 443,
+      "secret": "ee6fcf868535df2309ee2f6ea5a6563ef9617669746f2e7275",
+      "sources": [
+        "dubblebyte"
+      ],
+      "alive": true,
+      "verified": true,
+      "mode": "faketls",
+      "latency_ms": 260.9,
+      "connect_ms": 134.2,
+      "tls_ms": 126.8,
       "success_rate": 1.0,
       "samples": 2,
       "error": "",
       "rank": 100,
-      "link": "https://t.me/proxy?server=grovewillow.paperteapot.com&port=443&secret=eed09fb30e9ba945e3eb272875413c8c9467726f766577696c6c6f772e7061706572746561706f742e636f6d"
+      "link": "https://t.me/proxy?server=autumn.sorrelbay.xyz&port=443&secret=ee6fcf868535df2309ee2f6ea5a6563ef9617669746f2e7275"
     }
   ]
 }
